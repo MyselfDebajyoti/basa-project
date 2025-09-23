@@ -1,20 +1,18 @@
 "use client";
 
 import { FormSkeleton } from "@/components/BengaliEnrollmentForm";
-
+import MembershipForm from "@/components/MemberShipForm";
+import RsvpForm from "@/components/RsvpForm";
+import ContactEnquriesForm from "@/components/ContactEnquriesForm";
 export default function AdminPage() {
   return (
     <div className="">
-      {/* <header>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold leading-tight text-gray-900">
-            Dashboard
-          </h1>
-        </div>
-      </header> */}
       <main>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+        <div className="max-w-7xl grid grid-cols-2 gap-10 mx-auto px-4 sm:px-6 lg:px-8 mt-8">
           <FormSkeleton />
+          <MembershipForm />
+          <RsvpForm />
+          <ContactEnquriesForm />
         </div>
       </main>
     </div>

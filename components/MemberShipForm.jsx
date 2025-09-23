@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { databases, DATABASE_ID, TABLES } from "../lib/appwrite";
+import { ID } from "appwrite";
 
 const MembershipForm = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +14,9 @@ const MembershipForm = () => {
     isStudent: false,
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
@@ -20,10 +25,49 @@ const MembershipForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Membership form submitted:", formData);
-    // Handle form submission here
+    setIsSubmitting(true);
+    setSubmitMessage("");
+
+    try {
+      // Create a document in Appwrite database table
+      const response = await databases.createDocument(
+        DATABASE_ID,
+        TABLES.MEMBERSHIP_FORM,
+        ID.unique(),
+        {
+          name: formData.name,
+          contactNumber: formData.contactNumber,
+          email: formData.email || "",
+          membershipEnquiry: formData.membershipEnquiry,
+          referringMember: formData.referringMember || "",
+          numberOfAdults: parseInt(formData.numberOfAdults) || 0,
+          numberOfChildren: parseInt(formData.numberOfChildren) || 0,
+          isStudent: formData.isStudent,
+        }
+      );
+
+      console.log("Membership form submitted successfully:", response);
+      setSubmitMessage("Membership enquiry submitted successfully! We'll get back to you soon.");
+
+      // Reset form after successful submission
+      setFormData({
+        name: "",
+        contactNumber: "",
+        email: "",
+        membershipEnquiry: "",
+        referringMember: "",
+        numberOfAdults: "",
+        numberOfChildren: "",
+        isStudent: false,
+      });
+    } catch (error) {
+      console.error("Error submitting membership form:", error);
+      setSubmitMessage("Error submitting membership enquiry. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -38,6 +82,19 @@ const MembershipForm = () => {
         </p>
       </div>
 
+      {/* Success/Error Message */}
+      {submitMessage && (
+        <div
+          className={`mb-6 p-4 rounded-lg ${
+            submitMessage.includes("successfully")
+              ? "bg-green-100 text-green-700 border border-green-300"
+              : "bg-red-100 text-red-700 border border-red-300"
+          }`}
+        >
+          {submitMessage}
+        </div>
+      )}
+
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Name */}
         <div>
@@ -49,6 +106,7 @@ const MembershipForm = () => {
             onChange={handleChange}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             required
+            disabled={isSubmitting}
           />
         </div>
 
@@ -62,6 +120,7 @@ const MembershipForm = () => {
             onChange={handleChange}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             required
+            disabled={isSubmitting}
           />
         </div>
 
@@ -74,6 +133,7 @@ const MembershipForm = () => {
             value={formData.email}
             onChange={handleChange}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
+            disabled={isSubmitting}
           />
         </div>
 
@@ -87,6 +147,7 @@ const MembershipForm = () => {
             rows={4}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400 resize-vertical"
             required
+            disabled={isSubmitting}
           />
         </div>
 
@@ -99,6 +160,7 @@ const MembershipForm = () => {
             value={formData.referringMember}
             onChange={handleChange}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
+            disabled={isSubmitting}
           />
         </div>
 
@@ -113,6 +175,7 @@ const MembershipForm = () => {
             min="0"
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             required
+            disabled={isSubmitting}
           />
         </div>
 
@@ -127,6 +190,7 @@ const MembershipForm = () => {
             min="0"
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             required
+            disabled={isSubmitting}
           />
         </div>
 
@@ -139,6 +203,7 @@ const MembershipForm = () => {
               checked={formData.isStudent}
               onChange={handleChange}
               className="sr-only peer"
+              disabled={isSubmitting}
             />
             <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
           </label>
@@ -161,9 +226,14 @@ const MembershipForm = () => {
         <div className="pt-4">
           <button
             type="submit"
-            className="bg-gray-500 hover:bg-gray-600 text-white font-semibold text-xl px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+            disabled={isSubmitting}
+            className={`font-semibold text-xl px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl ${
+              isSubmitting
+                ? "bg-gray-400 cursor-not-allowed text-white"
+                : "bg-gray-500 hover:bg-gray-600 text-white"
+            }`}
           >
-            Submit
+            {isSubmitting ? "Submitting..." : "Submit"}
           </button>
         </div>
       </form>

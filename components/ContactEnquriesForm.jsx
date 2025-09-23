@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { databases, DATABASE_ID, TABLES } from "../lib/appwrite";
+import { ID } from "appwrite";
 
 const ContactEnquiriesForm = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +12,8 @@ const ContactEnquiriesForm = () => {
   });
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
 
   const subjectOptions = [
     "General Enquiry",
@@ -35,10 +39,45 @@ const ContactEnquiriesForm = () => {
     setIsDropdownOpen(false);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Contact enquiry form submitted:", formData);
-    // Handle form submission here
+    setIsSubmitting(true);
+    setSubmitMessage("");
+
+    try {
+      // Create a document in Appwrite database table
+      const response = await databases.createDocument(
+        DATABASE_ID,
+        TABLES.CONTACT_ENQUIRIES_FORM,
+        ID.unique(),
+        {
+          name: formData.name,
+          contactNumber: formData.contactNumber,
+          email: formData.email || "",
+          subject: formData.subject,
+          message: formData.message,
+        }
+      );
+
+      console.log("Contact enquiry form submitted successfully:", response);
+      setSubmitMessage(
+        "Contact enquiry submitted successfully! We'll get back to you soon."
+      );
+
+      // Reset form after successful submission
+      setFormData({
+        name: "",
+        contactNumber: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error submitting contact enquiry form:", error);
+      setSubmitMessage("Error submitting contact enquiry. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -48,6 +87,19 @@ const ContactEnquiriesForm = () => {
           Fill up the below query form. Our team will get back to you.
         </p>
       </div>
+
+      {/* Success/Error Message */}
+      {submitMessage && (
+        <div
+          className={`mb-6 p-4 rounded-lg ${
+            submitMessage.includes("successfully")
+              ? "bg-green-100 text-green-700 border border-green-300"
+              : "bg-red-100 text-red-700 border border-red-300"
+          }`}
+        >
+          {submitMessage}
+        </div>
+      )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Name */}
@@ -60,6 +112,7 @@ const ContactEnquiriesForm = () => {
             onChange={handleChange}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             required
+            disabled={isSubmitting}
           />
         </div>
 
@@ -73,6 +126,7 @@ const ContactEnquiriesForm = () => {
             onChange={handleChange}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             required
+            disabled={isSubmitting}
           />
         </div>
 
@@ -85,6 +139,7 @@ const ContactEnquiriesForm = () => {
             value={formData.email}
             onChange={handleChange}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
+            disabled={isSubmitting}
           />
         </div>
 
@@ -92,8 +147,9 @@ const ContactEnquiriesForm = () => {
         <div className="relative">
           <button
             type="button"
-            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            onClick={() => !isSubmitting && setIsDropdownOpen(!isDropdownOpen)}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors text-left flex justify-between items-center"
+            disabled={isSubmitting}
           >
             <span
               className={formData.subject ? "text-gray-700" : "text-gray-400"}
@@ -118,7 +174,7 @@ const ContactEnquiriesForm = () => {
           </button>
 
           {/* Dropdown Options */}
-          {isDropdownOpen && (
+          {isDropdownOpen && !isSubmitting && (
             <div className="absolute z-10 w-full mt-1 bg-white border-2 border-gray-300 rounded-lg shadow-lg">
               {subjectOptions.map((option, index) => (
                 <button
@@ -152,6 +208,7 @@ const ContactEnquiriesForm = () => {
             rows={8}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400 resize-vertical"
             required
+            disabled={isSubmitting}
           />
         </div>
 
@@ -159,15 +216,20 @@ const ContactEnquiriesForm = () => {
         <div className="pt-4">
           <button
             type="submit"
-            className="bg-red-400 hover:bg-red-500 text-white font-semibold text-xl px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+            disabled={isSubmitting}
+            className={`font-semibold text-xl px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl ${
+              isSubmitting
+                ? "bg-gray-400 cursor-not-allowed text-white"
+                : "bg-red-400 hover:bg-red-500 text-white"
+            }`}
           >
-            Submit
+            {isSubmitting ? "Submitting..." : "Submit"}
           </button>
         </div>
       </form>
 
       {/* Click outside to close dropdown */}
-      {isDropdownOpen && (
+      {isDropdownOpen && !isSubmitting && (
         <div
           className="fixed inset-0 z-5"
           onClick={() => setIsDropdownOpen(false)}
