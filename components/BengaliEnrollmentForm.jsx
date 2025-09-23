@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { databases, DATABASE_ID, TABLE_ID } from "../lib/appwrite";
+import { ID } from "appwrite";
 
-const Form = () => {
+export const FormSkeleton = () => {
   const [formData, setFormData] = useState({
     studentName: "",
     whatsappNumber: "",
@@ -10,6 +12,9 @@ const Form = () => {
     age: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -18,10 +23,47 @@ const Form = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission here
+    setIsSubmitting(true);
+    setSubmitMessage("");
+
+    try {
+      // Create a document in Appwrite database table
+      const response = await databases.createDocument(
+        DATABASE_ID,
+        TABLE_ID,
+        ID.unique(), // Generates a unique ID
+        {
+          studentName: formData.studentName,
+          whatsappNumber: formData.whatsappNumber,
+          email: formData.email || "", // Handle optional email
+          country: formData.country,
+          bengaliLearning: formData.bengaliLearning,
+          age: formData.age,
+        }
+      );
+
+      console.log("Form submitted successfully:", response);
+      setSubmitMessage(
+        "Form submitted successfully! We'll get back to you soon."
+      );
+
+      // Reset form after successful submission
+      setFormData({
+        studentName: "",
+        whatsappNumber: "",
+        email: "",
+        country: "",
+        bengaliLearning: "",
+        age: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitMessage("Error submitting form. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -35,6 +77,19 @@ const Form = () => {
         </p>
       </div>
 
+      {/* Success/Error Message */}
+      {submitMessage && (
+        <div
+          className={`mb-6 p-4 rounded-lg ${
+            submitMessage.includes("successfully")
+              ? "bg-green-100 text-green-700 border border-green-300"
+              : "bg-red-100 text-red-700 border border-red-300"
+          }`}
+        >
+          {submitMessage}
+        </div>
+      )}
+
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Student Name */}
         <div>
@@ -46,6 +101,7 @@ const Form = () => {
             onChange={handleChange}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             required
+            disabled={isSubmitting}
           />
         </div>
 
@@ -59,6 +115,7 @@ const Form = () => {
             onChange={handleChange}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             required
+            disabled={isSubmitting}
           />
         </div>
 
@@ -71,6 +128,7 @@ const Form = () => {
             value={formData.email}
             onChange={handleChange}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
+            disabled={isSubmitting}
           />
         </div>
 
@@ -84,6 +142,7 @@ const Form = () => {
             onChange={handleChange}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             required
+            disabled={isSubmitting}
           />
         </div>
 
@@ -97,6 +156,7 @@ const Form = () => {
             rows={4}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400 resize-vertical"
             required
+            disabled={isSubmitting}
           />
         </div>
 
@@ -108,6 +168,7 @@ const Form = () => {
             onChange={handleChange}
             className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors text-gray-700"
             required
+            disabled={isSubmitting}
           >
             <option value="" disabled className="text-gray-400">
               Select Age
@@ -125,14 +186,17 @@ const Form = () => {
         <div className="pt-4">
           <button
             type="submit"
-            className="bg-red-400 hover:bg-red-500 text-white font-semibold text-xl px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+            disabled={isSubmitting}
+            className={`font-semibold text-xl px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl ${
+              isSubmitting
+                ? "bg-gray-400 cursor-not-allowed text-white"
+                : "bg-red-400 hover:bg-red-500 text-white"
+            }`}
           >
-            Submit
+            {isSubmitting ? "Submitting..." : "Submit"}
           </button>
         </div>
       </form>
     </div>
   );
 };
-
-export default Form;
