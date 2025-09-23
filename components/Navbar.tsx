@@ -139,6 +139,11 @@ const Navbar = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Hide navbar on admin pages
+  if (pathname.startsWith("/admin")) {
+    return null;
+  }
+
   const getColorClasses = (color: string) => {
     const colorMap = {
       red: "text-red-600 border-red-200 hover:text-red-600",
