@@ -16,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Organization Name",
-  description: "Your organization description",
+  title: "BASA",
+  description: "",
 };
 
 export default function RootLayout({
