@@ -1,6 +1,6 @@
 "use client";
 
-import { FormSkeleton } from "@/components/Form";
+import { FormSkeleton } from "@/components/BengaliEnrollmentForm";
 
 export default function AdminPage() {
   return (
