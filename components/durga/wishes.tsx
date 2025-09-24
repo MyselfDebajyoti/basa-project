@@ -1,0 +1,37 @@
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+
+type WishesOnSharodothsavProps = {
+  className?: string;
+};
+
+export function WishesOnSharodothsav({ className }: WishesOnSharodothsavProps) {
+  return (
+    <section className={cn("   bg-background ", className)}>
+      <header className="space-y-2">
+        <h2 className="text-3xl font-semibold text-[color:var(--brand-text)] text-balance pb-10">
+          Wishes on Sharodothsav
+        </h2>
+      </header>
+
+      <figure className="overflow-hidden rounded-xl grid grid-cols-2 gap-4 bg-background shadow-sm">
+        <Image
+          src="/images/Screenshot 2025-09-20 at 14.54.10 1.svg"
+          alt="Letters conveying wishes on Sharodothsav from the Chief Minister of West Bengal and the High Commissioner of India."
+          width={960}
+          height={690}
+          className="h-auto w-full object-cover"
+          priority
+        />
+        <Image
+          src="/images/1758702451850-674f2d7b-580a-4944-892c-7ff5dfc36596_1 1.svg"
+          alt="Letters conveying wishes on Sharodothsav from the Chief Minister of West Bengal and the High Commissioner of India."
+          width={960}
+          height={690}
+          className="h-auto w-full object-cover"
+          priority
+        />
+      </figure>
+    </section>
+  );
+}

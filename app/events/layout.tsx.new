@@ -1,0 +1,63 @@
+"use client";
+import { ReactNode } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
+
+// Create a separate Navbar component
+function Navbar() {
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  const toggleDropdown = (dropdown: string) => {
+    if (openDropdown === dropdown) {
+      setOpenDropdown(null);
+    } else {
+      setOpenDropdown(dropdown);
+    }
+  };
+
+  return (
+    <nav className="md:hidden fixed top-0 left-0 right-0 bg-white z-50 p-4">
+      <div className="flex justify-between items-center">
+        <h1 className="text-xl font-bold">
+          <Link href={"/"}>BASA Events</Link>
+        </h1>
+
+        <button onClick={() => setIsOpen(!isOpen)} className="text-2xl">
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="absolute top-16 left-0 right-0 bg-white p-4 shadow-md overflow-y-auto max-h-screen">
+          {/* Your mobile menu items */}
+        </div>
+      )}
+    </nav>
+  );
+}
+
+// Layout interface
+interface LayoutProps {
+  children: ReactNode;
+}
+
+// Main Layout component
+export default function EventsLayout({ children }: LayoutProps) {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      
+      {/* Main content area */}
+      <main className="flex-1">
+        {children}
+      </main>
+
+      {/* You can add footer here if needed */}
+    </div>
+  );
+}
