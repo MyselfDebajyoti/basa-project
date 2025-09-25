@@ -8,9 +8,9 @@ type SidebarItem = {
 
 export function PujoSidebar({ items }: { items: SidebarItem[] }) {
   return (
-    <aside className="md:sticky md:top-24 mt-20">
+    <aside className="md:sticky md:top-24 mt-20 h-[calc(100vh-6rem)] overflow-y-auto">
       <nav aria-label="Festival navigation">
-        <ul className="flex flex-row gap-4 overflow-x-auto md:flex-col md:gap-6">
+        <ul className="flex flex-row gap-2 overflow-x-auto md:flex-col md:gap-4 md:pb-8">
           {items.map((item) => (
             <li key={item.label}>
               <a

@@ -16,7 +16,7 @@ export function PurohitMoshai({ className }: PurohitMoshaiProps) {
 
       <div className="grid gap-8 lg:grid-cols-2">
         <div className="space-y-4">
-          <figure className="overflow-hidden rounded-xl border border-[color:var(--brand-muted)] bg-background shadow-sm">
+          <figure className="overflow-hidden  bg-background shadow-sm">
             <Image
               src="/images/Rectangle 457.png"
               alt="Shri Tapash Mukherjee offering prayers before Maa Durga during BASA's Sharodotsav."
@@ -25,9 +25,6 @@ export function PurohitMoshai({ className }: PurohitMoshaiProps) {
               className="h-auto w-full object-cover"
               priority
             />
-            <figcaption className="px-4 py-3 text-xs text-[color:var(--brand-text)]/70">
-              Shri Tapash Mukherjee performs pushpanjali at BASA Durga Pujo.
-            </figcaption>
           </figure>
 
           <div className="space-y-2 text-[color:var(--brand-text)]">

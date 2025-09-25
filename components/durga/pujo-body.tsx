@@ -6,6 +6,11 @@ import { PujoCommittee } from "./puj--committee";
 import { BongoUtsav } from "./bongo-utsav";
 import { WishesOnSharodothsav } from "./wishes";
 import { PurohitMoshai } from "./purohit";
+import { Sponsors } from "./sponsors";
+import { Televison } from "./television";
+import { Radio } from "./radio";
+import { PrintMedia } from "./print-media";
+import { TVMedia } from "./tv-media";
 
 const breadcrumbItems = [
   { label: "Home", href: "#" },
@@ -18,9 +23,7 @@ export function PujoBody() {
     <div className="flex flex-col gap-10">
       <header className="flex flex-col gap-2">
         <BreadcrumbTrail items={breadcrumbItems}></BreadcrumbTrail>
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-accent)]">
-          Talent &amp; Culture
-        </p>
+
         <h1 className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance">
           Durga Pujo
         </h1>
@@ -53,6 +56,13 @@ export function PujoBody() {
       <WishesOnSharodothsav />
       <PurohitMoshai />
       <PujoCommittee className="mt-12" />
+      <PujoCommittee className="mt-12" />
+      <PujoCommittee className="mt-12" />
+      <Sponsors className="mt-12" />
+      <Televison className="mt-12" />
+      <Radio className="mt-12" />
+      <PrintMedia className="mt-12" />
+      <TVMedia className="mt-12" />
     </div>
   );
 }
