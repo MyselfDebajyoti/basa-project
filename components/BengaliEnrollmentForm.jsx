@@ -67,12 +67,12 @@ export const FormSkeleton = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white">
+    <div className="max-w-2xl  p-6 bg-white">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">
+        <h3 className="text-xl font-semibold text-gray-900 mb-3">
           Enrol & Learn Bengali
-        </h1>
-        <p className="text-gray-600 text-lg">
+        </h3>
+        <p className="text-gray-600 text-sm">
           Fill up the below query form. Our team will get back to you.
         </p>
       </div>
@@ -99,7 +99,7 @@ export const FormSkeleton = () => {
             placeholder="Student Name"
             value={formData.studentName}
             onChange={handleChange}
-            className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
+            className="w-[70%] px-4 py-4 text-sm border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             required
             disabled={isSubmitting}
           />
@@ -113,7 +113,7 @@ export const FormSkeleton = () => {
             placeholder="Parents/ Guardian Whatsapp Number"
             value={formData.whatsappNumber}
             onChange={handleChange}
-            className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
+            className="w-[70%] px-4 py-4 text-sm border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             required
             disabled={isSubmitting}
           />
@@ -127,7 +127,7 @@ export const FormSkeleton = () => {
             placeholder="Email (Optional)"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
+            className="w-[70%] px-4 py-4 text-sm border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             disabled={isSubmitting}
           />
         </div>
@@ -140,7 +140,7 @@ export const FormSkeleton = () => {
             placeholder="Country of current residence"
             value={formData.country}
             onChange={handleChange}
-            className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
+            className="w-[70%] px-4 py-4 text-sm border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             required
             disabled={isSubmitting}
           />
@@ -154,7 +154,7 @@ export const FormSkeleton = () => {
             value={formData.bengaliLearning}
             onChange={handleChange}
             rows={4}
-            className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400 resize-vertical"
+            className="w-[70%] px-4 py-4 text-sm border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400 resize-vertical"
             required
             disabled={isSubmitting}
           />
@@ -166,7 +166,7 @@ export const FormSkeleton = () => {
             name="age"
             value={formData.age}
             onChange={handleChange}
-            className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors text-gray-700"
+            className="w-[70%] px-4 py-4 text-sm border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors text-gray-700"
             required
             disabled={isSubmitting}
           >
@@ -187,7 +187,7 @@ export const FormSkeleton = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`font-semibold text-xl px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl ${
+            className={`font-semibold text-sm px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl ${
               isSubmitting
                 ? "bg-gray-400 cursor-not-allowed text-white"
                 : "bg-red-400 hover:bg-red-500 text-white"
