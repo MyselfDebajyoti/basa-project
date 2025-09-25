@@ -6,7 +6,7 @@ import { PujoCommittee } from "./puj--committee";
 import { BongoUtsav } from "./bongo-utsav";
 
 const breadcrumbItems = [
-  { label: "Home", href: "#" },
+  { label: "Home", href: "/" },
   { label: "Bengali Culture", href: "#" },
   { label: "Talent & Culture", current: true },
 ];
