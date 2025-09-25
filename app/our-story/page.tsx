@@ -3,7 +3,7 @@ import type { CSSProperties } from "react";
 import { useState, useEffect } from "react";
 
 import { PujoSidebar } from "@/components/durga/pujo-sidebar";
-import { BongoUtsavBody } from "@/components/durga/bong-utsav-body";
+
 import { OurStoryBody } from "@/components/our-story/body";
 
 const sidebarItems = [

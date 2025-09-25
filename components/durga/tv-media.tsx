@@ -1,13 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-type CommitteeMember = {
-  name: string;
-  description: string[];
-  imageQuery: string;
-  imageUrl?: string;
-};
-
 type PujoCommitteeProps = {
   className?: string;
 };
