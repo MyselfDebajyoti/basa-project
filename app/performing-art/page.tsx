@@ -5,7 +5,7 @@ import { PujoBody } from "@/components/durga/pujo-body";
 import { Body } from "@/components/performingArts/artsBody";
 
 const breadcrumbItems = [
-  { label: "Home", href: "#" },
+  { label: "Home", href: "/" },
   { label: "Bengali Culture", href: "#" },
   { label: "Talent & Culture", current: true },
 ];

@@ -17,8 +17,8 @@ import { FormSkeleton } from "../BengaliEnrollmentForm";
 import { Teachers } from "./teachers";
 
 const breadcrumbItems = [
-  { label: "Home", href: "#" },
-  { label: "Bengali Culture", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "Bengali Culture", href: "/events/bongo-utsav" },
   { label: "Talent & Culture", current: true },
 ];
 
