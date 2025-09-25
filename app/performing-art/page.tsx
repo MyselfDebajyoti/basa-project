@@ -1,14 +1,8 @@
 import type { CSSProperties } from "react";
-import { BreadcrumbTrail } from "@/components/durga/breadcrumb-trail";
-import { PujoSidebar } from "@/components/durga/pujo-sidebar";
-import { PujoBody } from "@/components/durga/pujo-body";
-import { Body } from "@/components/performingArts/artsBody";
 
-const breadcrumbItems = [
-  { label: "Home", href: "/" },
-  { label: "Bengali Culture", href: "#" },
-  { label: "Talent & Culture", current: true },
-];
+import { PujoSidebar } from "@/components/durga/pujo-sidebar";
+
+import { Body } from "@/components/performingArts/artsBody";
 
 const sidebarItems = [
   { label: "Performing Art", href: "#", active: true },

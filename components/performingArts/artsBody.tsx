@@ -1,19 +1,9 @@
 "use client";
 
 import { BreadcrumbTrail } from "../durga/breadcrumb-trail";
-import { DurgaScheduleFigure } from "../durga/schedule-figure";
-import { PujoCommittee } from "../durga/puj--committee";
-import { BongoUtsav } from "../durga/bongo-utsav";
-import { WishesOnSharodothsav } from "../durga/wishes";
-import { PurohitMoshai } from "../durga/purohit";
-import { Sponsors } from "../durga/sponsors";
-import { Televison } from "../durga/television";
-import { Radio } from "../durga/radio";
-import { PrintMedia } from "../durga/print-media";
-import { TVMedia } from "../durga/tv-media";
+
 import HeroImage from "../bengaliSchool/hero-image";
 
-import { FormSkeleton } from "../BengaliEnrollmentForm";
 import { Teachers } from "./teachers";
 
 const breadcrumbItems = [

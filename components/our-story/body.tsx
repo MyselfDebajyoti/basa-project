@@ -1,15 +1,13 @@
 "use client";
 
 import { BreadcrumbTrail } from "../durga/breadcrumb-trail";
-import { DurgaScheduleFigure } from "../durga/schedule-figure";
-import { PujoCommittee } from "../durga/puj--committee";
-import { BongoUtsav } from "../durga/bongo-utsav";
+
 import { Hero } from "./hero";
 
 const breadcrumbItems = [
-  { label: "Home", href: "#" },
-  { label: "Bengali Culture", href: "#" },
-  { label: "Talent & Culture", current: true },
+  { label: "Home", href: "/" },
+  { label: "Our Story", href: "" },
+  { label: "History", current: true },
 ];
 
 export function OurStoryBody() {

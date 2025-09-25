@@ -2,17 +2,7 @@ import React from "react";
 
 // Reusable ProfileCard component
 const ProfileCard = ({ user }) => {
-  const {
-    name,
-    title,
-    image,
-    description,
-    tags = [],
-    highlights = [],
-    location,
-    experience,
-    family,
-  } = user;
+  const { name, title, image, description } = user;
 
   return (
     <div className="bg-white  overflow-hidden   transition-all duration-300">

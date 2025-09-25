@@ -1,23 +1,14 @@
 "use client";
 
 import { BreadcrumbTrail } from "../durga/breadcrumb-trail";
-import { DurgaScheduleFigure } from "../durga/schedule-figure";
-import { PujoCommittee } from "../durga/puj--committee";
-import { BongoUtsav } from "../durga/bongo-utsav";
-import { WishesOnSharodothsav } from "../durga/wishes";
-import { PurohitMoshai } from "../durga/purohit";
-import { Sponsors } from "../durga/sponsors";
-import { Televison } from "../durga/television";
-import { Radio } from "../durga/radio";
-import { PrintMedia } from "../durga/print-media";
-import { TVMedia } from "../durga/tv-media";
+
 import HeroImage from "./hero-image";
 import { Outreach } from "./outreach";
 import { Teachers } from "./teachers";
 import { FormSkeleton } from "../BengaliEnrollmentForm";
 
 const breadcrumbItems = [
-  { label: "Home", href: "#" },
+  { label: "Home", href: "/" },
   { label: "Bengali Culture", href: "#" },
   { label: "Talent & Culture", current: true },
 ];
@@ -35,7 +26,7 @@ export function Body() {
 
       <HeroImage />
 
-      <div className="mt-8">
+      <div className="mt-8 " id="about">
         <h3 className="text-xl font-semibold text-[color:var(--brand-text)] text-balance pb-8">
           About the Program
         </h3>

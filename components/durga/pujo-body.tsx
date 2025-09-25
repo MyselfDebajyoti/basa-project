@@ -3,7 +3,7 @@
 import { BreadcrumbTrail } from "./breadcrumb-trail";
 import { DurgaScheduleFigure } from "./schedule-figure";
 import { PujoCommittee } from "./puj--committee";
-import { BongoUtsav } from "./bongo-utsav";
+
 import { WishesOnSharodothsav } from "./wishes";
 import { PurohitMoshai } from "./purohit";
 import { Sponsors } from "./sponsors";
@@ -13,7 +13,7 @@ import { PrintMedia } from "./print-media";
 import { TVMedia } from "./tv-media";
 
 const breadcrumbItems = [
-  { label: "Home", href: "#" },
+  { label: "Home", href: "/" },
   { label: "Bengali Culture", href: "#" },
   { label: "Talent & Culture", current: true },
 ];
