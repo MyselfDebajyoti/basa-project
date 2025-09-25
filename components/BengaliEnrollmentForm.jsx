@@ -3,7 +3,7 @@ import { databases, DATABASE_ID, TABLE_ID } from "../lib/appwrite";
 import { ID } from "appwrite";
 
 export const FormSkeleton = () => {
-  const [formData, setFormData] = useState({
+   const [formData, setFormData] = useState({
     studentName: "",
     whatsappNumber: "",
     email: "",
