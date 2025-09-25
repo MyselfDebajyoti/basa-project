@@ -15,11 +15,11 @@ const menuConfig = [
     color: "red",
     path: "/our-story",
     items: [
-      { title: "History", path: "/our-story#history" },
-      { title: "Mission & Vision", path: "/our-story#mission-vision" },
+      { title: "History", path: "/our-story" },
+      { title: "Mission & Vision", path: "/our-story#mission" },
       { title: "Eminent Members", path: "/our-story#eminent-members" },
       { title: "Patron Messages", path: "/our-story#patron-messages" },
-      { title: "Current Ex-Co", path: "/exco" },
+      { title: "Current Ex-Co", path: "/our-story/current-exco" },
     ],
   },
   {
@@ -31,26 +31,26 @@ const menuConfig = [
       {
         title: "Festivals & Get Togethers",
         items: [
-          { title: "Durga Puja", path: "/bengali-culture#durga-puja" },
-          { title: "Bongotsav", path: "/bengali-culture#bongotsav" },
+          { title: "Durga Puja", path: "/events" },
+          { title: "Bongotsav", path: "/events/bongo-utsav" },
         ],
       },
       {
         title: "Talent & Culture",
         items: [
           { title: "Bengali School - Kshology", path: "/bengali-school" },
-          { title: "Learning Grades", path: "/bengali-school#learning-grades" },
-          { title: "Enrol in Kshology", path: "/bengali-school#enrol" },
+          { title: "Learning Grades", path: "/bengali-school#learning" },
+          { title: "Enrol in Kshology", path: "/bengali-school" },
           { title: "Know our Teachers", path: "/bengali-school#teachers" },
         ],
       },
       {
         title: "Performing Arts",
         items: [
-          { title: "Dance", path: "/bengali-culture#dance" },
-          { title: "Elocution", path: "/bengali-culture#elocution" },
-          { title: "Singing", path: "/bengali-culture#singing" },
-          { title: "Drama", path: "/bengali-culture#drama" },
+          { title: "Dance", path: "/performing-art" },
+          { title: "Elocution", path: "/performing-art" },
+          { title: "Singing", path: "/performing-art" },
+          { title: "Drama", path: "/performing-art" },
         ],
       },
     ],
@@ -65,47 +65,47 @@ const menuConfig = [
       { title: "Upcoming Events", path: "/events#upcoming" },
       { title: "RSVPs", path: "/events#rsvp" },
     ],
-    sections: [
-      {
-        title: "Media & Literature",
-        items: [
-          { title: "E-Magazine Ramdhanu", path: "/events#magazine" },
-          { title: "Photo Archives", path: "/events#photos" },
-          { title: "Print Media", path: "/events#print-media" },
-          { title: "TV Media", path: "/events#tv-media" },
-        ],
-      },
-      {
-        title: "Social Media",
-        items: [
-          { title: "Facebook", path: "https://facebook.com", external: true },
-          { title: "WhatsApp", path: "https://whatsapp.com", external: true },
-          { title: "Instagram", path: "https://instagram.com", external: true },
-          { title: "Twitter", path: "https://twitter.com", external: true },
-        ],
-      },
-    ],
+    // sections: [
+    //   {
+    //     title: "Media & Literature",
+    //     items: [
+    //       { title: "E-Magazine Ramdhanu", path: "/events#magazine" },
+    //       { title: "Photo Archives", path: "/events#photos" },
+    //       { title: "Print Media", path: "/events#print-media" },
+    //       { title: "TV Media", path: "/events#tv-media" },
+    //     ],
+    //   },
+    //   {
+    //     title: "Social Media",
+    //     items: [
+    //       { title: "Facebook", path: "https://facebook.com", external: true },
+    //       { title: "WhatsApp", path: "https://whatsapp.com", external: true },
+    //       { title: "Instagram", path: "https://instagram.com", external: true },
+    //       { title: "Twitter", path: "https://twitter.com", external: true },
+    //     ],
+    //   },
+    // ],
   },
-  {
-    id: "beyond-basa",
-    title: "Beyond BASA",
-    color: "yellow",
-    path: "/beyond-basa",
-    items: [
-      { title: "Outreach Programs", path: "/beyond-basa#outreach" },
-      { title: "Sponsors & Partners", path: "/beyond-basa#sponsors" },
-      { title: "Sponsor List", path: "/beyond-basa#sponsor-list" },
-      {
-        title: "Sponsorship Request",
-        path: "/beyond-basa#sponsorship-request",
-      },
-      { title: "Enquiries", path: "/contact" },
-      {
-        title: "BASA Business Exchange",
-        path: "/beyond-basa#business-exchange",
-      },
-    ],
-  },
+  // {
+  //   id: "beyond-basa",
+  //   title: "Beyond BASA",
+  //   color: "yellow",
+  //   path: "/beyond-basa",
+  //   items: [
+  //     { title: "Outreach Programs", path: "/beyond-basa#outreach" },
+  //     { title: "Sponsors & Partners", path: "/beyond-basa#sponsors" },
+  //     { title: "Sponsor List", path: "/beyond-basa#sponsor-list" },
+  //     {
+  //       title: "Sponsorship Request",
+  //       path: "/beyond-basa#sponsorship-request",
+  //     },
+  //     { title: "Enquiries", path: "/contact" },
+  //     {
+  //       title: "BASA Business Exchange",
+  //       path: "/beyond-basa#business-exchange",
+  //     },
+  //   ],
+  // },
   {
     id: "join-basa",
     title: "Join BASA",
