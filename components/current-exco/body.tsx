@@ -134,9 +134,7 @@
 "use client";
 
 import { BreadcrumbTrail } from "../durga/breadcrumb-trail";
-import { DurgaScheduleFigure } from "../durga/schedule-figure";
-import { PujoCommittee } from "../durga/puj--committee";
-import { BongoUtsav } from "../durga/bongo-utsav";
+
 // import { Hero } from "./hero";
 import ProfileCard from "./exco-card";
 
@@ -248,13 +246,13 @@ export function ExcoBody() {
                 community service.
               </p>
               <p className="text-pretty text-sm sm:text-base leading-relaxed text-[color:var(--brand-text)] opacity-85">
-                Mission Statement from the EXCO : "We, the Executive Committee
-                of BASA, are committed to preserving and promoting the cultural
-                heritage of Bengal, fostering inclusivity, and strengthening the
-                bonds of our community in South Africa. Through cultural
-                programs, social initiatives, and collective participation, we
-                aim to create a vibrant, united, and welcoming space for present
-                and future generations."
+                Mission Statement from the EXCO : &quot;We, the Executive
+                Committee of BASA, are committed to preserving and promoting the
+                cultural heritage of Bengal, fostering inclusivity, and
+                strengthening the bonds of our community in South Africa.
+                Through cultural programs, social initiatives, and collective
+                participation, we aim to create a vibrant, united, and welcoming
+                space for present and future generations.&quot;
               </p>
             </div>
           </div>

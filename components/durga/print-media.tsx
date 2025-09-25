@@ -8,21 +8,6 @@ type CommitteeMember = {
   imageUrl?: string;
 };
 
-const committeeMembers: CommitteeMember[] = [
-  {
-    name: "Mrs. Sudeshna Ghatak",
-    description: ["Pujo Committee", "Co-ordinator"],
-    imageQuery: "Mrs. Sudeshna Ghatak portrait",
-    imageUrl: "/icons/rBangla.svg",
-  },
-  {
-    name: "Mrs. Annapurna Hazra",
-    description: ["Co-ordinator,", "Bhog Prep."],
-    imageQuery: "Mrs. Annapurna Hazra portrait",
-    imageUrl: "/icons/rBangla.svg",
-  },
-];
-
 type PujoCommitteeProps = {
   className?: string;
 };

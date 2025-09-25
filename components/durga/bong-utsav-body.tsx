@@ -1,8 +1,7 @@
 "use client";
 
 import { BreadcrumbTrail } from "./breadcrumb-trail";
-import { DurgaScheduleFigure } from "./schedule-figure";
-import { PujoCommittee } from "./puj--committee";
+
 import { BongoUtsav } from "./bongo-utsav";
 
 const breadcrumbItems = [

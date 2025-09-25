@@ -629,25 +629,16 @@
 /////////////////////////////////////
 
 import type { CSSProperties } from "react";
-import { BreadcrumbTrail } from "@/components/durga/breadcrumb-trail";
+
 import { PujoSidebar } from "@/components/durga/pujo-sidebar";
 import { PujoBody } from "@/components/durga/pujo-body";
 
-const breadcrumbItems = [
-  { label: "Home", href: "#" },
-  { label: "Bengali Culture", href: "#" },
-  { label: "Talent & Culture", current: true },
-];
-
 const sidebarItems = [
   { label: "Durga Pujo", href: "#", active: true },
-  { label: "Lokhhi Pujo", href: "#" },
-  { label: "Saraswati Pujo", href: "#" },
-  { label: "Kali Pujo", href: "#" },
-  { label: "Dol Utsav", href: "#" },
-  { label: "Bongo Utsav", href: "/bongo-utsav" },
-  { label: "Annual Picnic", href: "#" },
-  { label: "Back to Top", href: "#" },
+
+  { label: "Bongo Utsav", href: "/events/bongo-utsav" },
+
+  { label: "Back to Top", href: "" },
 ];
 
 const palette = {
