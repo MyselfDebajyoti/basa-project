@@ -18,6 +18,57 @@ type DownloadStates = {
   [key: string]: boolean;
 };
 
+// Define types for each form document
+interface StudentFormDocument {
+  $id: string;
+  $createdAt: string;
+  studentName?: string;
+  whatsappNumber?: string;
+  email?: string;
+  country?: string;
+  bengaliLearning?: string;
+  age?: string;
+}
+
+interface RsvpFormDocument {
+  $id: string;
+  $createdAt: string;
+  name?: string;
+  contactNumber?: string;
+  nabamiMahaJogyo?: number;
+  dashamiDebiBoron?: number;
+  comments?: string;
+}
+
+interface MembershipFormDocument {
+  $id: string;
+  $createdAt: string;
+  name?: string;
+  contactNumber?: string;
+  email?: string;
+  membershipEnquiry?: string;
+  referringMember?: string;
+  numberOfAdults?: number;
+  numberOfChildren?: number;
+  isStudent?: boolean;
+}
+
+interface ContactEnquiriesFormDocument {
+  $id: string;
+  $createdAt: string;
+  name?: string;
+  contactNumber?: string;
+  email?: string;
+  subject?: string;
+  message?: string;
+}
+
+type FormDocument =
+  | StudentFormDocument
+  | RsvpFormDocument
+  | MembershipFormDocument
+  | ContactEnquiriesFormDocument;
+
 export default function AdminPage() {
   const [downloadStates, setDownloadStates] = useState<DownloadStates>({
     student_forms: false,
@@ -102,55 +153,59 @@ export default function AdminPage() {
       csvContent += headers.join(",") + "\n";
 
       // Add data rows
-      documents.forEach((doc: any) => {
+      documents.forEach((doc: FormDocument) => {
         let row: (string | number)[] = [];
         switch (tableId) {
           case TABLES.STUDENT_FORMS:
+            const studentDoc = doc as StudentFormDocument;
             row = [
-              doc.$id,
-              `"${doc.studentName || ""}"`,
-              `"${doc.whatsappNumber || ""}"`,
-              `"${doc.email || ""}"`,
-              `"${doc.country || ""}"`,
-              `"${doc.bengaliLearning || ""}"`,
-              `"${doc.age || ""}"`,
-              `"${new Date(doc.$createdAt).toLocaleString()}"`,
+              studentDoc.$id,
+              `"${studentDoc.studentName || ""}"`,
+              `"${studentDoc.whatsappNumber || ""}"`,
+              `"${studentDoc.email || ""}"`,
+              `"${studentDoc.country || ""}"`,
+              `"${studentDoc.bengaliLearning || ""}"`,
+              `"${studentDoc.age || ""}"`,
+              `"${new Date(studentDoc.$createdAt).toLocaleString()}"`,
             ];
             break;
           case TABLES.RSVP_FORM:
+            const rsvpDoc = doc as RsvpFormDocument;
             row = [
-              doc.$id,
-              `"${doc.name || ""}"`,
-              `"${doc.contactNumber || ""}"`,
-              doc.nabamiMahaJogyo || 0,
-              doc.dashamiDebiBoron || 0,
-              `"${doc.comments || ""}"`,
-              `"${new Date(doc.$createdAt).toLocaleString()}"`,
+              rsvpDoc.$id,
+              `"${rsvpDoc.name || ""}"`,
+              `"${rsvpDoc.contactNumber || ""}"`,
+              rsvpDoc.nabamiMahaJogyo || 0,
+              rsvpDoc.dashamiDebiBoron || 0,
+              `"${rsvpDoc.comments || ""}"`,
+              `"${new Date(rsvpDoc.$createdAt).toLocaleString()}"`,
             ];
             break;
           case TABLES.MEMBERSHIP_FORM:
+            const membershipDoc = doc as MembershipFormDocument;
             row = [
-              doc.$id,
-              `"${doc.name || ""}"`,
-              `"${doc.contactNumber || ""}"`,
-              `"${doc.email || ""}"`,
-              `"${doc.membershipEnquiry || ""}"`,
-              `"${doc.referringMember || ""}"`,
-              doc.numberOfAdults || 0,
-              doc.numberOfChildren || 0,
-              doc.isStudent ? "Yes" : "No",
-              `"${new Date(doc.$createdAt).toLocaleString()}"`,
+              membershipDoc.$id,
+              `"${membershipDoc.name || ""}"`,
+              `"${membershipDoc.contactNumber || ""}"`,
+              `"${membershipDoc.email || ""}"`,
+              `"${membershipDoc.membershipEnquiry || ""}"`,
+              `"${membershipDoc.referringMember || ""}"`,
+              membershipDoc.numberOfAdults || 0,
+              membershipDoc.numberOfChildren || 0,
+              membershipDoc.isStudent ? "Yes" : "No",
+              `"${new Date(membershipDoc.$createdAt).toLocaleString()}"`,
             ];
             break;
           case TABLES.CONTACT_ENQUIRIES_FORM:
+            const contactDoc = doc as ContactEnquiriesFormDocument;
             row = [
-              doc.$id,
-              `"${doc.name || ""}"`,
-              `"${doc.contactNumber || ""}"`,
-              `"${doc.email || ""}"`,
-              `"${doc.subject || ""}"`,
-              `"${doc.message || ""}"`,
-              `"${new Date(doc.$createdAt).toLocaleString()}"`,
+              contactDoc.$id,
+              `"${contactDoc.name || ""}"`,
+              `"${contactDoc.contactNumber || ""}"`,
+              `"${contactDoc.email || ""}"`,
+              `"${contactDoc.subject || ""}"`,
+              `"${contactDoc.message || ""}"`,
+              `"${new Date(contactDoc.$createdAt).toLocaleString()}"`,
             ];
             break;
         }
