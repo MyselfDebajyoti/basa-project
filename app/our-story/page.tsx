@@ -106,7 +106,7 @@ export default function Page() {
       <section className="mx-auto max-w-6xl py-6 md:py-16">
         <div style={palette} className="flex flex-col gap-8 md:gap-10">
           {/* <BreadcrumbTrail items={breadcrumbItems} /> */}
-          <div className="flex flex-col gap-12 md:grid md:grid-cols-[200px_1fr] md:gap-14">
+          <div className="flex px-5 flex-col  gap-12 md:grid md:grid-cols-[200px_1fr] md:gap-14">
             <PujoSidebar
               items={updatedSidebarItems}
               onItemClick={handleSidebarClick}

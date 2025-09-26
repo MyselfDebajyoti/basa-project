@@ -99,7 +99,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo - responsive sizing */}
           <Link href="/" className="flex items-center">
-            <div className="">
+            <div className="p-2 xl:p-0 ">
               {/* <Image
                 src="/images/logo.png"
                 alt="BASA Logo"
@@ -179,26 +179,23 @@ const Navbar = () => {
             >
               {/* Menu content - fully responsive grid */}
               <div className="px-4 sm:px-6 lg:px-8 pb-6 lg:pb-8 h-full overflow-y-auto">
-                <div className="max-w-7xl mx-auto h-full">
+                <div className="mx-auto max-w-screen-xl h-full">
                   {/* Responsive grid: 1 col on mobile, 2 on tablet, 5 on desktop */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-8 py-4 lg:py-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-6 sm:gap-8 py-4 lg:py-6">
                     {menuConfig.map((menu) => {
                       const colorClasses = getColorClasses(menu.color);
                       const headerColorClass =
                         colorClasses.split(" ")[0] +
-                        " font-bold text-base lg:text-lg mb-3 lg:mb-4 border-b " +
+                        " font-bold text-base lg:text-lg mb-3 lg:mb-4 " +
                         colorClasses.split(" ")[1] +
                         " pb-2";
                       const linkColorClass = colorClasses.split(" ")[2];
 
                       return (
                         <div key={menu.id} className="min-h-0">
-                          <Link
-                            href={menu.path}
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            <h3 className={headerColorClass}>{menu.title}</h3>
-                          </Link>
+                          <div className="min-h-10">
+                              <h3 className={headerColorClass}>{menu.title}</h3>
+                          </div>
 
                           <div className="space-y-3 lg:space-y-4">
                             {/* Direct items */}
@@ -290,22 +287,29 @@ const menuConfig = [
       {
         title: "Festivals & Get Togethers",
         items: [
-          { title: "Durga Pujo", path: "/events" },
+          { title: "Durga Puja", path: "/events" },
+          { title: "Lokkhi Pujo", path: "/events" },
+          { title: "Kali Pujo", path: "/events" },
+          { title: "Saraswati Pujo", path: "/events" },
+          { title: "Dol-Utsav", path: "/events" },
           { title: "Bongotsav", path: "/events/bongo-utsav" },
-          { title: "Lokkhi Pujo", path: "/events/bongo-utsav" },
-          { title: "Kali Pujo", path: "/events/bongo-utsav" },
-          { title: "Saraswati Pujo", path: "/events/bongo-utsav" },
-          { title: "Dol-utsav", path: "/events/bongo-utsav" },
-          { title: "Bongotsav", path: "/events/bongo-utsav" },
-          { title: "Annual Picnic", path: "/events/bongo-utsav" },
+          { title: "Annual Picnic", path: "/events" },
         ],
       },
+    ],
+  },
+  {
+    id: "bengali-culture",
+    title: "",
+    color: "green",
+    path: "/bengali-culture",
+    sections: [
       {
         title: "Talent & Culture",
         items: [
-          { title: "Bengali School - Kshology", path: "/bengali-school" },
+          { title: "Bengali School - Kishology", path: "/bengali-school" },
           { title: "Learning Grades", path: "/bengali-school#learning" },
-          { title: "Enrol in Kshology", path: "/bengali-school" },
+          { title: "Enrol in Kishology", path: "/bengali-school" },
           { title: "Know our Teachers", path: "/bengali-school#teachers" },
         ],
       },
@@ -321,6 +325,48 @@ const menuConfig = [
     ],
   },
   {
+    id: "bengali-culture",
+    title: "",
+    color: "green",
+    path: "/bengali-culture",
+    sections: [
+      {
+        title: "Media & Literature",
+        items: [
+          { title: "E-Magazine Ramdhanu", path: "/events#magazine" },
+          { title: "Photo Archives", path: "/events#photos" },
+          { title: "Print Media", path: "/events#print-media" },
+          { title: "TV Media", path: "/events#tv-media" },
+        ],
+      },
+      {
+        title: "Social Media",
+        items: [
+          {
+            title: "Facebook",
+            path: "https://www.facebook.com/bengaliassociationsa",
+            external: true,
+          },
+          {
+            title: "WhatsApp",
+            path: "https://wa.me/27795381768",
+            external: true,
+          },
+          {
+            title: "Instagram",
+            path: "https://www.instagram.com/bengaliassociationsa",
+            external: true,
+          },
+          {
+            title: "Twitter",
+            path: "https://twitter.com/bengaliassocsa",
+            external: true,
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "events",
     title: "Events",
     color: "blue",
@@ -330,47 +376,60 @@ const menuConfig = [
       { title: "Upcoming Events", path: "/events#upcoming" },
       { title: "RSVPs", path: "/events#rsvp" },
     ],
-    sections: [
+    // sections: [
+    //   {
+    //     title: "Media & Literature",
+    //     items: [
+    //       { title: "E-Magazine Ramdhanu", path: "/events#magazine" },
+    //       { title: "Photo Archives", path: "/events#photos" },
+    //       { title: "Print Media", path: "/events#print-media" },
+    //       { title: "TV Media", path: "/events#tv-media" },
+    //     ],
+    //   },
+    //   {
+    //     title: "Social Media",
+    //     items: [
+    //       {
+    //         title: "Facebook",
+    //         path: "https://www.facebook.com/bengaliassociationsa",
+    //         external: true,
+    //       },
+    //       {
+    //         title: "WhatsApp",
+    //         path: "https://wa.me/27795381768",
+    //         external: true,
+    //       },
+    //       {
+    //         title: "Instagram",
+    //         path: "https://www.instagram.com/bengaliassociationsa",
+    //         external: true,
+    //       },
+    //       {
+    //         title: "Twitter",
+    //         path: "https://twitter.com/bengaliassocsa",
+    //         external: true,
+    //       },
+    //     ],
+    //   },
+    // ],
+  },
+  {
+    id: "beyond-basa",
+    title: "Beyond BASA",
+    color: "yellow",
+    path: "/beyond-basa",
+    items: [
+      { title: "Outreach Programs", path: "/beyond-basa#outreach" },
+      { title: "Sponsors & Partners", path: "/beyond-basa#sponsors" },
+      { title: "Sponsor List", path: "/beyond-basa#sponsor-list" },
       {
-        title: "Media & Literature",
-        items: [
-          { title: "E-Magazine Ramdhanu", path: "#" },
-          { title: "Photo Archives", path: "#" },
-          { title: "Print Media", path: "#" },
-          { title: "TV Media", path: "#" },
-        ],
+        title: "Sponsorship Request",
+        path: "/beyond-basa#sponsorship-request",
       },
-      {
-        title: "Social Media",
-        items: [
-          { title: "Facebook", path: "https://facebook.com", external: true },
-          { title: "WhatsApp", path: "https://whatsapp.com", external: true },
-          { title: "Instagram", path: "https://instagram.com", external: true },
-          { title: "Twitter", path: "https://twitter.com", external: true },
-        ],
-      },
+      { title: "Enquiries", path: "/contact" },
+      { title: "BASA Business Exchange", path: "/bussiness-enquiry" },
     ],
   },
-  // {
-  //   id: "beyond-basa",
-  //   title: "Beyond BASA",
-  //   color: "yellow",
-  //   path: "/beyond-basa",
-  //   items: [
-  //     { title: "Outreach Programs", path: "/beyond-basa#outreach" },
-  //     { title: "Sponsors & Partners", path: "/beyond-basa#sponsors" },
-  //     { title: "Sponsor List", path: "/beyond-basa#sponsor-list" },
-  //     {
-  //       title: "Sponsorship Request",
-  //       path: "/beyond-basa#sponsorship-request",
-  //     },
-  //     { title: "Enquiries", path: "/contact" },
-  //     {
-  //       title: "BASA Business Exchange",
-  //       path: "/beyond-basa#business-exchange",
-  //     },
-  //   ],
-  // },
   {
     id: "join-basa",
     title: "Join BASA",
