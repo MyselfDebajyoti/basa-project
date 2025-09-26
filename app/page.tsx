@@ -1,10 +1,7 @@
-
-
 import Image from "next/image";
 import HeroImage from "@/components/durga/hero-image";
 
 export default function Home() {
-
   return (
     <div className="min-h-screen bg-white">
       {/* Full-Screen Dropdown Menu */}
@@ -14,11 +11,11 @@ export default function Home() {
       {/* Top Decorative Pattern */}
       <HeroImage />
 
-      <section className=" py-16 px-4 bg-white mt-10">
+      <section className="py-16 px-4 bg-white mt-10">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
-          <h2 className="text-2xl  text-gray-800 mb-12 text-left">
-            Get to the Buzz.
+          <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-12 text-left">
+            Get to the Buzz
           </h2>
 
           {/* Cards Grid */}
@@ -42,14 +39,13 @@ export default function Home() {
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
               <img
-                src="/assets/Group 1171275776.png"
+                src="/assets/Group 1171275771.png"
                 alt="Join our vibrant community"
                 className="block w-full h-auto"
               />
-
+              {/* public/assets/.png */}
               {/* Overlay */}
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
-
               {/* Content */}
             </div>
 
@@ -73,7 +69,7 @@ export default function Home() {
       <section className=" py-16 px-4 bg-white mt-10">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
-          <h2 className="text-2xl  text-gray-800 mb-12 text-left">
+          <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-12 text-left">
             Get to know us
           </h2>
 
@@ -129,105 +125,78 @@ export default function Home() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
-          <h2 className="text-2xl  text-gray-800 mb-16 text-left">
+          <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-16 text-left">
             Our Partners
           </h2>
 
           {/* Partners Grid - Row 1 */}
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
-            {/* Travel Partner */}
-            <div className="text-center">
-              <h3 className="text-sm font-semibold text-gray-700 mb-4">
-                Travel Partner
-              </h3>
-              <div className="flex flex-col space-y-4">
-                <div className="h-16 flex items-center justify-center">
-                  <img
-                    src="/icons/24hrs.svg"
-                    alt="Travel Partner"
-                    className="max-h-full max-w-full object-contain"
-                  />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12 place-items-center">
+            {[
+              {
+                title: "Travel Partner",
+                logos: [
+                  { src: "/icons/24hrs.svg", alt: "Travel Partner" },
+                  { src: "/icons/quatar.svg", alt: "Qatar Airways" },
+                ],
+              },
+              {
+                title: "Media Partner",
+                logos: [{ src: "/icons/zee.svg", alt: "Zee Africa" }],
+              },
+              {
+                title: "Banking Partner",
+                logos: [
+                  { src: "/icons/sbi-bank.svg", alt: "SBI South Africa" },
+                ],
+              },
+              {
+                title: "Breakfast Partner",
+                logos: [{ src: "/icons/kellogs.svg", alt: "Kellogg's" }],
+              },
+              {
+                title: "Retail Partner",
+                logos: [
+                  { src: "/icons/india-bazaar.svg", alt: "India Bazaar" },
+                  { src: "/icons/chopees.png", alt: "Chopees" },
+                ],
+              },
+            ].map((partner, index) => (
+              <div key={index} className="text-center w-full">
+                <h3 className="text-xs sm:text-sm font-semibold text-gray-700 mb-3 sm:mb-4">
+                  {partner.title}
+                </h3>
+                <div
+                  className={`${
+                    partner.logos.length > 1
+                      ? "flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center"
+                      : "flex items-center justify-center"
+                  }`}
+                >
+                  {partner.logos.map((logo, logoIndex) => (
+                    <div
+                      key={logoIndex}
+                      className="h-10 sm:h-12 w-full max-w-[80px] sm:max-w-[100px] flex items-center justify-center"
+                    >
+                      <img
+                        src={logo.src}
+                        alt={logo.alt}
+                        className="max-h-full max-w-full object-contain"
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
-            <div className="text-center">
-              <h3 className="text-sm font-semibold text-gray-700 mb-4">
-                Travel Partner
-              </h3>
-              <div className="h-16 flex items-center justify-center">
-                <img
-                  src="/icons/quatar.svg"
-                  alt="Qatar Airways"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            {/* Media Partner */}
-            <div className="text-center">
-              <h3 className="text-sm font-semibold text-gray-700 mb-4">
-                Media Partner
-              </h3>
-              <div className="h-16 flex items-center justify-center">
-                <img
-                  src="/icons/zee.svg"
-                  alt="Zee Africa"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            {/* Banking Partner */}
-            <div className="text-center">
-              <h3 className="text-sm font-semibold text-gray-700 mb-4">
-                Banking Partner
-              </h3>
-              <div className="h-16 flex items-center justify-center">
-                <img
-                  src="/icons/sbi-bank.svg"
-                  alt="SBI South Africa"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            {/* Breakfast Partner */}
-            <div className="text-center">
-              <h3 className="text-sm font-semibold text-gray-700 mb-4">
-                Breakfast Partner
-              </h3>
-              <div className="h-16 flex items-center justify-center">
-                <img
-                  src="/icons/kellogs.svg"
-                  alt="Kellogg's"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            {/* Retail Partner */}
-            <div className="text-center">
-              <h3 className="text-sm font-semibold text-gray-700 mb-4">
-                Retail Partner
-              </h3>
-              <div className="h-16 flex items-center justify-center">
-                <img
-                  src="/icons/india-bazaar.svg"
-                  alt="India Bazaar"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
+            ))}
           </div>
 
           {/* Partners Grid - Row 2 */}
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 place-items-center">
             {/* Sponsor */}
-            <div className="text-center">
-              <h3 className="text-sm font-semibold text-gray-700 mb-4">
+            <div className="text-center w-full">
+              <h3 className="text-xs sm:text-sm font-semibold text-gray-700 mb-3 sm:mb-4">
                 Sponsor
               </h3>
-              <div className="h-16 flex items-center justify-center">
+              <div className="h-12 sm:h-16 flex items-center justify-center">
                 <img
                   src="/icons/Jindal Steel Logo 2025 1.svg"
                   alt="Jindal Steel"
@@ -237,11 +206,11 @@ export default function Home() {
             </div>
 
             {/* Radio Partner */}
-            <div className="text-center">
-              <h3 className="text-sm font-semibold text-gray-700 mb-4">
+            <div className="text-center w-full">
+              <h3 className="text-xs sm:text-sm font-semibold text-gray-700 mb-3 sm:mb-4">
                 Radio Partner
               </h3>
-              <div className="h-16 flex items-center justify-center">
+              <div className="h-12 sm:h-16 flex items-center justify-center">
                 <img
                   src="/icons/friendsfm.svg"
                   alt="Friends FM 91.9"
@@ -251,11 +220,11 @@ export default function Home() {
             </div>
 
             {/* Television Partner */}
-            <div className="text-center">
-              <h3 className="text-sm font-semibold text-gray-700 mb-4">
+            <div className="text-center w-full">
+              <h3 className="text-xs sm:text-sm font-semibold text-gray-700 mb-3 sm:mb-4">
                 Television Partner
               </h3>
-              <div className="h-16 flex items-center justify-center">
+              <div className="h-12 sm:h-16 flex items-center justify-center">
                 <img
                   src="/icons/rBangla.svg"
                   alt="R Bangla"
@@ -265,11 +234,11 @@ export default function Home() {
             </div>
 
             {/* Branding Partner */}
-            <div className="text-center">
-              <h3 className="text-sm font-semibold text-gray-700 mb-4">
+            <div className="text-center w-full">
+              <h3 className="text-xs sm:text-sm font-semibold text-gray-700 mb-3 sm:mb-4">
                 Branding Partner
               </h3>
-              <div className="h-16 flex items-center justify-center">
+              <div className="h-12 sm:h-16 flex items-center justify-center">
                 <img
                   src="/icons/min-design.svg"
                   alt="Min Design Studio"
@@ -279,11 +248,11 @@ export default function Home() {
             </div>
 
             {/* CSR Partner */}
-            <div className="text-center">
-              <h3 className="text-sm font-semibold text-gray-700 mb-4">
+            <div className="text-center w-full">
+              <h3 className="text-xs sm:text-sm font-semibold text-gray-700 mb-3 sm:mb-4">
                 CSR Partner
               </h3>
-              <div className="h-16 flex items-center justify-center">
+              <div className="h-12 sm:h-16 flex items-center justify-center">
                 <img
                   src="/icons/ibanita.svg"
                   alt="Imbanita"
@@ -294,10 +263,46 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Friends of the Association Section */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
-          <h2 className="text-2xl text-gray-800 mb-12 text-left">
+          <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-12 text-left">
+            Friends of the Association
+          </h2>
+
+          {/* Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Left Column - Description */}
+            <div className="space-y-6">
+              <p className="text-gray-700 leading-relaxed">
+                The Bengali Association of South Africa would like to sincerely
+                acknowledge the help and generosity of the following individuals
+                who have supported us since our inception. Your unwavering
+                encouragement through thick and thin is deeply appreciated and
+                warmly remembered.
+              </p>
+            </div>
+
+            {/* Right Column - Names */}
+            <div className="space-y-4">
+              <div className="text-gray-800">
+                <strong>Shree Kiritbhai Acharya & Smt. Neelam Acharya</strong>
+              </div>
+              <div className="text-gray-800">
+                <strong>Mr. Ashok Jain & Mrs. Kavita Jain</strong>
+              </div>
+              <div className="text-gray-800">
+                <strong>Mr. Ravi Tripathi & Mrs. Banti Tripathi.</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Title */}
+          <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-12 text-left">
             Latest Events
           </h2>
 
@@ -320,6 +325,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* Footer */}
       <footer className="bg-white py-12 mt-5">
         <div className="max-w-7xl mx-auto px-4 text-center">

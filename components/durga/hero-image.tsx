@@ -10,11 +10,11 @@ const images = [
     alt: "Bengali School Image 1",
   },
   {
-    src: "/images/Home Page -Carousel Image 2.png",
+    src: "/images/image-3.png",
     alt: "Bengali School Image 2",
   },
   {
-    src: "/images/image-3.png",
+    src: "/images/image-2.png",
     alt: "Bengali School Image 3",
   },
 ];
@@ -22,7 +22,7 @@ const images = [
 export default function HeroImage() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
-  // Auto-advance slides every 5 seconds
+  // Auto-advance slides every 10 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex((i) => (i + 1) % images.length);
@@ -41,7 +41,7 @@ export default function HeroImage() {
 
   return (
     <div className="relative w-full overflow-hidden">
-      <figure className="border border-[color:var(--brand-muted)] bg-background">
+      <figure className="">
         <div className="w-full overflow-hidden">
           {/* Track: width = images.length * 100% */}
           <div
