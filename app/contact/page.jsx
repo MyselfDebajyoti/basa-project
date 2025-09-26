@@ -7,10 +7,10 @@ import { ClipboardCheck, Copy } from "lucide-react";
 // import BreadcrumbTrail from "@/components/BreadcrumbTrail";
 
 function ContactUsPage() {
-  const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Contact Us", current: true },
-  ];
+  // const breadcrumbItems = [
+  //   { label: "Home", href: "/" },
+  //   { label: "Contact Us", current: true },
+  // ];
   const [copied, setCopied] = useState({ email: false, phone: false });
 
   const copyToClipboard = (text, key) => {
