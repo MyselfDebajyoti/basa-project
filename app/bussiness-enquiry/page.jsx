@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 import { PujoSidebar } from "@/components/durga/pujo-sidebar";
-import { BreadcrumbTrail } from "@/components/durga/breadcrumb-trail";
+// import { BreadcrumbTrail } from "@/components/durga/breadcrumb-trail";
 import { BusinessEnquiryBody } from "@/components/business-enquiry/body";
 
 const sidebarItems = [
@@ -13,11 +13,11 @@ const sidebarItems = [
   { label: "Back to Top", href: "" },
 ];
 
-const breadcrumbItems = [
-  { label: "Home", href: "/" },
-  { label: "Bengali Culture", href: "/bengali-culture" },
-  { label: "Business Enquiry", current: true },
-];
+// const breadcrumbItems = [
+//   { label: "Home", href: "/" },
+//   { label: "Bengali Culture", href: "/bengali-culture" },
+//   { label: "Business Enquiry", current: true },
+// ];
 
 const palette = {
   "--brand-primary": "#264653",

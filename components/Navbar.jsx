@@ -12,11 +12,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  // Hide navbar on admin pages
-  if (pathname.startsWith("/admin")) {
-    return null;
-  }
-
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -44,6 +39,11 @@ const Navbar = () => {
       document.body.style.overflow = "unset";
     };
   }, [isMenuOpen]);
+
+  // Hide navbar on admin pages - moved after hooks
+  if (pathname.startsWith("/admin")) {
+    return null;
+  }
 
   const getColorClasses = (color) => {
     const colorMap = {

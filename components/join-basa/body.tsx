@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import MembershipForm from "../MemberShipForm";
 
 export function JoinBasaBody() {
@@ -120,7 +120,7 @@ export function JoinBasaBody() {
                     <span>
                       <strong>Newsletter & Updates:</strong> Stay informed about
                       upcoming events, news, activities, and community
-                      initiatives through BASA's regular communications
+                      initiatives through BASA&apos;s regular communications
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -213,8 +213,8 @@ export function JoinBasaBody() {
               >
                 bsamemberinfo@basa.com
               </a>{" "}
-              or WhatsApp to +27 79 538 1768. Please use "BASA Annual
-              Membership" as the subject of the communication.
+              or WhatsApp to +27 79 538 1768. Please use &quot;BASA Annual
+              Membership&quot; as the subject of the communication.
             </p>
 
             <div className=" gap-8">

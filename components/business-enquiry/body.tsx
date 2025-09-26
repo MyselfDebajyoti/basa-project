@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 
 export function BusinessEnquiryBody() {
   return (
@@ -61,9 +61,9 @@ export function BusinessEnquiryBody() {
                 collaborations that strengthen both individual ventures and the
                 wider community. Whether you run a small business, represent a
                 corporate enterprise, or offer specialised professional
-                services, BASA's platform can help you connect with potential
-                clients, partners, and collaborators across South Africa and
-                beyond.
+                services, BASA&apos;s platform can help you connect with
+                potential clients, partners, and collaborators across South
+                Africa and beyond.
               </p>
             </div>
 
