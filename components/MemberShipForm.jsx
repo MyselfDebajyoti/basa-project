@@ -71,9 +71,9 @@ const MembershipForm = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white">
+    <div className="max-w-2xl bg-white">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">
+        <h1 className="text-xl font-bold text-gray-900 mb-4">
           Membership Enquiry
         </h1>
         <p className="text-gray-600 text-lg">
