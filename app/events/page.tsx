@@ -8,6 +8,12 @@ import { PujoBody } from "@/components/durga/pujo-body";
 const sidebarItems = [
   { label: "Durga Pujo", href: "#", active: true },
   { label: "Bongo Utsav", href: "/events/bongo-utsav" },
+  { label: "Annual Picnic", href: "/events/bongo-utsav" },
+  { label: "Lokkhi Pujo", href: "/events/bongo-utsav" },
+  { label: "Saraswati Pujo", href: "/events/bongo-utsav" },
+  { label: "Kali Pujo", href: "/events/bongo-utsav" },
+  { label: "Dol Utsab", href: "/events/bongo-utsav" },
+  // { label: "Back to Top", href: "" },
   { label: "Back to Top", href: "" },
 ];
 
