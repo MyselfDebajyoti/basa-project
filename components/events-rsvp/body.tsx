@@ -5,8 +5,8 @@ import RsvpForm from "../RsvpForm";
 
 const breadcrumbItems = [
   { label: "Home", href: "/" },
-  { label: "Bengali Culture", href: "/events/bongo-utsav" },
-  { label: "Talent & Culture ", current: true },
+//   { label: "Bengali Culture", href: "/events/bongo-utsav" },
+  { label: "RSVP", current: true },
 ];
 
 export function EventsBody() {

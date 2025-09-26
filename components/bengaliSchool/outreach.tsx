@@ -12,8 +12,8 @@ const committeeMembers: CommitteeMember[] = [
   {
     name: "Mrs. Sudeshna Ghatak",
     description: ["Pujo Committee", "Co-ordinator"],
-    imageQuery: "Mrs. Sudeshna Ghatak portrait",
-    imageUrl: "/flags/Screenshot 2025-09-15 at 15.31.16 1.svg",
+    imageQuery: "South African",
+    imageUrl: "/flags/southafrica.png",
   },
   {
     name: "Mrs. Annapurna Hazra",
@@ -37,7 +37,7 @@ const committeeMembers: CommitteeMember[] = [
     name: "Mrs. Sayantani Chatterjee",
     description: ["Co-ordinator,", "Bhog Prep."],
     imageQuery: "Mrs. Sayantani Chatterjee portrait",
-    imageUrl: "/flags/Screenshot 2025-09-15 at 15.33.49 2.svg",
+    imageUrl: "/flags/Zambia.png",
   },
   {
     name: "Mrs. Sayantani Chatterjee",
@@ -63,13 +63,21 @@ export function Outreach({ className }: PujoCommitteeProps) {
         {committeeMembers.map((member) => {
           const imageSrc = member.imageUrl;
           return (
-            <div key={member.name} className="bg-background p-4 ">
-              <Image
+            <div
+              key={member.name}
+              className="bg-background bg-black w-24 h-24 flex justify-center items-center rounded-full "
+            >
+              {/* <Image
                 src={imageSrc || "/placeholder.svg"}
                 alt={`${member.name} portrait`}
-                width={96}
-                height={96}
+                // width={96}
+                // height={96}
                 className="h-24 w-24  object-contain"
+              /> */}
+              <img
+                src={imageSrc || "/placeholder.svg"}
+                className="w-24 h-24 object-cover rounded-full"
+                alt=""
               />
             </div>
           );

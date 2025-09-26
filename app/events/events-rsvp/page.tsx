@@ -7,13 +7,13 @@ import { BongoUtsavBody } from "@/components/durga/bong-utsav-body";
 import { EventsBody } from "@/components/events-rsvp/body";
 
 const sidebarItems = [
-  { label: "Durga Pujo", href: "/events" },
-  { label: "Bongo-Utsab", href: "#bongo-utsab", active: true },
-  { label: "Annual Picnic", href: "#annual-picnic" },
-  { label: "Lokkhi Pujo", href: "#lokkhi-pujo" },
-  { label: "Dol Utsav", href: "#dol-utsab" },
-  { label: "Saraswati Pujo", href: "#saraswati-pujo" },
-  { label: "Kali Pujo", href: "#kali-pujo" },
+  // { label: "Durga Pujo", href: "/events" },
+  // { label: "Bongo-Utsab", href: "#bongo-utsab", active: true },
+  // { label: "Annual Picnic", href: "#annual-picnic" },
+  // { label: "Lokkhi Pujo", href: "#lokkhi-pujo" },
+  // { label: "Dol Utsav", href: "#dol-utsab" },
+  // { label: "Saraswati Pujo", href: "#saraswati-pujo" },
+  // { label: "Kali Pujo", href: "#kali-pujo" },
   { label: "Back to Top", href: "" },
 ];
 
