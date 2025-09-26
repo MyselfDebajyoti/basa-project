@@ -11,7 +11,7 @@ export function DurgaScheduleFigure() {
       <figure className=" border border-[color:var(--brand-muted)] bg-background ">
         <div className="overflow-hidden rounded-lg">
           <Image
-            src="/images/Rectangle 465.svg"
+            src="/images/event-page.png"
             alt="Durga Pujo event schedule with three illustrated cards for Maha Sashthi, Maha Ashtami, and Maha Nabami rituals."
             width={800}
             height={460}
