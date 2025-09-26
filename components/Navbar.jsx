@@ -230,7 +230,7 @@ const Navbar = () => {
                                 <h4 className="font-semibold text-gray-800 mb-2 text-sm lg:text-base">
                                   {section.title}
                                 </h4>
-                                <ul className="space-y-1 font-light text-sm ml-2">
+                                <ul className="space-y-1 font-light text-sm ">
                                   {section.items.map((item) => (
                                     <li key={item.title}>
                                       {renderMenuItem(item, colorStyles)}
