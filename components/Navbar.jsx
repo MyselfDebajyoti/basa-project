@@ -290,8 +290,14 @@ const menuConfig = [
       {
         title: "Festivals & Get Togethers",
         items: [
-          { title: "Durga Puja", path: "/events" },
+          { title: "Durga Pujo", path: "/events" },
           { title: "Bongotsav", path: "/events/bongo-utsav" },
+          { title: "Lokkhi Pujo", path: "/events/bongo-utsav" },
+          { title: "Kali Pujo", path: "/events/bongo-utsav" },
+          { title: "Saraswati Pujo", path: "/events/bongo-utsav" },
+          { title: "Dol-utsav", path: "/events/bongo-utsav" },
+          { title: "Bongotsav", path: "/events/bongo-utsav" },
+          { title: "Annual Picnic", path: "/events/bongo-utsav" },
         ],
       },
       {
@@ -324,26 +330,26 @@ const menuConfig = [
       { title: "Upcoming Events", path: "/events#upcoming" },
       { title: "RSVPs", path: "/events#rsvp" },
     ],
-    // sections: [
-    //   {
-    //     title: "Media & Literature",
-    //     items: [
-    //       { title: "E-Magazine Ramdhanu", path: "/events#magazine" },
-    //       { title: "Photo Archives", path: "/events#photos" },
-    //       { title: "Print Media", path: "/events#print-media" },
-    //       { title: "TV Media", path: "/events#tv-media" },
-    //     ],
-    //   },
-    //   {
-    //     title: "Social Media",
-    //     items: [
-    //       { title: "Facebook", path: "https://facebook.com", external: true },
-    //       { title: "WhatsApp", path: "https://whatsapp.com", external: true },
-    //       { title: "Instagram", path: "https://instagram.com", external: true },
-    //       { title: "Twitter", path: "https://twitter.com", external: true },
-    //     ],
-    //   },
-    // ],
+    sections: [
+      {
+        title: "Media & Literature",
+        items: [
+          { title: "E-Magazine Ramdhanu", path: "#" },
+          { title: "Photo Archives", path: "#" },
+          { title: "Print Media", path: "#" },
+          { title: "TV Media", path: "#" },
+        ],
+      },
+      {
+        title: "Social Media",
+        items: [
+          { title: "Facebook", path: "https://facebook.com", external: true },
+          { title: "WhatsApp", path: "https://whatsapp.com", external: true },
+          { title: "Instagram", path: "https://instagram.com", external: true },
+          { title: "Twitter", path: "https://twitter.com", external: true },
+        ],
+      },
+    ],
   },
   // {
   //   id: "beyond-basa",
@@ -380,7 +386,7 @@ const menuConfig = [
 // Main navigation items (shown in desktop nav)
 const mainNavItems = [
   { title: "Our Story", path: "/our-story" },
-  { title: "Durga Puja", path: "/events" },
+  { title: "Durga Pujo", path: "/events" },
   { title: "Bengali School", path: "/bengali-school" },
   // { title: "Event Calendar", path: "/events#calendar" },
   // { title: "Social Responsibilities", path: "/beyond-basa#outreach" },
