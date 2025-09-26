@@ -1,5 +1,7 @@
 import Image from "next/image";
 import HeroImage from "@/components/durga/hero-image";
+import { PrintMedia } from "@/components/durga/print-media";
+import { TVMedia } from "@/components/durga/tv-media";
 
 export default function Home() {
   return (
@@ -325,7 +327,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <section className="py-16 px-4 bg-white max-w-7xl mx-auto">
+        <PrintMedia className="" />
+      </section>
+      <section className="py-16 px-4 bg-white max-w-7xl mx-auto">
+        <TVMedia className="" />
+      </section>
       {/* Footer */}
       <footer className="bg-white py-12 mt-5">
         <div className="max-w-7xl mx-auto px-4 text-center">

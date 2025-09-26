@@ -11,7 +11,9 @@
     font-family: var(--font-noto-sans), system-ui, sans-serif;
   }
 }
-
+*{
+  font-family: 'Noto Sans', sans-serif;
+}
 
 
 @layer base {
