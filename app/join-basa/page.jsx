@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 import { PujoSidebar } from "@/components/durga/pujo-sidebar";
-import { BreadcrumbTrail } from "@/components/durga/breadcrumb-trail";
+// import { BreadcrumbTrail } from "@/components/durga/breadcrumb-trail";
 import { JoinBasaBody } from "@/components/join-basa/body";
 
 const sidebarItems = [
@@ -13,10 +13,10 @@ const sidebarItems = [
   { label: "Back to Top", href: "" },
 ];
 
-const breadcrumbItems = [
-  { label: "Home", href: "/" },
-  { label: "Join BASA", current: true },
-];
+// const breadcrumbItems = [
+//   { label: "Home", href: "/" },
+//   { label: "Join BASA", current: true },
+// ];
 
 const palette = {
   "--brand-primary": "#264653",
