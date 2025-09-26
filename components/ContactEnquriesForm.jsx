@@ -81,11 +81,11 @@ const ContactEnquiriesForm = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white">
+    <div className="max-w-lg  p-6 pl-0 pt-0 md:p-0 bg-white">
       <div className="mb-8">
-        <p className="text-gray-600 text-lg">
+        {/* <p className="text-gray-600 text-sm">
           Fill up the below query form. Our team will get back to you.
-        </p>
+        </p> */}
       </div>
 
       {/* Success/Error Message */}
@@ -110,7 +110,7 @@ const ContactEnquiriesForm = () => {
             placeholder="Name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
+            className="w-full px-4 py-4 text-sm border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             required
             disabled={isSubmitting}
           />
@@ -124,7 +124,7 @@ const ContactEnquiriesForm = () => {
             placeholder="Contact Number"
             value={formData.contactNumber}
             onChange={handleChange}
-            className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
+            className="w-full px-4 py-4 text-sm border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             required
             disabled={isSubmitting}
           />
@@ -138,7 +138,7 @@ const ContactEnquiriesForm = () => {
             placeholder="Email (Optional)"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
+            className="w-full px-4 py-4 text-sm border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400"
             disabled={isSubmitting}
           />
         </div>
@@ -148,7 +148,7 @@ const ContactEnquiriesForm = () => {
           <button
             type="button"
             onClick={() => !isSubmitting && setIsDropdownOpen(!isDropdownOpen)}
-            className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors text-left flex justify-between items-center"
+            className="w-full px-4 py-4 text-sm border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors text-left flex justify-between items-center"
             disabled={isSubmitting}
           >
             <span
@@ -206,7 +206,7 @@ const ContactEnquiriesForm = () => {
             value={formData.message}
             onChange={handleChange}
             rows={8}
-            className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400 resize-vertical"
+            className="w-full px-4 py-4 text-sm border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400 resize-vertical"
             required
             disabled={isSubmitting}
           />
@@ -217,7 +217,7 @@ const ContactEnquiriesForm = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`font-semibold text-xl px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl ${
+            className={`font-semibold text-sm px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl ${
               isSubmitting
                 ? "bg-gray-400 cursor-not-allowed text-white"
                 : "bg-red-400 hover:bg-red-500 text-white"

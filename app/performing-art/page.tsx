@@ -1,15 +1,16 @@
+"use client";
 import type { CSSProperties } from "react";
+import { useState, useEffect } from "react";
 
 import { PujoSidebar } from "@/components/durga/pujo-sidebar";
-
 import { Body } from "@/components/performingArts/artsBody";
 
 const sidebarItems = [
   { label: "Performing Art", href: "#", active: true },
-  { label: "Dance", href: "#" },
-  { label: "Elocution", href: "#" },
-  { label: "Singing", href: "#" },
-  { label: "Drama", href: "#" },
+  { label: "Dance", href: "#dance" },
+  { label: "Elocution", href: "#elocution" },
+  { label: "Singing", href: "#singing" },
+  { label: "Drama", href: "#drama" },
 ];
 
 const palette = {
@@ -20,14 +21,78 @@ const palette = {
 } as CSSProperties;
 
 export default function Page() {
+  const [activeSection, setActiveSection] = useState<string>("#");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = [
+        { id: "#", element: document.querySelector("main") },
+        { id: "#dance", element: document.getElementById("dance") },
+        { id: "#elocution", element: document.getElementById("elocution") },
+        { id: "#singing", element: document.getElementById("singing") },
+        { id: "#drama", element: document.getElementById("drama") },
+      ];
+
+      const scrollPosition = window.scrollY + 100; // Offset for better UX
+
+      // Find the section that's currently in view
+      let currentSection = "#"; // Default to first section
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section.element) {
+          const sectionTop = section.element.offsetTop;
+          if (scrollPosition >= sectionTop) {
+            currentSection = section.id;
+            break;
+          }
+        }
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Call once to set initial state
+    handleScroll();
+
+    // Cleanup
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Update sidebar items with current active state
+  const updatedSidebarItems = sidebarItems.map((item) => ({
+    ...item,
+    active: item.href === activeSection,
+  }));
+
+  const handleSidebarClick = (href: string) => {
+    if (href === "#") {
+      // Scroll to main section (top)
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    // Handle section navigation
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <main className="bg-background">
       <section className="mx-auto max-w-6xl py-12 md:py-16">
         <div style={palette} className="flex flex-col gap-8 md:gap-10">
           {/* <BreadcrumbTrail items={breadcrumbItems} /> */}
           <div className="flex flex-col gap-12 md:grid md:grid-cols-[200px_1fr] md:gap-14">
-            <PujoSidebar items={sidebarItems} />
-            <Body></Body>
+            <PujoSidebar
+              items={updatedSidebarItems}
+              onItemClick={handleSidebarClick}
+            />
+            <Body />
           </div>
         </div>
       </section>

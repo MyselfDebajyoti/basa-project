@@ -938,6 +938,7 @@ import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
+import HeroImage from "@/components/durga/hero-image";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -1266,87 +1267,8 @@ export default function Home() {
       {/* Header/Navbar */}
 
       {/* Top Decorative Pattern */}
-      <div className="h-12 relative overflow-hidden">
-        <img
-          src="/images/Group 1171275754.png"
-          alt="Top decorative pattern"
-          className="w-full h-full object-cover"
-        />
-      </div>
+      <HeroImage />
 
-      {/* Main Content */}
-      <main className="pt-10 px-4 ">
-        <div className="max-w-7xl mx-auto text-center">
-          {/* Bengali Text */}
-          <h1 className="text-2xl md:text-4xl text-blue-600 font-medium mb-8">
-            বাঙালি ভাষার আলোর ঢেউ, বাঙালি হৃদয় তুমি...
-          </h1>
-
-          {/* Event Information */}
-          <div className="text-right mb-12 max-w-md ml-auto">
-            <div className="text-3xl font-bold text-red-600 mb-2">
-              3rd, 4th & 5th Oct
-            </div>
-            <div className="text-xl font-semibold text-gray-800 mb-1">
-              Shree Radhe Shyam
-            </div>
-            <div className="text-xl font-semibold text-gray-800 mb-3">
-              Mandir Complex, Sandton
-            </div>
-            <div className="text-base text-gray-600">
-              2 Gilla Crescent, Marlboro
-            </div>
-            <div className="text-base text-gray-600">
-              Gardens, Sandton, 2063
-            </div>
-          </div>
-
-          {/* Central Emblems - Much Larger */}
-          <div className="flex justify-center items-end space-x-8 lg:space-x-16">
-            {/* Left Emblem */}
-            <div className="relative w-80 h-96 lg:w-96 lg:h-[500px]">
-              <Image
-                src="/images/Group 1171275750 (1).png"
-                alt="Sharadotsav 2025 Emblem"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-
-            {/* Center Emblem (Largest) */}
-            <div className="relative w-96 h-[500px] lg:w-[450px] lg:h-[600px]">
-              <Image
-                src="/images/Group 1171275750 (1).png"
-                alt="Maa Aaschen Emblem"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-
-            {/* Right Emblem */}
-            <div className="relative w-80 h-96 lg:w-96 lg:h-[500px]">
-              <Image
-                src="/images/Group 1171275750 (1).png"
-                alt="Durga 2025 Emblem"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </main>
-
-      {/* Bottom Decorative Pattern */}
-      <div className="h-12 relative overflow-hidden ">
-        <img
-          src="/images/Group 1171275754.png"
-          alt="Bottom decorative pattern"
-          className="w-full h-full object-cover"
-        />
-      </div>
       <section className=" py-16 px-4 bg-white mt-10">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}

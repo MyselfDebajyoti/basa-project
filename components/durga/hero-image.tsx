@@ -103,15 +103,15 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
   {
-    src: "/images/image 116.svg",
+    src: "/images/Home Page -Carousel Image 1.png",
     alt: "Bengali School Image 1",
   },
   {
-    src: "/images/image 114.svg",
+    src: "/images/Home Page -Carousel Image 2.png",
     alt: "Bengali School Image 2",
   },
   {
-    src: "/images/image 119.svg",
+    src: "/images/Home Page -Carousel Image 3.png",
     alt: "Bengali School Image 3",
   },
 ];
@@ -137,7 +137,7 @@ export default function HeroImage() {
   const translatePercentage = activeIndex * (100 / images.length);
 
   return (
-    <div className=" px-5relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden">
       <figure className="border border-[color:var(--brand-muted)] bg-background">
         <div className="w-full overflow-hidden">
           {/* Track: width = images.length * 100% */}

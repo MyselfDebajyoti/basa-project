@@ -16,7 +16,10 @@ export function BongoUtsavBody() {
       <header className="flex flex-col gap-2">
         <BreadcrumbTrail items={breadcrumbItems}></BreadcrumbTrail>
 
-        <h1 className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance">
+        <h1
+          className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance"
+          id="bongo-utsab"
+        >
           Bongo Utsav
         </h1>
       </header>
@@ -47,16 +50,39 @@ export function BongoUtsavBody() {
       </div>
       <PujoCommittee className="mt-12" /> */}
       <BongoUtsav className="mt-12" />
-      <h1 className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance">
-        Bongo Utsav
+      <h1
+        className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance"
+        id="annual-picnic"
+      >
+        Annual Picnic
       </h1>
       <BongoUtsav className="mt-12" />
-      <h1 className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance">
-        Bongo Utsav
+      <h1
+        className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance"
+        id="lokkhi-pujo"
+      >
+        Lokkhi Pujo
       </h1>
       <BongoUtsav className="mt-12" />
-      <h1 className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance">
-        Bongo Utsav
+      <h1
+        className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance"
+        id="saraswati-pujo"
+      >
+        Saraswati Pujo
+      </h1>
+      <BongoUtsav className="mt-12" />
+      <h1
+        className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance"
+        id="kali-pujo"
+      >
+        Kali Pujo
+      </h1>
+      <BongoUtsav className="mt-12" />
+      <h1
+        className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance"
+        id="dol-utsab"
+      >
+        Dol Utsav
       </h1>
       <BongoUtsav className="mt-12" />
     </div>

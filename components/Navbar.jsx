@@ -47,10 +47,10 @@ const menuConfig = [
       {
         title: "Performing Arts",
         items: [
-          { title: "Dance", path: "/performing-art" },
-          { title: "Elocution", path: "/performing-art" },
-          { title: "Singing", path: "/performing-art" },
-          { title: "Drama", path: "/performing-art" },
+          { title: "Dance", path: "/performing-art#dance" },
+          { title: "Elocution", path: "/performing-art#elocution" },
+          { title: "Singing", path: "/performing-art#singing" },
+          { title: "Drama", path: "/performing-art#drama" },
         ],
       },
     ],
@@ -124,8 +124,8 @@ const mainNavItems = [
   { title: "Our Story", path: "/our-story" },
   { title: "Durga Puja", path: "/events" },
   { title: "Bengali School", path: "/bengali-school" },
-  { title: "Event Calendar", path: "/events#calendar" },
-  { title: "Social Responsibilities", path: "/beyond-basa#outreach" },
+  // { title: "Event Calendar", path: "/events#calendar" },
+  // { title: "Social Responsibilities", path: "/beyond-basa#outreach" },
   { title: "Join BASA", path: "/join-basa" },
   { title: "Contact Us", path: "/contact" },
 ];
@@ -141,7 +141,7 @@ const Navbar = () => {
 
   const getColorClasses = (color) => {
     const colorMap = {
-      red: "text-red-600 border-red-200 hover:text-red-600",
+      red: "text-[#FE0000]  hover:text-red-600",
       green: "text-green-600 border-green-200 hover:text-green-600",
       blue: "text-blue-600 border-blue-200 hover:text-blue-600",
       yellow: "text-yellow-600 border-yellow-200 hover:text-yellow-600",
