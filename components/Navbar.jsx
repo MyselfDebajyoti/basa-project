@@ -204,7 +204,7 @@ const Navbar = () => {
                           <div className="min-h-10">
                             {menu.title && (
                               <h3
-                                className="font-bold text-base lg:text-lg mb-3 lg:mb-4 pb-2"
+                                className="font-semibold text-base lg:text-lg mb-3 lg:mb-4 pb-2"
                                 style={colorStyles.headerStyle}
                               >
                                 {menu.title}
