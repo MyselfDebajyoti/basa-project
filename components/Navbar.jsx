@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -15,11 +15,11 @@ const menuConfig = [
     color: "red",
     path: "/our-story",
     items: [
-      { title: "History", path: "/our-story#history" },
-      { title: "Mission & Vision", path: "/our-story#mission-vision" },
+      { title: "History", path: "/our-story" },
+      { title: "Mission & Vision", path: "/our-story#mission" },
       { title: "Eminent Members", path: "/our-story#eminent-members" },
       { title: "Patron Messages", path: "/our-story#patron-messages" },
-      { title: "Current Ex-Co", path: "/exco" },
+      { title: "Current Ex-Co", path: "/our-story/current-exco" },
     ],
   },
   {
@@ -31,26 +31,26 @@ const menuConfig = [
       {
         title: "Festivals & Get Togethers",
         items: [
-          { title: "Durga Puja", path: "/bengali-culture#durga-puja" },
-          { title: "Bongotsav", path: "/bengali-culture#bongotsav" },
+          { title: "Durga Puja", path: "/events" },
+          { title: "Bongotsav", path: "/events/bongo-utsav" },
         ],
       },
       {
         title: "Talent & Culture",
         items: [
           { title: "Bengali School - Kshology", path: "/bengali-school" },
-          { title: "Learning Grades", path: "/bengali-school#learning-grades" },
-          { title: "Enrol in Kshology", path: "/bengali-school#enrol" },
+          { title: "Learning Grades", path: "/bengali-school#learning" },
+          { title: "Enrol in Kshology", path: "/bengali-school" },
           { title: "Know our Teachers", path: "/bengali-school#teachers" },
         ],
       },
       {
         title: "Performing Arts",
         items: [
-          { title: "Dance", path: "/bengali-culture#dance" },
-          { title: "Elocution", path: "/bengali-culture#elocution" },
-          { title: "Singing", path: "/bengali-culture#singing" },
-          { title: "Drama", path: "/bengali-culture#drama" },
+          { title: "Dance", path: "/performing-art#dance" },
+          { title: "Elocution", path: "/performing-art#elocution" },
+          { title: "Singing", path: "/performing-art#singing" },
+          { title: "Drama", path: "/performing-art#drama" },
         ],
       },
     ],
@@ -65,47 +65,47 @@ const menuConfig = [
       { title: "Upcoming Events", path: "/events#upcoming" },
       { title: "RSVPs", path: "/events#rsvp" },
     ],
-    sections: [
-      {
-        title: "Media & Literature",
-        items: [
-          { title: "E-Magazine Ramdhanu", path: "/events#magazine" },
-          { title: "Photo Archives", path: "/events#photos" },
-          { title: "Print Media", path: "/events#print-media" },
-          { title: "TV Media", path: "/events#tv-media" },
-        ],
-      },
-      {
-        title: "Social Media",
-        items: [
-          { title: "Facebook", path: "https://facebook.com", external: true },
-          { title: "WhatsApp", path: "https://whatsapp.com", external: true },
-          { title: "Instagram", path: "https://instagram.com", external: true },
-          { title: "Twitter", path: "https://twitter.com", external: true },
-        ],
-      },
-    ],
+    // sections: [
+    //   {
+    //     title: "Media & Literature",
+    //     items: [
+    //       { title: "E-Magazine Ramdhanu", path: "/events#magazine" },
+    //       { title: "Photo Archives", path: "/events#photos" },
+    //       { title: "Print Media", path: "/events#print-media" },
+    //       { title: "TV Media", path: "/events#tv-media" },
+    //     ],
+    //   },
+    //   {
+    //     title: "Social Media",
+    //     items: [
+    //       { title: "Facebook", path: "https://facebook.com", external: true },
+    //       { title: "WhatsApp", path: "https://whatsapp.com", external: true },
+    //       { title: "Instagram", path: "https://instagram.com", external: true },
+    //       { title: "Twitter", path: "https://twitter.com", external: true },
+    //     ],
+    //   },
+    // ],
   },
-  {
-    id: "beyond-basa",
-    title: "Beyond BASA",
-    color: "yellow",
-    path: "/beyond-basa",
-    items: [
-      { title: "Outreach Programs", path: "/beyond-basa#outreach" },
-      { title: "Sponsors & Partners", path: "/beyond-basa#sponsors" },
-      { title: "Sponsor List", path: "/beyond-basa#sponsor-list" },
-      {
-        title: "Sponsorship Request",
-        path: "/beyond-basa#sponsorship-request",
-      },
-      { title: "Enquiries", path: "/contact" },
-      {
-        title: "BASA Business Exchange",
-        path: "/beyond-basa#business-exchange",
-      },
-    ],
-  },
+  // {
+  //   id: "beyond-basa",
+  //   title: "Beyond BASA",
+  //   color: "yellow",
+  //   path: "/beyond-basa",
+  //   items: [
+  //     { title: "Outreach Programs", path: "/beyond-basa#outreach" },
+  //     { title: "Sponsors & Partners", path: "/beyond-basa#sponsors" },
+  //     { title: "Sponsor List", path: "/beyond-basa#sponsor-list" },
+  //     {
+  //       title: "Sponsorship Request",
+  //       path: "/beyond-basa#sponsorship-request",
+  //     },
+  //     { title: "Enquiries", path: "/contact" },
+  //     {
+  //       title: "BASA Business Exchange",
+  //       path: "/beyond-basa#business-exchange",
+  //     },
+  //   ],
+  // },
   {
     id: "join-basa",
     title: "Join BASA",
@@ -124,8 +124,8 @@ const mainNavItems = [
   { title: "Our Story", path: "/our-story" },
   { title: "Durga Puja", path: "/events" },
   { title: "Bengali School", path: "/bengali-school" },
-  { title: "Event Calendar", path: "/events#calendar" },
-  { title: "Social Responsibilities", path: "/beyond-basa#outreach" },
+  // { title: "Event Calendar", path: "/events#calendar" },
+  // { title: "Social Responsibilities", path: "/beyond-basa#outreach" },
   { title: "Join BASA", path: "/join-basa" },
   { title: "Contact Us", path: "/contact" },
 ];
@@ -133,35 +133,6 @@ const mainNavItems = [
 const Navbar = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null);
-
-  // Close menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    const handleEscape = (event) => {
-      if (event.key === "Escape") {
-        setIsMenuOpen(false);
-      }
-    };
-
-    if (isMenuOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-      document.addEventListener("keydown", handleEscape);
-      // Prevent body scroll when menu is open
-      document.body.style.overflow = "hidden";
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("keydown", handleEscape);
-      document.body.style.overflow = "unset";
-    };
-  }, [isMenuOpen]);
 
   // Hide navbar on admin pages
   if (pathname.startsWith("/admin")) {
@@ -170,7 +141,7 @@ const Navbar = () => {
 
   const getColorClasses = (color) => {
     const colorMap = {
-      red: "text-red-600 border-red-200 hover:text-red-600",
+      red: "text-[#FE0000]  hover:text-red-600",
       green: "text-green-600 border-green-200 hover:text-green-600",
       blue: "text-blue-600 border-blue-200 hover:text-blue-600",
       yellow: "text-yellow-600 border-yellow-200 hover:text-yellow-600",
@@ -219,7 +190,6 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="fixed inset-0 top-[76px] z-40 md:pt-8 pt-2 bg-black bg-opacity-50 lg:absolute lg:bg-transparent">
           <div
-            ref={menuRef}
             className={`bg-white w-full shadow-2xl transform transition-all duration-300 ease-out overflow-hidden ${
               isMenuOpen
                 ? "translate-y-0 opacity-100"
@@ -229,7 +199,6 @@ const Navbar = () => {
               height: "calc(100vh - 76px)",
               maxHeight: "calc(100vh - 76px)",
             }}
-            onClick={(e) => e.stopPropagation()}
           >
             {/* Menu content - fully responsive grid */}
             <div className="px-4 sm:px-6 lg:px-8 pb-6 lg:pb-8 h-full overflow-y-auto">
