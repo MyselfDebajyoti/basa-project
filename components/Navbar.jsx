@@ -190,11 +190,13 @@ const Navbar = () => {
                         colorClasses.split(" ")[1] +
                         " pb-2";
                       const linkColorClass = colorClasses.split(" ")[2];
-
+                      console.log("Menu Color:", menu.color);
                       return (
                         <div key={menu.id} className="min-h-0">
-                          <div className="min-h-10">
-                              <h3 className={headerColorClass}>{menu.title}</h3>
+                          <div className={`min-h-10  `}>
+                          <h3 className= {`text-[#${menu.color}]`}>
+                              {menu.title}
+                            </h3>
                           </div>
 
                           <div className="space-y-3 lg:space-y-4">
@@ -268,7 +270,7 @@ const menuConfig = [
   {
     id: "our-story",
     title: "Our Story",
-    color: "red",
+    color: "#FE0000",
     path: "/our-story",
     items: [
       { title: "History", path: "/our-story" },
@@ -281,7 +283,7 @@ const menuConfig = [
   {
     id: "bengali-culture",
     title: "Bengali Culture",
-    color: "green",
+    color: "#00794C",
     path: "/bengali-culture",
     sections: [
       {
@@ -369,7 +371,7 @@ const menuConfig = [
   {
     id: "events",
     title: "Events",
-    color: "blue",
+    color: "#002496",
     path: "/events",
     items: [
       { title: "Annual Event Calendar", path: "/events#calendar" },
@@ -416,7 +418,7 @@ const menuConfig = [
   {
     id: "beyond-basa",
     title: "Beyond BASA",
-    color: "yellow",
+    color: "#FFB612",
     path: "/beyond-basa",
     items: [
       { title: "Outreach Programs", path: "/beyond-basa#outreach" },
@@ -433,7 +435,7 @@ const menuConfig = [
   {
     id: "join-basa",
     title: "Join BASA",
-    color: "purple",
+    color: "#002496",
     path: "/join-basa",
     items: [{ title: "Become a Member", path: "/join-basa#membership" }],
     additionalItems: [
