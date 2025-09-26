@@ -155,7 +155,7 @@ const Navbar = () => {
             ))}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="flex items-center space-x-2 hover:text-gray-900 transition-colors whitespace-nowrap"
+              className="flex font-light items-center space-x-2 hover:text-gray-900 transition-colors whitespace-nowrap"
             >
               <span>More Menu</span>
               <Menu className="w-4 h-4" />

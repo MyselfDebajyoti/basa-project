@@ -340,7 +340,7 @@ export default function Home() {
           <div className="flex justify-center space-x-8 mb-8">
             {/* Facebook */}
             <a
-              href="https://www.facebook.com/bengaliassociationsa"
+              href="https://www.facebook.com/basasouthafrica"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 relative"
@@ -354,7 +354,7 @@ export default function Home() {
             </a>
 
             {/* Instagram */}
-            <a
+            {/* <a
               href="https://www.instagram.com/bengaliassociationsa"
               target="_blank"
               rel="noopener noreferrer"
@@ -366,10 +366,10 @@ export default function Home() {
                 fill
                 className="object-contain"
               />
-            </a>
+            </a> */}
 
             {/* X (Twitter) */}
-            <a
+            {/* <a
               href="https://twitter.com/bengaliassocsa"
               target="_blank"
               rel="noopener noreferrer"
@@ -381,9 +381,9 @@ export default function Home() {
                 fill
                 className="object-contain"
               />
-            </a>
+            </a> */}
             <a
-              href="https://twitter.com/bengaliassocsa"
+              href="mailto:basa.gsec@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 relative"
