@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 type PujoCommitteeProps = {
   className?: string;
@@ -19,14 +20,16 @@ export function TVMedia({ className }: PujoCommitteeProps) {
         {/* Facebook Post Embed */}
         <div className="max-w-4xl mx-auto">
           <div className="bg-white  overflow-hidden">
-            <Image
-              src="/images/Screenshot 2025-09-17 at 19.22.22 1.png"
-              width="500"
-              height="500"
-              style={{ border: "none", overflow: "hidden" }}
-              alt="Facebook Post - Friends Sunday Funday with Animesh"
-              className="w-full"
-            ></Image>
+            <Link href={"https://youtu.be/JXNjU6iwnq4"}>
+              <Image
+                src="/images/Screenshot 2025-09-17 at 19.22.22 1.png"
+                width="500"
+                height="500"
+                style={{ border: "none", overflow: "hidden" }}
+                alt="Facebook Post - Friends Sunday Funday with Animesh"
+                className="w-full"
+              ></Image>
+            </Link>
           </div>
         </div>
       </div>

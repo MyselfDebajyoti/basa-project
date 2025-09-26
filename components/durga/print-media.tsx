@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 type PujoCommitteeProps = {
   className?: string;
@@ -17,18 +18,36 @@ export function PrintMedia({ className }: PujoCommitteeProps) {
         {/* Section Title */}
 
         {/* Facebook Post Embed */}
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white  overflow-hidden">
+        <figure className="overflow-hidden rounded-xl grid grid-cols-2 gap-4 bg-background shadow-sm">
+          <Link
+            href={
+              "https://www.thewall.in/international-news/spring-arrives-in-johannesburg-with-the-blooming-of-purple-jacaranda-petals-durga-puja-drums-ringing/tid/174178"
+            }
+          >
             <Image
-              src="/images/Group 1171275755 (1).png"
-              width="500"
-              height="500"
-              style={{ border: "none", overflow: "hidden" }}
-              alt="Facebook Post - Friends Sunday Funday with Animesh"
-              className="w-full"
-            ></Image>
-          </div>
-        </div>
+              src="/print-media/Screenshot 2025-09-25 at 23.42.00 1.png"
+              alt="Letters conveying wishes on Sharodothsav from the Chief Minister of West Bengal and the High Commissioner of India."
+              width={960}
+              height={690}
+              className="h-auto w-full object-cover"
+              priority
+            />
+          </Link>
+          <Link
+            href={
+              "https://epaper.sangbadpratidin.in/epaper/m/950604/683b6a256c708"
+            }
+          >
+            <Image
+              src="/print-media/Group 1171275777.png"
+              alt="Letters conveying wishes on Sharodothsav from the Chief Minister of West Bengal and the High Commissioner of India."
+              width={960}
+              height={690}
+              className="h-auto w-full object-cover"
+              priority
+            />
+          </Link>
+        </figure>
       </div>
     </section>
   );
