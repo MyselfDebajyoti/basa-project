@@ -111,7 +111,7 @@ export default function Home() {
             {/* Card 3 - Join Community */}
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
-              <Link href="/">
+              <Link href="/social-responsibility">
                 <img
                   src="/assets/Group 1171275776.png"
                   alt="Join our vibrant community"

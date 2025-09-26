@@ -193,35 +193,41 @@ const committeeMembers: CommitteeMember[] = [
   },
   {
     name: " Mrs. Jayashree Mitra",
-    description: ["Co-ordinator,", "Bhog Prep."],
+    description: [
+      "Jayashhree Mitra is a seasoned Chartered Accountant and Company Secretary with 17 years of professional experience. She has recently relocated to South Africa. In her free time, Jayashhree enjoys gardening and traveling, showcasing her passion for nature and exploration. She is a hardcore Bengali at heart and thought..",
+    ],
     imageQuery: "Mrs. Annapurna Hazra portrait",
     imageUrl: "/teachers/Group 1171275683.svg",
   },
   {
     name: "Mrs. Sayantani Chatterjee",
     description: [
-      "I am a chartered accountant & a chartered secretary by profession and living in SA for over 2 decades with his wife Rini and two young children. Sanjoy runs finance team of a mining group in SA. He is an active BASA member and one of the founder teacher of Kisholoy.",
+      "A post graduate (Masters in Bengali  literature), Sayantani is an administrative professional who has been living in South Africa since 2010. She resides with her husband Anindya Chatterji and three children. She is an active member of BASA and She is one of the teacher in BASA Bangla class (Kisholoy)",
     ],
     imageQuery: "Mrs. Sudeshna Ghatak portrait",
     imageUrl: "/teachers/Rectangle 457 (4).svg",
   },
   {
     name: "Mrs. Sikha Bhattacharya",
-    description: ["Co-ordinator,", "Bhog Prep."],
+    description: [
+      "A teacher passionate about mother tongue education, sees it as a vital tool for improving learning, enhancing confidence and ensuring the preservation of cultural heritage and identity.Believes in fostering cognitive benefits, building pride and strengthening family and community bond through the mother tongue.",
+    ],
     imageQuery: "Mrs. Annapurna Hazra portrait",
     imageUrl: "/teachers/Rectangle 457 (5).svg",
   },
   {
     name: "Mrs. Madhumita Bhattacharya",
     description: [
-      "I am a chartered accountant & a chartered secretary by profession and living in SA for over 2 decades with his wife Rini and two young children. Sanjoy runs finance team of a mining group in SA. He is an active BASA member and one of the founder teacher of Kisholoy.",
+      "Madhumita Bhattacharya, a Post Graduate (MBA) with prior experience in administration, has been living in South Africa since 2019 with her husband, (Avik Debnath) and their child. Currently a homemaker, she is an active member of BASA and a teacher at BASA’s Bangla class, (Kisholoy). She enjoys teaching Bangla to children growing up abroad, helping them stay connected to their mother tongue and cultural roots.",
     ],
     imageQuery: "Mrs. Sudeshna Ghatak portrait",
     imageUrl: "/teachers/Rectangle 457 (6).svg",
   },
   {
     name: "Mr. Dipanjan Chaudhuri",
-    description: ["Co-ordinator,", "Bhog Prep."],
+    description: [
+      "Dipanjan is an IT professional and living in Johannesburg for more than 8 years now. He is married with Sanchari and having a son Drishan. He is a BASA member and one of the teachers in Kisholoy. As a teacher handling such small kids is not an easy job for me but with the help of other teachers gradually am getting into it so it's a learning for me as well",
+    ],
     imageQuery: "Mrs. Annapurna Hazra portrait",
     imageUrl: "/teachers/Rectangle 457 (7).svg",
   },
