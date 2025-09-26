@@ -215,7 +215,7 @@ const Navbar = () => {
                           <div className="space-y-3 lg:space-y-4">
                             {/* Direct items */}
                             {menu.items && (
-                              <ul className="space-y-1 lg:space-y-2 text-sm">
+                              <ul className="space-y-1 lg:space-y-2 font-light text-sm">
                                 {menu.items.map((item) => (
                                   <li key={item.title}>
                                     {renderMenuItem(item, colorStyles)}
@@ -230,7 +230,7 @@ const Navbar = () => {
                                 <h4 className="font-semibold text-gray-800 mb-2 text-sm lg:text-base">
                                   {section.title}
                                 </h4>
-                                <ul className="space-y-1 text-sm ml-2">
+                                <ul className="space-y-1 font-light text-sm ml-2">
                                   {section.items.map((item) => (
                                     <li key={item.title}>
                                       {renderMenuItem(item, colorStyles)}
@@ -248,13 +248,14 @@ const Navbar = () => {
                                     key={item.title}
                                     className="flex items-center space-x-2 text-sm"
                                   >
-                                    <span className="text-base">
-                                      {item.icon}
-                                    </span>
+                                    {/* <span className="text-base">
+                                      
+                                    </span> */}
+                                    <img className="w-4" src={item.icon} alt="" />
                                     <Link
                                       href={item.path}
-                                      className={`py-1 hover:underline transition-colors ${colorStyles.hoverClass}`}
-                                      style={colorStyles.linkStyle}
+                                      className={`py-1 font-light hover:underline transition-colors `}
+                                      // style={colorStyles.linkStyle}
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {item.title}
@@ -418,8 +419,8 @@ const menuConfig = [
     path: "/join-basa",
     items: [{ title: "Become a Member", path: "/join-basa#membership" }],
     additionalItems: [
-      { title: "Contact us", path: "/contact", icon: "📞" },
-      { title: "ExCo Login", path: "/admin", icon: "🔐" },
+      { title: "Contact us", path: "/contact", icon: "/images/call.png" },
+      { title: "ExCo Login", path: "/admin", icon: "/images/lock.png" },
     ],
   },
 ];
