@@ -20,7 +20,7 @@ const ProfileCard = ({ user }) => {
         </div>
 
         {/* Profile Info - Right Cell */}
-        <div className="col-span-8 p-8 bg-white flex flex-col justify-center">
+        <div className="col-span-8 p-8 pl-2 bg-white flex flex-col justify-center">
           <div className="space-y-4">
             <div>
               <h2 className="text-lg font-semibold text-gray-900 mb-1 tracking-tight">
