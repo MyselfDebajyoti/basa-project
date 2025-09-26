@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Full-Screen Dropdown Menu */}
-     
 
       {/* Header/Navbar */}
 
@@ -28,7 +27,7 @@ export default function Home() {
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
               <img
-                src="/images/Group 1171275745.png"
+                src="/assets/Group 1171275770.png"
                 alt="Join our vibrant community"
                 className="block w-full h-auto"
               />
@@ -37,22 +36,13 @@ export default function Home() {
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                {/* Bottom Text */}
-                <div className="text-left">
-                  <div className="text-xl font-semibold">Join our Vibrant</div>
-                  <div className="text-xl font-semibold mb-7">
-                    Community. Be a Member
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Card 2 - Learn Bengali (Square Card) */}
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
               <img
-                src="/images/Group 1171275745.png"
+                src="/assets/Group 1171275776.png"
                 alt="Join our vibrant community"
                 className="block w-full h-auto"
               />
@@ -61,22 +51,13 @@ export default function Home() {
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                {/* Bottom Text */}
-                <div className="text-left">
-                  <div className="text-xl font-semibold">Join our Vibrant</div>
-                  <div className="text-xl font-semibold mb-7">
-                    Community. Be a Member
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Card 3 - Join Community */}
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
               <img
-                src="/images/Group 1171275745.png"
+                src="/assets/Group 1171275772.png"
                 alt="Join our vibrant community"
                 className="block w-full h-auto"
               />
@@ -85,15 +66,6 @@ export default function Home() {
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                {/* Bottom Text */}
-                <div className="text-left">
-                  <div className="text-xl font-semibold">Join our Vibrant</div>
-                  <div className="text-xl font-semibold mb-7">
-                    Community. Be a Member
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -102,7 +74,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
           <h2 className="text-2xl  text-gray-800 mb-12 text-left">
-            Get to the Buzz.
+            Get to know us
           </h2>
 
           {/* Cards Grid */}
@@ -111,7 +83,7 @@ export default function Home() {
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
               <img
-                src="/images/Group 1171275745.png"
+                src="/assets/Group 1171275773.png"
                 alt="Join our vibrant community"
                 className="block w-full h-auto"
               />
@@ -120,22 +92,13 @@ export default function Home() {
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                {/* Bottom Text */}
-                <div className="text-left">
-                  <div className="text-xl font-semibold">Join our Vibrant</div>
-                  <div className="text-xl font-semibold mb-7">
-                    Community. Be a Member
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Card 2 - Learn Bengali (Square Card) */}
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
               <img
-                src="/images/Group 1171275745.png"
+                src="/assets/Group 1171275774.png"
                 alt="Join our vibrant community"
                 className="block w-full h-auto"
               />
@@ -144,22 +107,13 @@ export default function Home() {
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                {/* Bottom Text */}
-                <div className="text-left">
-                  <div className="text-xl font-semibold">Join our Vibrant</div>
-                  <div className="text-xl font-semibold mb-7">
-                    Community. Be a Member
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Card 3 - Join Community */}
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
               <img
-                src="/images/Group 1171275745.png"
+                src="/assets/Group 1171275776.png"
                 alt="Join our vibrant community"
                 className="block w-full h-auto"
               />
@@ -168,15 +122,6 @@ export default function Home() {
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                {/* Bottom Text */}
-                <div className="text-left">
-                  <div className="text-xl font-semibold">Join our Vibrant</div>
-                  <div className="text-xl font-semibold mb-7">
-                    Community. Be a Member
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -203,13 +148,18 @@ export default function Home() {
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
-                <div className="h-16 flex items-center justify-center">
-                  <img
-                    src="/icons/quatar.svg"
-                    alt="Qatar Airways"
-                    className="max-h-full max-w-full object-contain"
-                  />
-                </div>
+              </div>
+            </div>
+            <div className="text-center">
+              <h3 className="text-sm font-semibold text-gray-700 mb-4">
+                Travel Partner
+              </h3>
+              <div className="h-16 flex items-center justify-center">
+                <img
+                  src="/icons/quatar.svg"
+                  alt="Qatar Airways"
+                  className="max-h-full max-w-full object-contain"
+                />
               </div>
             </div>
 
@@ -383,7 +333,7 @@ export default function Home() {
               className="w-12 h-12 relative"
             >
               <Image
-                src="/icons/image 173.png"
+                src="/icons/image 173 (1).png"
                 alt="Facebook"
                 fill
                 className="object-contain"
@@ -398,7 +348,7 @@ export default function Home() {
               className="w-12 h-12 relative"
             >
               <Image
-                src="/icons/image 175.png"
+                src="/icons/image 180.png"
                 alt="Instagram"
                 fill
                 className="object-contain"
@@ -413,7 +363,20 @@ export default function Home() {
               className="w-12 h-12 relative"
             >
               <Image
-                src="/icons/image 174.png"
+                src="/icons/image 122.png"
+                alt="Twitter"
+                fill
+                className="object-contain"
+              />
+            </a>
+            <a
+              href="https://twitter.com/bengaliassocsa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 relative"
+            >
+              <Image
+                src="/icons/image 189.png"
                 alt="Twitter"
                 fill
                 className="object-contain"
