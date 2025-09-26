@@ -16,7 +16,7 @@ export function WishesOnSharodothsav({ className }: WishesOnSharodothsavProps) {
 
       <figure className="overflow-hidden rounded-xl grid grid-cols-2 gap-4 bg-background shadow-sm">
         <Image
-          src="/images/Screenshot 2025-09-20 at 14.54.10 1.svg"
+          src="/images/1758702451850-674f2d7b-580a-4944-892c-7ff5dfc36596_1 1.svg"
           alt="Letters conveying wishes on Sharodothsav from the Chief Minister of West Bengal and the High Commissioner of India."
           width={960}
           height={690}
@@ -24,7 +24,7 @@ export function WishesOnSharodothsav({ className }: WishesOnSharodothsavProps) {
           priority
         />
         <Image
-          src="/images/1758702451850-674f2d7b-580a-4944-892c-7ff5dfc36596_1 1.svg"
+          src="/images/Screenshot 2025-09-20 at 14.54.10 1.svg"
           alt="Letters conveying wishes on Sharodothsav from the Chief Minister of West Bengal and the High Commissioner of India."
           width={960}
           height={690}

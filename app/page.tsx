@@ -1403,13 +1403,18 @@ export default function Home() {
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
-                <div className="h-16 flex items-center justify-center">
-                  <img
-                    src="/icons/quatar.svg"
-                    alt="Qatar Airways"
-                    className="max-h-full max-w-full object-contain"
-                  />
-                </div>
+              </div>
+            </div>
+            <div className="text-center">
+              <h3 className="text-sm font-semibold text-gray-700 mb-4">
+                Travel Partner
+              </h3>
+              <div className="h-16 flex items-center justify-center">
+                <img
+                  src="/icons/quatar.svg"
+                  alt="Qatar Airways"
+                  className="max-h-full max-w-full object-contain"
+                />
               </div>
             </div>
 
@@ -1583,7 +1588,7 @@ export default function Home() {
               className="w-12 h-12 relative"
             >
               <Image
-                src="/icons/image 173.png"
+                src="/icons/image 173 (1).png"
                 alt="Facebook"
                 fill
                 className="object-contain"
@@ -1598,7 +1603,7 @@ export default function Home() {
               className="w-12 h-12 relative"
             >
               <Image
-                src="/icons/image 175.png"
+                src="/icons/image 180.png"
                 alt="Instagram"
                 fill
                 className="object-contain"
@@ -1613,7 +1618,20 @@ export default function Home() {
               className="w-12 h-12 relative"
             >
               <Image
-                src="/icons/image 174.png"
+                src="/icons/image 122.png"
+                alt="Twitter"
+                fill
+                className="object-contain"
+              />
+            </a>
+            <a
+              href="https://twitter.com/bengaliassocsa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 relative"
+            >
+              <Image
+                src="/icons/image 189.png"
                 alt="Twitter"
                 fill
                 className="object-contain"

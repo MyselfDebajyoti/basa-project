@@ -11,6 +11,8 @@ import { Televison } from "./television";
 import { Radio } from "./radio";
 import { PrintMedia } from "./print-media";
 import { TVMedia } from "./tv-media";
+import { CulturalCommittee } from "./cultural-committee";
+import { KitchenCommittee } from "./kitchen-committe";
 
 const breadcrumbItems = [
   { label: "Home", href: "/" },
@@ -56,8 +58,8 @@ export function PujoBody() {
       <WishesOnSharodothsav />
       <PurohitMoshai />
       <PujoCommittee className="mt-12" />
-      <PujoCommittee className="mt-12" />
-      <PujoCommittee className="mt-12" />
+      <CulturalCommittee className="mt-12"></CulturalCommittee>
+      <KitchenCommittee />
       <Sponsors className="mt-12" />
       <Televison className="mt-12" />
       <Radio className="mt-12" />

@@ -142,10 +142,10 @@ const Navbar = () => {
   const getColorClasses = (color) => {
     const colorMap = {
       red: "text-[#FE0000]  hover:text-red-600",
-      green: "text-green-600 border-green-200 hover:text-green-600",
-      blue: "text-blue-600 border-blue-200 hover:text-blue-600",
-      yellow: "text-yellow-600 border-yellow-200 hover:text-yellow-600",
-      purple: "text-purple-600 border-purple-200 hover:text-purple-600",
+      green: "text-[#00794C] border-green-200 hover:text-green-600",
+      blue: "text[#002496] border-blue-200 hover:text-blue-600",
+      yellow: "text-[#FFB612] border-yellow-200 hover:text-yellow-600",
+      purple: "text-[#002496] border-purple-200 hover:text-purple-600",
     };
     return (
       colorMap[color] || "text-gray-600 border-gray-200 hover:text-gray-600"
