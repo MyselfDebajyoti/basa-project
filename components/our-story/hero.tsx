@@ -423,7 +423,7 @@ export function Hero({ className }: BongoUtsavProps) {
       {/* Top banner */}
       <div>
         <Image
-          src="/images/Group 1171275756.svg"
+          src="/images/our-story.png"
           alt="Dance performance at Bongo Utsav"
           width={1200}
           height={600}
@@ -437,24 +437,22 @@ export function Hero({ className }: BongoUtsavProps) {
           The story of the Bengali Association of South Africa (BASA) began with
           a heartfelt vision: to create a space where Bengalis could unite on
           the foundation of language, culture, and tradition. For the Bengali
-          diaspora, far away from their ancestral homes, there was a deep need
-          for a platform that would celebrate their shared roots, preserve their
-          identity, and pass down the richness of Bengal’s heritage to future
-          generations. What started as small gatherings among families and
-          friends soon grew into a vibrant idea — a club that would represent
-          the spirit of Bengal for Bengalis across the world, right here in
-          South Africa.
+          diaspora, far from their ancestral homes, there was a deep need for a
+          platform to celebrate shared roots, preserve identity, and pass down
+          the richness of Bengal’s heritage to future generations. What started
+          as small gatherings among families and friends soon grew into a
+          vibrant idea — a community forum that would represent the spirit of
+          Bengal, right here in South Africa.
         </p>
         <p className="text-pretty text-base leading-relaxed text-[color:var(--brand-text)] opacity-85">
           A significant milestone came in 2007, when BASA hosted its first
-          public Durga Puja. The festival, central to Bengali culture, became a
-          turning point in uniting the community on a larger scale. It was more
-          than a religious celebration — it became an annual cultural highlight,
-          showcasing the music, dance, literature, food, and artistic
-          expressions of Bengal to the broader South African society. The Puja
-          created a tradition of togetherness that continues to grow stronger
-          every year, attracting not just Bengalis but friends from many other
-          communities who share in the joy and vibrancy of the celebrations.
+          public Durga Puja. More than a religious festival, it became a
+          cultural turning point — an annual celebration of music, dance,
+          literature, food, and artistry that showcased the richness of Bengal
+          to the broader South African society. Over the years, the Puja has
+          grown into a tradition of togetherness, attracting not only Bengalis
+          but also friends from diverse communities who share in its joy and
+          vibrancy.
         </p>
       </div>
 
@@ -462,25 +460,24 @@ export function Hero({ className }: BongoUtsavProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         <p className="text-pretty text-base leading-relaxed text-[color:var(--brand-text)] opacity-85">
           This vision first took shape in 1994, with the formation of the
-          “Dokkhin Africa Bongo Shongothon (DABS).” It was the first organized
-          attempt to bring together the community under one umbrella, uniting
-          people through cultural events, festivals, and social engagement. Over
-          time, as the association grew in strength and reach, it redefined its
-          identity to better reflect its expanding role. In 2005, it was
-          formally renamed the Bengali Association of South Africa (BASA) — an
-          identity that continues to symbolize pride, belonging, and cultural
+          Dokkhin Africa Bongo Shongothon (DABS) in 1996. It marked the first
+          organized attempt to bring together the community under one umbrella,
+          uniting people through cultural events, festivals, and social
+          initiatives. As the community grew in strength and reach, the
+          association redefined itself to reflect its expanding role. In 2005,
+          it was formally renamed the Bengali Association of South Africa (BASA)
+          — a name that continues to symbolize pride, belonging, and cultural
           continuity.
         </p>
         <p className="text-pretty text-base leading-relaxed text-[color:var(--brand-text)] opacity-85">
-          Recognising the importance of building a sustainable foundation for
-          the future, BASA was officially registered as a Non-Profit Company in
-          2015. This step provided the association with the structure and
-          credibility to expand its activities, engage in wider cultural and
-          social projects, and strengthen its legacy. Today, BASA stands as a
-          beacon for the Bengali community in South Africa — a place where
-          traditions meet modern aspirations, where cultural pride blends with
-          inclusivity, and where the journey that began in 1994 continues to
-          inspire generations.
+          Recognising the importance of building a sustainable foundation, BASA
+          was officially registered as a Non-Profit Company in 2015. This
+          provided the structure and credibility to expand activities, engage in
+          larger cultural and social projects, and strengthen its legacy. Today,
+          BASA stands as a beacon for the Bengali community in South Africa —
+          where traditions meet modern aspirations, cultural pride blends with
+          inclusivity, and a journey that began in 1994 continues to inspire
+          generations.
         </p>
       </div>
 
@@ -547,7 +544,7 @@ export function Hero({ className }: BongoUtsavProps) {
           (Top Single) A literary piece in Bengali by Mr. Satyen Biswas, DGM,
           Air India (Retd.), capturing the prelude to the formation of Dokkhin
           Africa Bongo Songhothon (DABS)—the first NRI Bengali association in
-          South Africa, established in 1996
+          South Africa, established in 1996.
         </p>
         <p className="text-pretty text-base leading-relaxed text-[color:var(--brand-text)] opacity-85">
           (Middle Row Right) On 15th August 1997, during India’s 50th
@@ -585,18 +582,8 @@ export function Hero({ className }: BongoUtsavProps) {
             rich heritage of Bengal while embracing the vibrant diversity of
             South Africa. We serve as a hub for Bengalis across the country,
             creating a home away from home where traditions are cherished,
-            connections are nurtured, and culture thrives
+            connections are nurtured, and culture thrives.
           </p>
-          <p className="text-pretty text-base leading-relaxed text-[color:var(--brand-text)] opacity-85">
-            At the same time, BASA proudly acknowledges the legacy of Nelson
-            Mandela, South Africa’s beloved statesman and Nobel Peace Prize
-            laureate. His lifelong struggle for justice, equality, and unity
-            reflects the very values that guide our community and strengthen our
-            mission of cultural exchange and inclusivity.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           <p className="text-pretty text-base leading-relaxed text-[color:var(--brand-text)] opacity-85">
             Bengal, in the eastern part of the Indian subcontinent, is
             celebrated for its literature, art, music, festivals, and cuisine.
@@ -605,14 +592,29 @@ export function Hero({ className }: BongoUtsavProps) {
             timeless works and universal message of love, peace, and harmony
             continue to inspire people worldwide.
           </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           <p className="text-pretty text-base leading-relaxed text-[color:var(--brand-text)] opacity-85">
-            Through festivals, cultural programs, and social initiatives, BASA
-            showcases Bengali music, dance, literature, and art while fostering
-            dialogue with the wider South African community. From Durga and
-            Saraswati Puja to food festivals and cultural evenings, we keep our
-            heritage alive and build cultural bridges. We invite
-            everyone—Bengalis, friends, and the curious—to celebrate Bengal’s
-            spirit and South Africa’s diversity with us.
+            At the same time, BASA proudly acknowledges the legacy of Nelson
+            Mandela, South Africa’s beloved statesman and Nobel Peace Prize
+            laureate. His lifelong struggle for justice, equality, and unity
+            reflects the very values that guide our community and strengthen our
+            mission of cultural exchange and inclusivity.
+          </p>
+          <p className="text-pretty text-base leading-relaxed text-[color:var(--brand-text)] opacity-85">
+            Through vibrant festivals, cultural programs, workshops, and social
+            initiatives, BASA provides a platform to showcase Bengali music,
+            dance, literature, and art while also encouraging dialogue and
+            understanding with the broader South African community. From
+            celebrating Durga Puja and Saraswati Puja to organizing food
+            festivals and cultural evenings, we strive to keep our heritage
+            alive for future generations while building bridges across cultures.
+            We warmly invite you to join us — whether you are a Bengali residing
+            in South Africa, a friend of the community, or someone simply
+            curious to learn more about our traditions. Together, let us
+            celebrate the spirit of Bengal and the beauty of South Africa’s
+            diversity.
           </p>
         </div>
       </section>
