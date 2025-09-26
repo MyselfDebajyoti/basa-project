@@ -3,7 +3,7 @@ import { databases, DATABASE_ID, TABLE_ID } from "../lib/appwrite";
 import { ID } from "appwrite";
 
 export const FormSkeleton = () => {
-   const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     studentName: "",
     whatsappNumber: "",
     email: "",
@@ -67,7 +67,7 @@ export const FormSkeleton = () => {
   };
 
   return (
-    <div className="max-w-2xl  p-6 bg-white">
+    <div className="  p-6 bg-white">
       <div className="mb-8">
         <h3 className="text-xl font-semibold text-gray-900 mb-3">
           Enrol & Learn Bengali

@@ -144,7 +144,7 @@ export function JoinBasaBody() {
             <h2 className="text-xl font-semibold text-[color:var(--brand-text)] mb-6">
               Membership Tiers
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
               {[
                 {
                   icon: "/join-basa/icon1.png",

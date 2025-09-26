@@ -9,7 +9,7 @@ export function WishesOnSharodothsav({ className }: WishesOnSharodothsavProps) {
   return (
     <section className={cn("   bg-background ", className)}>
       <header className="space-y-2">
-        <h2 className="text-3xl font-semibold text-[color:var(--brand-text)] text-balance pb-10">
+        <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-12 text-left">
           Wishes on Sharodothsav
         </h2>
       </header>

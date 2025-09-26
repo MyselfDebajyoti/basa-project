@@ -267,7 +267,7 @@ export function Teachers({ className }: PujoCommitteeProps) {
   return (
     <section className={cn("space-y-6", className)} id="teachers">
       <header className="flex flex-col gap-2">
-        <h3 className="text-xl font-semibold text-[color:var(--brand-text)] text-balance">
+        <h3 className="text-xl font-noto-sans font-semibold text-[color:var(--brand-text)] text-balance">
           Know Our Teachers
         </h3>
       </header>

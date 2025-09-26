@@ -26,9 +26,9 @@ export function PujoBody() {
       <header className="flex flex-col gap-2">
         <BreadcrumbTrail items={breadcrumbItems}></BreadcrumbTrail>
 
-        <h1 className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance">
+        <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-12 text-left">
           Durga Pujo
-        </h1>
+        </h2>
       </header>
 
       <DurgaScheduleFigure />
@@ -60,9 +60,35 @@ export function PujoBody() {
       <PujoCommittee className="mt-12" />
       <CulturalCommittee className="mt-12"></CulturalCommittee>
       <KitchenCommittee />
-      <Sponsors className="mt-12" />
+      {/* <Sponsors className="mt-12" />
       <Televison className="mt-12" />
-      <Radio className="mt-12" />
+      <Radio className="mt-12" /> */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Title */}
+          <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-12 text-left">
+            Latest Events
+          </h2>
+
+          {/* Facebook Post Embed */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <iframe
+                src="https://www.facebook.com/plugins/post.php?href=https://www.facebook.com/FriendsFM919/videos/2898745130317631&show_text=false&width=500"
+                width="100%"
+                height="500"
+                style={{ border: "none", overflow: "hidden" }}
+                scrolling="no"
+                frameBorder="0"
+                allowTransparency={true}
+                allow="encrypted-media"
+                title="Facebook Post - Friends Sunday Funday with Animesh"
+                className="w-full"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
       <PrintMedia className="mt-12" />
       <TVMedia className="mt-12" />
     </div>

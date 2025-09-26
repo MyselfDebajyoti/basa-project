@@ -55,7 +55,7 @@ export function Outreach({ className }: PujoCommitteeProps) {
   return (
     <section className={cn("space-y-6", className)} id="outreach">
       <header className="flex flex-col gap-2">
-        <h3 className="text-xl font-semibold text-[color:var(--brand-text)] text-balance">
+        <h3 className="text-xl font-noto-sans font-semibold text-[color:var(--brand-text)] text-balance">
           International Outreach
         </h3>
       </header>
