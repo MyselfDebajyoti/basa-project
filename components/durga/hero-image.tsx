@@ -14,7 +14,7 @@ const images = [
     alt: "Bengali School Image 2",
   },
   {
-    src: "/images/Home Page -Carousel Image 3.png",
+    src: "/images/image-3.png",
     alt: "Bengali School Image 3",
   },
 ];
@@ -26,7 +26,7 @@ export default function HeroImage() {
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex((i) => (i + 1) % images.length);
-    }, 5000);
+    }, 10000);
     return () => clearInterval(timer);
   }, []);
 

@@ -99,17 +99,18 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo - responsive sizing */}
           <Link href="/" className="flex items-center">
-            <div className="w-12 h-12 lg:w-16 lg:h-16 relative flex-shrink-0">
-              <Image
-                src="/images/Screenshot 2025-09-23 052102.png"
+            <div className="">
+              {/* <Image
+                src="/images/logo.png"
                 alt="BASA Logo"
                 fill
                 className="object-contain"
                 priority
-              />
+              /> */}
+              <img src="/images/logo.png" className="h-16" alt="" />
             </div>
-            <div className="h-10 lg:h-14 w-[2px] bg-black mx-3 lg:mx-4" />
-            <div className="text-xs lg:text-sm">
+            {/* <div className="h-10 lg:h-14 w-[2px] bg-black mx-3 lg:mx-4" /> */}
+            {/* <div className="text-xs lg:text-sm">
               <div className="font-bold text-gray-800 leading-tight">
                 BENGALI
               </div>
@@ -122,7 +123,7 @@ const Navbar = () => {
               <div className="text-[10px] lg:text-xs text-gray-600 mt-1">
                 A NON-PROFIT ORGANISATION
               </div>
-            </div>
+            </div> */}
           </Link>
 
           {/* Navigation Menu - hidden on mobile/tablet */}
@@ -131,7 +132,7 @@ const Navbar = () => {
               <Link
                 key={item.title}
                 href={item.path}
-                className={`hover:text-gray-900 transition-colors whitespace-nowrap ${
+                className={`hover:text-gray-900 font-light transition-colors whitespace-nowrap ${
                   pathname === item.path ? "text-gray-900 font-medium" : ""
                 }`}
               >
