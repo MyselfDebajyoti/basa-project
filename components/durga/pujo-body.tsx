@@ -14,7 +14,7 @@ import { TVMedia } from "./tv-media";
 
 const breadcrumbItems = [
   { label: "Home", href: "/" },
-  { label: "Bengali Culture", href: "#" },
+  { label: "Bengali Culture", href: "/events/bongo-utsav" },
   { label: "Talent & Culture", current: true },
 ];
 

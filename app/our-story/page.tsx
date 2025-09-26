@@ -11,7 +11,7 @@ const sidebarItems = [
   { label: "Mission and Vision", href: "#Mission" },
   { label: "Eminent Members", href: "#eminent-members" },
   { label: "Patron Messages", href: "#patron-messages" },
-  { label: "Current Exco", href: "our-story/current-exco" },
+  { label: "Current Exco", href: "/our-story/current-exco" },
   { label: "Back to Top", href: "" },
 ];
 
@@ -88,7 +88,13 @@ export default function Page() {
       return;
     }
 
-    // Handle section navigation
+    // Handle page navigation (starts with /)
+    if (href.startsWith("/")) {
+      window.location.href = href;
+      return;
+    }
+
+    // Handle section navigation (hash fragments)
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

@@ -46,7 +46,10 @@ export function Body() {
             diaspora.
           </p>
         </div>
-        <h3 className="text-xl font-semibold text-[color:var(--brand-text)] text-balance pb-8 pt-8">
+        <h3
+          className="text-xl font-semibold text-[color:var(--brand-text)] text-balance pb-8 pt-8"
+          id="dance"
+        >
           Dance
         </h3>
         <div className="grid gap-8 md:grid-cols-2">
@@ -69,7 +72,10 @@ export function Body() {
             diaspora.
           </p>
         </div>
-        <h3 className="text-xl font-semibold text-[color:var(--brand-text)] text-balance pb-8 pt-8">
+        <h3
+          className="text-xl font-semibold text-[color:var(--brand-text)] text-balance pb-8 pt-8"
+          id="elocution"
+        >
           Elocution
         </h3>
         <div className="grid gap-8 md:grid-cols-2">
@@ -92,7 +98,10 @@ export function Body() {
             diaspora.
           </p>
         </div>
-        <h3 className="text-xl font-semibold text-[color:var(--brand-text)] text-balance pb-8 pt-8">
+        <h3
+          className="text-xl font-semibold text-[color:var(--brand-text)] text-balance pb-8 pt-8"
+          id="singing"
+        >
           Singing
         </h3>
         <div className="grid gap-8 md:grid-cols-2">
@@ -118,7 +127,10 @@ export function Body() {
       </div>
 
       <div className="mt-8">
-        <h3 className="text-xl font-semibold text-[color:var(--brand-text)] text-balance pb-8 pt-8">
+        <h3
+          className="text-xl font-semibold text-[color:var(--brand-text)] text-balance pb-8 pt-8"
+          id="drama"
+        >
           Drama
         </h3>
         <HeroImage></HeroImage>
