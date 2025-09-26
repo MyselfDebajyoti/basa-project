@@ -349,7 +349,7 @@ export default function Home() {
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
               <img
-                src="/images/Group 1171275745.png"
+                src="/assets/Group 1171275770.png"
                 alt="Join our vibrant community"
                 className="block w-full h-auto"
               />
@@ -358,22 +358,13 @@ export default function Home() {
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                {/* Bottom Text */}
-                <div className="text-left">
-                  <div className="text-xl font-semibold">Join our Vibrant</div>
-                  <div className="text-xl font-semibold mb-7">
-                    Community. Be a Member
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Card 2 - Learn Bengali (Square Card) */}
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
               <img
-                src="/images/Group 1171275745.png"
+                src="/assets/Group 1171275776.png"
                 alt="Join our vibrant community"
                 className="block w-full h-auto"
               />
@@ -382,22 +373,13 @@ export default function Home() {
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                {/* Bottom Text */}
-                <div className="text-left">
-                  <div className="text-xl font-semibold">Join our Vibrant</div>
-                  <div className="text-xl font-semibold mb-7">
-                    Community. Be a Member
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Card 3 - Join Community */}
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
               <img
-                src="/images/Group 1171275745.png"
+                src="/assets/Group 1171275772.png"
                 alt="Join our vibrant community"
                 className="block w-full h-auto"
               />
@@ -406,15 +388,6 @@ export default function Home() {
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                {/* Bottom Text */}
-                <div className="text-left">
-                  <div className="text-xl font-semibold">Join our Vibrant</div>
-                  <div className="text-xl font-semibold mb-7">
-                    Community. Be a Member
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -423,7 +396,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
           <h2 className="text-2xl  text-gray-800 mb-12 text-left">
-            Get to the Buzz.
+            Get to know us
           </h2>
 
           {/* Cards Grid */}
@@ -432,7 +405,7 @@ export default function Home() {
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
               <img
-                src="/images/Group 1171275745.png"
+                src="/assets/Group 1171275773.png"
                 alt="Join our vibrant community"
                 className="block w-full h-auto"
               />
@@ -441,22 +414,13 @@ export default function Home() {
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                {/* Bottom Text */}
-                <div className="text-left">
-                  <div className="text-xl font-semibold">Join our Vibrant</div>
-                  <div className="text-xl font-semibold mb-7">
-                    Community. Be a Member
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Card 2 - Learn Bengali (Square Card) */}
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
               <img
-                src="/images/Group 1171275745.png"
+                src="/assets/Group 1171275774.png"
                 alt="Join our vibrant community"
                 className="block w-full h-auto"
               />
@@ -465,22 +429,13 @@ export default function Home() {
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                {/* Bottom Text */}
-                <div className="text-left">
-                  <div className="text-xl font-semibold">Join our Vibrant</div>
-                  <div className="text-xl font-semibold mb-7">
-                    Community. Be a Member
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Card 3 - Join Community */}
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
               <img
-                src="/images/Group 1171275745.png"
+                src="/assets/Group 1171275776.png"
                 alt="Join our vibrant community"
                 className="block w-full h-auto"
               />
@@ -489,15 +444,6 @@ export default function Home() {
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                {/* Bottom Text */}
-                <div className="text-left">
-                  <div className="text-xl font-semibold">Join our Vibrant</div>
-                  <div className="text-xl font-semibold mb-7">
-                    Community. Be a Member
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
