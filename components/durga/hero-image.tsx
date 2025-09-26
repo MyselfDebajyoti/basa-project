@@ -156,7 +156,7 @@ export default function HeroImage() {
                 style={{ width: `${100 / images.length}%` }}
               >
                 {/* Use Image with `fill` so it scales to parent and doesn't introduce intrinsic width overflow */}
-                <div className="relative h-[480px] w-full select-none">
+                <div className="relative h-[680px] w-full select-none">
                   <Image
                     src={image.src}
                     alt={image.alt}
