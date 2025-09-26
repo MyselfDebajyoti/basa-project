@@ -9,7 +9,7 @@ export function PurohitMoshai({ className }: PurohitMoshaiProps) {
   return (
     <section className={cn("space-y-6   bg-background p-6", className)}>
       <header className="space-y-2">
-        <h2 className="text-3xl font-semibold text-[color:var(--brand-text)] text-balance">
+        <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-12 text-left">
           Our Purohit Moshai
         </h2>
       </header>

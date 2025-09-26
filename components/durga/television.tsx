@@ -31,7 +31,7 @@ export function Televison({ className }: PujoCommitteeProps) {
   return (
     <section className={cn("space-y-6", className)}>
       <header className="flex flex-col gap-2">
-        <h2 className="text-3xl font-semibold text-[color:var(--brand-text)] text-balance">
+        <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-12 text-left">
           Television and Media Partner
         </h2>
       </header>
@@ -39,7 +39,7 @@ export function Televison({ className }: PujoCommitteeProps) {
         {committeeMembers.map((member) => {
           const imageSrc = member.imageUrl;
           return (
-            <div key={member.name} className="bg-background p-4 ">
+            <div key={member.name} className="bg-background max-w-xl">
               <Image
                 src={imageSrc || "/placeholder.svg"}
                 alt={`${member.name} portrait`}

@@ -19,7 +19,7 @@ export function Body() {
       <header className="flex flex-col gap-2">
         <BreadcrumbTrail items={breadcrumbItems}></BreadcrumbTrail>
 
-        <h1 className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance">
+        <h1 className="text-xl font-noto-sans font-semibold text-[color:var(--brand-text)] text-balance">
           Kisholoy-Bengali School
         </h1>
       </header>
@@ -27,7 +27,7 @@ export function Body() {
       <HeroImage />
 
       <div className="mt-8 " id="about">
-        <h3 className="text-xl font-semibold text-[color:var(--brand-text)] text-balance pb-8">
+        <h3 className="text-xl font-noto-sans text-[color:var(--brand-text)] text-balance pb-8">
           About the Program
         </h3>
         <div className="grid gap-8 md:grid-cols-2">

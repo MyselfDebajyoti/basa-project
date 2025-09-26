@@ -12,12 +12,12 @@ const breadcrumbItems = [
 
 export function BongoUtsavBody() {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-0">
       <header className="flex flex-col gap-2">
         <BreadcrumbTrail items={breadcrumbItems}></BreadcrumbTrail>
 
         <h1
-          className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance"
+          className="text-xl font-noto-sans font-semibold text-gray-800 text-left"
           id="bongo-utsab"
         >
           Bongo Utsav
@@ -49,42 +49,42 @@ export function BongoUtsavBody() {
         </div>
       </div>
       <PujoCommittee className="mt-12" /> */}
-      <BongoUtsav className="mt-12" />
+      <BongoUtsav className="mt-5" />
       <h1
-        className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance"
+        className="text-xl font-noto-sans font-semibold text-gray-800 mt-10 text-left"
         id="annual-picnic"
       >
         Annual Picnic
       </h1>
-      <BongoUtsav className="mt-12" />
+      <BongoUtsav className="mt-" />
       <h1
-        className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance"
+        className="text-xl font-noto-sans font-semibold text-gray-800 mt-10  text-left"
         id="lokkhi-pujo"
       >
         Lokkhi Pujo
       </h1>
-      <BongoUtsav className="mt-12" />
+      <BongoUtsav className="mt-" />
       <h1
-        className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance"
+        className="text-xl font-noto-sans font-semibold text-gray-800 mt-10 text-left"
         id="saraswati-pujo"
       >
         Saraswati Pujo
       </h1>
-      <BongoUtsav className="mt-12" />
+      <BongoUtsav className="mt-" />
       <h1
-        className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance"
+        className="text-xl font-noto-sans font-semibold text-gray-800 mt-10  text-left"
         id="kali-pujo"
       >
         Kali Pujo
       </h1>
-      <BongoUtsav className="mt-12" />
+      <BongoUtsav className="mt-" />
       <h1
-        className="text-4xl font-semibold text-[color:var(--brand-text)] text-balance"
+        className="text-xl font-noto-sans font-semibold text-gray-800 mt-10 text-left"
         id="dol-utsab"
       >
         Dol Utsav
       </h1>
-      <BongoUtsav className="mt-12" />
+      <BongoUtsav className="mt-" />
     </div>
   );
 }

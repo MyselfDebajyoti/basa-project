@@ -9,7 +9,7 @@ export function TVMedia({ className }: PujoCommitteeProps) {
   return (
     <section className={cn("space-y-6", className)}>
       <header className="flex flex-col gap-2">
-        <h2 className="text-3xl font-semibold text-[color:var(--brand-text)] text-balance pb-10">
+        <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-12 text-left">
           TV Media Coverage
         </h2>
       </header>
@@ -17,16 +17,18 @@ export function TVMedia({ className }: PujoCommitteeProps) {
         {/* Section Title */}
 
         {/* Facebook Post Embed */}
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <div className="bg-white  overflow-hidden">
-            <Image
-              src="/images/Screenshot 2025-09-17 at 19.22.22 1.png"
-              width="500"
-              height="500"
-              style={{ border: "none", overflow: "hidden" }}
-              alt="Facebook Post - Friends Sunday Funday with Animesh"
-              className="w-full"
-            ></Image>
+            <a href="https://www.youtube.com/watch?v=JXNjU6iwnq4">
+              <Image
+                src="/images/Screenshot 2025-09-17 at 19.22.22 1.png"
+                width="500"
+                height="500"
+                style={{ border: "none", overflow: "hidden" }}
+                alt="Facebook Post - Friends Sunday Funday with Animesh"
+                className="w-full"
+              ></Image>
+            </a>
           </div>
         </div>
       </div>

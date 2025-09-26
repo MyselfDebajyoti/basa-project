@@ -73,7 +73,7 @@ export function KitchenCommittee({ className }: PujoCommitteeProps) {
   return (
     <section className={cn("space-y-6", className)}>
       <header className="flex flex-col gap-2">
-        <h2 className="text-3xl font-semibold text-[color:var(--brand-text)] text-balance">
+        <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-12 text-left">
           Pujo Committee 2025-Kitchen Committee
         </h2>
       </header>
