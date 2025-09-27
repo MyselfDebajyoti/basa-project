@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { databases, DATABASE_ID, TABLES } from "../lib/appwrite";
 import { ID } from "appwrite";
 
 const RsvpForm = () => {
+  const [members, setMembers] = useState([]);
+  const [filteredMembers, setFilteredMembers] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [showDropdown, setShowDropdown] = useState(false);
+  
   const [formData, setFormData] = useState({
     name: "",
     contactNumber: "",
@@ -14,12 +19,59 @@ const RsvpForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
 
+  // Load members data
+  useEffect(() => {
+    const loadMembers = async () => {
+      try {
+        const response = await fetch('/members.json');
+        const data = await response.json();
+        setMembers(data.members);
+        setFilteredMembers(data.members);
+      } catch (error) {
+        console.error('Error loading members:', error);
+      }
+    };
+    
+    loadMembers();
+  }, []);
+
+  // Filter members based on search term
+  useEffect(() => {
+    if (searchTerm) {
+      const filtered = members.filter(member =>
+        member.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFilteredMembers(filtered);
+    } else {
+      setFilteredMembers(members);
+    }
+  }, [searchTerm, members]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
+  };
+
+  const handleMemberSelect = (memberName) => {
+    setFormData((prev) => ({
+      ...prev,
+      name: memberName,
+    }));
+    setSearchTerm(memberName);
+    setShowDropdown(false);
+  };
+
+  const handleNameInputChange = (e) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+    setFormData((prev) => ({
+      ...prev,
+      name: value,
+    }));
+    setShowDropdown(true);
   };
 
   const handleNumberChange = (eventName, value) => {
@@ -87,20 +139,55 @@ const RsvpForm = () => {
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Name */}
-        <div>
+        <div className="relative">
           <label className="block text-sm font-medium text-gray-700 mb-2">
             Name <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
             name="name"
-            placeholder="Please enter your name"
-            value={formData.name}
-            onChange={handleChange}
+            placeholder="Search and select your name"
+            value={searchTerm}
+            onChange={handleNameInputChange}
+            onFocus={() => setShowDropdown(true)}
             className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors placeholder-gray-400"
             required
             disabled={isSubmitting}
+            autoComplete="off"
           />
+          
+          {/* Dropdown */}
+          {showDropdown && filteredMembers.length > 0 && (
+            <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-60 overflow-auto">
+              {filteredMembers.slice(0, 10).map((member) => (
+                <div
+                  key={member.id}
+                  onClick={() => handleMemberSelect(member.name)}
+                  className="px-4 py-2 hover:bg-blue-50 cursor-pointer flex justify-between items-center"
+                >
+                  <span className="text-gray-900">{member.name}</span>
+                  {member.status && (
+                    <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                      {member.status}
+                    </span>
+                  )}
+                </div>
+              ))}
+              {filteredMembers.length > 10 && (
+                <div className="px-4 py-2 text-sm text-gray-500 bg-gray-50">
+                  Showing first 10 results. Continue typing to narrow down...
+                </div>
+              )}
+            </div>
+          )}
+          
+          {/* Click outside to close dropdown */}
+          {showDropdown && (
+            <div 
+              className="fixed inset-0 z-5"
+              onClick={() => setShowDropdown(false)}
+            />
+          )}
         </div>
 
         {/* Contact Number */}
