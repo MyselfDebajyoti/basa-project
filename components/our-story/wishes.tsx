@@ -24,10 +24,10 @@ export function Wishes({ className }: WishesOnSharodothsavProps) {
           priority
         />
         <Image
-          src="/images/Group 1171275757.svg"
+          src="/images/our-story-2.png"
           alt="Letters conveying wishes on Sharodothsav from the Chief Minister of West Bengal and the High Commissioner of India."
           width={960}
-          height={690}
+          height={790}
           className="h-auto w-full object-cover"
           priority
         />

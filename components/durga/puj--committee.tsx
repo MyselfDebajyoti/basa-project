@@ -119,7 +119,7 @@ export function PujoCommittee({ className }: PujoCommitteeProps) {
           return (
             <article
               key={member.name}
-              className="flex items-start gap-4  border border-[color:var(--brand-muted)] bg-background p-4 shadow-sm"
+              className="flex items-start gap-4 bg-background p-4 "
             >
               <Image
                 src={imageSrc || "/placeholder.svg"}

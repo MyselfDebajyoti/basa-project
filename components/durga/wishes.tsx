@@ -15,22 +15,28 @@ export function WishesOnSharodothsav({ className }: WishesOnSharodothsavProps) {
       </header>
 
       <figure className="overflow-hidden rounded-xl grid grid-cols-2 gap-4 bg-background shadow-sm">
-        <Image
-          src="/images/Screenshot 2025-09-20 at 14.54.10 1.svg"
-          alt="Letters conveying wishes on Sharodothsav from the Chief Minister of West Bengal and the High Commissioner of India."
-          width={960}
-          height={690}
-          className="h-auto w-full object-cover"
-          priority
-        />
-        <Image
-          src="/images/1758702451850-674f2d7b-580a-4944-892c-7ff5dfc36596_1 1.svg"
-          alt="Letters conveying wishes on Sharodothsav from the Chief Minister of West Bengal and the High Commissioner of India."
-          width={960}
-          height={690}
-          className="h-auto w-full object-cover"
-          priority
-        />
+        <div>
+          <p className="mb-3  ">Current Messages</p>
+          <Image
+            src="/images/1758702451850-674f2d7b-580a-4944-892c-7ff5dfc36596_1 1.svg"
+            alt="Letters conveying wishes on Sharodothsav from the Chief Minister of West Bengal and the High Commissioner of India."
+            width={960}
+            height={690}
+            className="h-auto w-full object-cover"
+            priority
+          />
+        </div>
+        <div>
+          <p className="mb-3">Messages from the past</p>
+          <Image
+            src="/images/Screenshot 2025-09-20 at 14.54.10 1.svg"
+            alt="Letters conveying wishes on Sharodothsav from the Chief Minister of West Bengal and the High Commissioner of India."
+            width={960}
+            height={690}
+            className="h-auto w-full object-cover"
+            priority
+          />
+        </div>
       </figure>
     </section>
   );
