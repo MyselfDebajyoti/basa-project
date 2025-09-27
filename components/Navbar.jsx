@@ -102,12 +102,23 @@ const Navbar = () => {
   };
 
   const renderMenuItem = (item, colorClass) => {
+    if (item.disabled) {
+      return (
+        <span
+          key={item.title}
+          className="block py-1 text-gray-400 cursor-not-allowed"
+        >
+          {item.title}
+        </span>
+      );
+    }
+
     if (item.external) {
       return (
         <button
           key={item.title}
           onClick={() => handleLinkClick(item.path, item.external)}
-          className={`${colorClass} block text-left w-full py-1 hover:underline transition-colors`}
+          className={`${colorClass} block text-left w-full py-1 hover:font-semibold transition-colors`}
         >
           {item.title}
         </button>
@@ -118,7 +129,7 @@ const Navbar = () => {
       <Link
         key={item.title}
         href={item.path}
-        className={`${colorClass} block py-1 hover:underline transition-colors`}
+        className={`${colorClass} block py-1 hover:font-semibold transition-colors`}
         onClick={() => setIsMenuOpen(false)}
       >
         {item.title}
@@ -251,7 +262,11 @@ const Navbar = () => {
                                     {/* <span className="text-base">
                                       
                                     </span> */}
-                                    <img className="w-4" src={item.icon} alt="" />
+                                    <img
+                                      className="w-4"
+                                      src={item.icon}
+                                      alt=""
+                                    />
                                     <Link
                                       href={item.path}
                                       className={`py-1 font-light hover:underline transition-colors `}
@@ -305,7 +320,7 @@ const menuConfig = [
       {
         title: "Festivals & Get Togethers",
         items: [
-          { title: "Durga Puja", path: "/events" },
+          { title: "Durga Pujo", path: "/events" },
           { title: "Lokkhi Pujo", path: "/events" },
           { title: "Kali Pujo", path: "/events" },
           { title: "Saraswati Pujo", path: "/events" },
@@ -351,10 +366,14 @@ const menuConfig = [
       {
         title: "Media & Literature",
         items: [
-          { title: "E-Magazine Ramdhanu", path: "/events#magazine" },
-          { title: "Photo Archives", path: "/events#photos" },
-          { title: "Print Media", path: "/events#print-media" },
-          { title: "TV Media", path: "/events#tv-media" },
+          {
+            title: "E-Magazine Ramdhanu",
+            path: "/events#magazine",
+            disabled: true,
+          },
+          { title: "Photo Archives", path: "/events#photos", disabled: true },
+          { title: "Print Media", path: "/events#print-media", disabled: true },
+          { title: "TV Media", path: "/events#tv-media", disabled: true },
         ],
       },
       {
@@ -364,21 +383,25 @@ const menuConfig = [
             title: "Facebook",
             path: "https://www.facebook.com/bengaliassociationsa",
             external: true,
+            disabled: true,
           },
           {
             title: "WhatsApp",
             path: "https://wa.me/27795381768",
             external: true,
+            disabled: true,
           },
           {
             title: "Instagram",
             path: "https://www.instagram.com/bengaliassociationsa",
             external: true,
+            disabled: true,
           },
           {
             title: "Twitter",
             path: "https://twitter.com/bengaliassocsa",
             external: true,
+            disabled: true,
           },
         ],
       },
