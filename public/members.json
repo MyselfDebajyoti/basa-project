@@ -1,0 +1,838 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "name": "Abhidipta Guha"
+    },
+    {
+      "id": 2,
+      "name": "Abhishek Chatterjee"
+    },
+    {
+      "id": 3,
+      "name": "Abhisekh Mondal"
+    },
+    {
+      "id": 4,
+      "name": "Abin Ganguly"
+    },
+    {
+      "id": 5,
+      "name": "Agniv Dutta"
+    },
+    {
+      "id": 6,
+      "name": "Alekhya Talapatra"
+    },
+    {
+      "id": 7,
+      "name": "Anand Swaminathan"
+    },
+    {
+      "id": 8,
+      "name": "Anil Dasari"
+    },
+    {
+      "id": 9,
+      "name": "Aninda Chakrabarti"
+    },
+    {
+      "id": 10,
+      "name": "Anindya Chatterji"
+    },
+    {
+      "id": 11,
+      "name": "Anirvan Banerjee"
+    },
+    {
+      "id": 12,
+      "name": "Arijit Chandra"
+    },
+    {
+      "id": 13,
+      "name": "Arijit Chatterjee"
+    },
+    {
+      "id": 14,
+      "name": "Arijit Ghosh"
+    },
+    {
+      "id": 15,
+      "name": "Arijit Ghosh"
+    },
+    {
+      "id": 16,
+      "name": "Arijit Mookerjee"
+    },
+    {
+      "id": 17,
+      "name": "Arindam Aich"
+    },
+    {
+      "id": 18,
+      "name": "Arijit Mukherjee"
+    },
+    {
+      "id": 19,
+      "name": "Arindam Ghosh"
+    },
+    {
+      "id": 20,
+      "name": "Arkapal Sen"
+    },
+    {
+      "id": 21,
+      "name": "Arpan Sur"
+    },
+    {
+      "id": 22,
+      "name": "Arnab Chattopadhyay"
+    },
+    {
+      "id": 23,
+      "name": "Arunabha Das"
+    },
+    {
+      "id": 24,
+      "name": "Aseem Saxena"
+    },
+    {
+      "id": 25,
+      "name": "Avijit Das"
+    },
+    {
+      "id": 26,
+      "name": "Ashish Kota"
+    },
+    {
+      "id": 27,
+      "name": "Avik Sarkar"
+    },
+    {
+      "id": 28,
+      "name": "Ayan Chatterjee"
+    },
+    {
+      "id": 29,
+      "name": "Ayan Ghosh"
+    },
+    {
+      "id": 30,
+      "name": "Banibrata Banerjee"
+    },
+    {
+      "id": 31,
+      "name": "Bodhisattva Gupta"
+    },
+    {
+      "id": 32,
+      "name": "Bijoy Saha"
+    },
+    {
+      "id": 33,
+      "name": "Bipul"
+    },
+    {
+      "id": 34,
+      "name": "Biswajit Paul"
+    },
+    {
+      "id": 35,
+      "name": "Brijesh Dutta"
+    },
+    {
+      "id": 36,
+      "name": "Chitta Ranjan Das"
+    },
+    {
+      "id": 37,
+      "name": "Debadyuti Gupta"
+    },
+    {
+      "id": 38,
+      "name": "Debaprashad Datta"
+    },
+    {
+      "id": 39,
+      "name": "Debashish Basu"
+    },
+    {
+      "id": 40,
+      "name": "Debratna Nag"
+    },
+    {
+      "id": 41,
+      "name": "Dipan Panja"
+    },
+    {
+      "id": 42,
+      "name": "Dipanjan Chaudhuri"
+    },
+    {
+      "id": 43,
+      "name": "Dipankar Mishra"
+    },
+    {
+      "id": 44,
+      "name": "Dipok Das"
+    },
+    {
+      "id": 45,
+      "name": "Divya Jyoti Das"
+    },
+    {
+      "id": 46,
+      "name": "Gaurav Chatterjee"
+    },
+    {
+      "id": 47,
+      "name": "Gourish Chakravorty"
+    },
+    {
+      "id": 48,
+      "name": "Hridoy Chandra Das"
+    },
+    {
+      "id": 49,
+      "name": "Joydeep Majumdar"
+    },
+    {
+      "id": 50,
+      "name": "Kamal Chatterjee"
+    },
+    {
+      "id": 51,
+      "name": "Kaushik Mahalanabish"
+    },
+    {
+      "id": 52,
+      "name": "Koushik Mitra"
+    },
+    {
+      "id": 53,
+      "name": "Kaushik Mukherjee"
+    },
+    {
+      "id": 54,
+      "name": "Kaustav Das"
+    },
+    {
+      "id": 55,
+      "name": "Krishna Datta"
+    },
+    {
+      "id": 56,
+      "name": "Kshitish Chandra Tarafdar"
+    },
+    {
+      "id": 57,
+      "name": "Matt Hilton"
+    },
+    {
+      "id": 58,
+      "name": "Mrinal Kanti Das"
+    },
+    {
+      "id": 59,
+      "name": "Mrinmay Paul"
+    },
+    {
+      "id": 60,
+      "name": "Pankaj Bhadra"
+    },
+    {
+      "id": 61,
+      "name": "Pranjit Chowdhury"
+    },
+    {
+      "id": 62,
+      "name": "Parikshit Moitra"
+    },
+    {
+      "id": 63,
+      "name": "Partha Basu"
+    },
+    {
+      "id": 64,
+      "name": "Partha Pratim Ghosh"
+    },
+    {
+      "id": 65,
+      "name": "Phalguni Pattanayak"
+    },
+    {
+      "id": 66,
+      "name": "Prashan Maharaj"
+    },
+    {
+      "id": 67,
+      "name": "Prasanta Mondal"
+    },
+    {
+      "id": 68,
+      "name": "Pratyush Haldar"
+    },
+    {
+      "id": 69,
+      "name": "Preetesh Gupta"
+    },
+    {
+      "id": 70,
+      "name": "Pritam Neogi"
+    },
+    {
+      "id": 71,
+      "name": "Ramakrishna Reddy"
+    },
+    {
+      "id": 72,
+      "name": "Rana Pratap Sinha"
+    },
+    {
+      "id": 73,
+      "name": "Ratan Mazumder"
+    },
+    {
+      "id": 74,
+      "name": "Romeo Das"
+    },
+    {
+      "id": 75,
+      "name": "Sabir Ranjan Modak"
+    },
+    {
+      "id": 76,
+      "name": "Sam Krishna Saha"
+    },
+    {
+      "id": 77,
+      "name": "Sambit Nayak"
+    },
+    {
+      "id": 78,
+      "name": "Samik Sinha"
+    },
+    {
+      "id": 79,
+      "name": "Samir Mozumder"
+    },
+    {
+      "id": 80,
+      "name": "Sammy Mukherjee"
+    },
+    {
+      "id": 81,
+      "name": "Samir Saha"
+    },
+    {
+      "id": 82,
+      "name": "Sandeep Basu"
+    },
+    {
+      "id": 83,
+      "name": "Sandipan Das"
+    },
+    {
+      "id": 84,
+      "name": "Sanjit Sinha"
+    },
+    {
+      "id": 85,
+      "name": "Sanjoy Das"
+    },
+    {
+      "id": 86,
+      "name": "Satish Nrusimhadevara"
+    },
+    {
+      "id": 87,
+      "name": "Saugata Das"
+    },
+    {
+      "id": 88,
+      "name": "Saumik Samanta"
+    },
+    {
+      "id": 89,
+      "name": "Sayan Chakrabarty"
+    },
+    {
+      "id": 90,
+      "name": "Shaibal Barua"
+    },
+    {
+      "id": 91,
+      "name": "Shouvik Nandy"
+    },
+    {
+      "id": 92,
+      "name": "Shuvo Ray"
+    },
+    {
+      "id": 93,
+      "name": "Shyamal Bhattacharya"
+    },
+    {
+      "id": 94,
+      "name": "Siddhartha Sen"
+    },
+    {
+      "id": 95,
+      "name": "Somdeb Banerjee"
+    },
+    {
+      "id": 96,
+      "name": "Somnath Bhattacharya"
+    },
+    {
+      "id": 97,
+      "name": "Somnath Modak"
+    },
+    {
+      "id": 98,
+      "name": "Subhash Chandra Sow"
+    },
+    {
+      "id": 99,
+      "name": "Subhradip Ghoshal"
+    },
+    {
+      "id": 100,
+      "name": "Sudeep Kumar Biswas"
+    },
+    {
+      "id": 101,
+      "name": "Sujon Saha"
+    },
+    {
+      "id": 102,
+      "name": "Sujoy Das"
+    },
+    {
+      "id": 103,
+      "name": "Sumon Sil"
+    },
+    {
+      "id": 104,
+      "name": "Suvra Sankar Paul"
+    },
+    {
+      "id": 105,
+      "name": "Tushar Kanti Nath"
+    },
+    {
+      "id": 106,
+      "name": "Tushar Das"
+    },
+    {
+      "id": 107,
+      "name": "Varun Bhojwani"
+    },
+    {
+      "id": 108,
+      "name": "Vishal Vishwas"
+    },
+    {
+      "id": 109,
+      "name": "Sunanda Bose",
+      "status": "Cousin"
+    },
+    {
+      "id": 110,
+      "name": "Susmita Mondal"
+    },
+    {
+      "id": 111,
+      "name": "Sagarika Ganguly"
+    },
+    {
+      "id": 112,
+      "name": "Rima Das",
+      "status": "Not Member"
+    },
+    {
+      "id": 113,
+      "name": "Bama Swaminathan"
+    },
+    {
+      "id": 114,
+      "name": "Suvarna Nandi"
+    },
+    {
+      "id": 115,
+      "name": "Rupali Chakrabarti"
+    },
+    {
+      "id": 116,
+      "name": "Sayantani Chatterji"
+    },
+    {
+      "id": 117,
+      "name": "Tulika Banerjee"
+    },
+    {
+      "id": 118,
+      "name": "Roshni Chandra"
+    },
+    {
+      "id": 119,
+      "name": "Poulomi Chatterjee"
+    },
+    {
+      "id": 120,
+      "name": "Arpita Ghosh"
+    },
+    {
+      "id": 121,
+      "name": "Shalini Ghosh"
+    },
+    {
+      "id": 122,
+      "name": "Arpita Aich",
+      "status": "Not Member"
+    },
+    {
+      "id": 123,
+      "name": "Indrakshi Sen"
+    },
+    {
+      "id": 124,
+      "name": "Indrani Sur"
+    },
+    {
+      "id": 125,
+      "name": "Deepti Deshpande"
+    },
+    {
+      "id": 126,
+      "name": "Saswati Das"
+    },
+    {
+      "id": 127,
+      "name": "Shilpa Saxena"
+    },
+    {
+      "id": 128,
+      "name": "Paramita Das"
+    },
+    {
+      "id": 129,
+      "name": "Ambika Kota"
+    },
+    {
+      "id": 130,
+      "name": "Priyanka Sarkar"
+    },
+    {
+      "id": 131,
+      "name": "Aparna Chatterjee"
+    },
+    {
+      "id": 132,
+      "name": "Sunanda Ghosh"
+    },
+    {
+      "id": 133,
+      "name": "Paramita Banerjee"
+    },
+    {
+      "id": 134,
+      "name": "Priyanka Roy"
+    },
+    {
+      "id": 135,
+      "name": "Shanta Saha",
+      "status": "Not Member"
+    },
+    {
+      "id": 136,
+      "name": "Sumita Paul"
+    },
+    {
+      "id": 137,
+      "name": "Falguni Das"
+    },
+    {
+      "id": 138,
+      "name": "Suchandra Gupta"
+    },
+    {
+      "id": 139,
+      "name": "Sharmi Palit"
+    },
+    {
+      "id": 140,
+      "name": "Jayati Kusari Basu"
+    },
+    {
+      "id": 141,
+      "name": "Chandrani Nag"
+    },
+    {
+      "id": 142,
+      "name": "Ishita Mondal"
+    },
+    {
+      "id": 143,
+      "name": "Sanchari Basu"
+    },
+    {
+      "id": 144,
+      "name": "Kanya Mishra"
+    },
+    {
+      "id": 145,
+      "name": "Soma Das"
+    },
+    {
+      "id": 146,
+      "name": "Surangama Das"
+    },
+    {
+      "id": 147,
+      "name": "Bairagya Hemantika Chatterjee"
+    },
+    {
+      "id": 148,
+      "name": "Chandra Chakravorty"
+    },
+    {
+      "id": 149,
+      "name": "Jayanti Ghosh Majumdar"
+    },
+    {
+      "id": 150,
+      "name": "Kavita Chatterjee"
+    },
+    {
+      "id": 151,
+      "name": "Joyita Bhattacharjee"
+    },
+    {
+      "id": 152,
+      "name": "Jayashree Mitra"
+    },
+    {
+      "id": 153,
+      "name": "Mayuri Mukherjee"
+    },
+    {
+      "id": 154,
+      "name": "Sreetama Deb"
+    },
+    {
+      "id": 155,
+      "name": "Bakul Sarkar"
+    },
+    {
+      "id": 156,
+      "name": "Moumita Aich"
+    },
+    {
+      "id": 157,
+      "name": "Lorrain Das"
+    },
+    {
+      "id": 158,
+      "name": "Rituparna Roy Paul"
+    },
+    {
+      "id": 159,
+      "name": "Rumi Bhadra"
+    },
+    {
+      "id": 160,
+      "name": "Gouri Chowdhury"
+    },
+    {
+      "id": 161,
+      "name": "Monalisa Moitra"
+    },
+    {
+      "id": 162,
+      "name": "Paramita Basu"
+    },
+    {
+      "id": 163,
+      "name": "Annapurna Hazra Ghosh"
+    },
+    {
+      "id": 164,
+      "name": "Ketaki Pattanayak"
+    },
+    {
+      "id": 165,
+      "name": "Pamela Chatterjee",
+      "status": "Not Member"
+    },
+    {
+      "id": 166,
+      "name": "Ankita Haldar"
+    },
+    {
+      "id": 167,
+      "name": "Dipanwita Gupta"
+    },
+    {
+      "id": 168,
+      "name": "Ankita Acharya Neogi"
+    },
+    {
+      "id": 169,
+      "name": "Gargi Mukherjee"
+    },
+    {
+      "id": 170,
+      "name": "Anindita Sinha"
+    },
+    {
+      "id": 171,
+      "name": "Priti Das"
+    },
+    {
+      "id": 172,
+      "name": "Dipanwita Deb"
+    },
+    {
+      "id": 173,
+      "name": "Nandita Saha (Uma)"
+    },
+    {
+      "id": 174,
+      "name": "Sudha Nayak"
+    },
+    {
+      "id": 175,
+      "name": "Archana Sinha"
+    },
+    {
+      "id": 176,
+      "name": "Sriti Mozumder"
+    },
+    {
+      "id": 177,
+      "name": "Tanusree Saha"
+    },
+    {
+      "id": 178,
+      "name": "Mahua Basu"
+    },
+    {
+      "id": 179,
+      "name": "Tamalee Das"
+    },
+    {
+      "id": 180,
+      "name": "Madhumita Sinha"
+    },
+    {
+      "id": 181,
+      "name": "Rini Das"
+    },
+    {
+      "id": 182,
+      "name": "Jaya Nrusimhadevara"
+    },
+    {
+      "id": 183,
+      "name": "Pia Das"
+    },
+    {
+      "id": 184,
+      "name": "Sudeshna Ghatak"
+    },
+    {
+      "id": 185,
+      "name": "Lovley Barua"
+    },
+    {
+      "id": 186,
+      "name": "Parul Nandy",
+      "status": "Not Member"
+    },
+    {
+      "id": 187,
+      "name": "Sikha Bhattacharya"
+    },
+    {
+      "id": 188,
+      "name": "Candice Sen"
+    },
+    {
+      "id": 189,
+      "name": "Shreela Gupta Banerjee"
+    },
+    {
+      "id": 190,
+      "name": "Monali Bhattacharya"
+    },
+    {
+      "id": 191,
+      "name": "Basudha Modak"
+    },
+    {
+      "id": 192,
+      "name": "Chandrani Mondal"
+    },
+    {
+      "id": 193,
+      "name": "Sanjukta Sarkar Ghoshal"
+    },
+    {
+      "id": 194,
+      "name": "Sudeshna Biswas",
+      "status": "Not Member"
+    },
+    {
+      "id": 195,
+      "name": "Popy Das"
+    },
+    {
+      "id": 196,
+      "name": "Anindita Paul",
+      "status": "Not Member"
+    },
+    {
+      "id": 197,
+      "name": "Sreerupa Das"
+    },
+    {
+      "id": 198,
+      "name": "Tulika Bhojwani"
+    },
+    {
+      "id": 199,
+      "name": "Preeti Biswas"
+    },
+    {
+      "id": 200,
+      "name": "Karna Das"
+    },
+    {
+      "id": 201,
+      "name": "Gayatri Chakravorty"
+    },
+    {
+      "id": 202,
+      "name": "Kajori Mitra/Soham Mitra"
+    },
+    {
+      "id": 203,
+      "name": "Swastika Das"
+    },
+    {
+      "id": 204,
+      "name": "Zoey Nandy"
+    },
+    {
+      "id": 205,
+      "name": "Shona Sen"
+    },
+    {
+      "id": 206,
+      "name": "Adityadeb Banerjee"
+    }
+  ],
+  "total_members": 206,
+  "last_updated": "2025-09-27"
+}
