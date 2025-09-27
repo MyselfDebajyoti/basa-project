@@ -71,7 +71,9 @@ export function Outreach({ className }: PujoCommitteeProps) {
           const imageSrc = member.imageUrl;
           const countryName = member.country;
           return (
-            <div className="flex flex-col items-center gap-2 ">
+            <div
+            key={member.name}
+            className="flex flex-col items-center gap-2 ">
               <div
                 key={member.name}
                 className="bg-background  w-24 h-24 flex justify-center items-center rounded-full "
