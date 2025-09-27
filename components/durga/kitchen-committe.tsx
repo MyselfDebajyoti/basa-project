@@ -74,7 +74,7 @@ export function KitchenCommittee({ className }: PujoCommitteeProps) {
     <section className={cn("space-y-6", className)}>
       <header className="flex flex-col gap-2">
         <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-12 text-left">
-          Pujo Committee 2025-Kitchen Committee
+          Durga Pujo - Kitchen Committee 2025
         </h2>
       </header>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
