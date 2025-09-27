@@ -18,14 +18,14 @@ export function KaliPujo({ className }: BongoUtsavProps) {
           alt="Dance performance at Bongo Utsav"
           width={200}
           height={140}
-          className="h-full w-full rounded-md object-cover"
+          className="h-full w-full  object-cover"
         />
         <Image
           src="/kali/image 138.png"
           alt="Festival art from Bongo Utsav"
           width={408}
           height={180}
-          className="h-full w-full rounded-md object-cover"
+          className="h-full w-full  object-cover"
         />
 
         <Image
@@ -33,7 +33,7 @@ export function KaliPujo({ className }: BongoUtsavProps) {
           alt="Bongo Utsav performers on stage"
           width={640}
           height={400}
-          className="h-full w-full rounded-md object-cover shadow-sm"
+          className="h-full w-full object-cover shadow-sm"
           priority
         />
       </div>

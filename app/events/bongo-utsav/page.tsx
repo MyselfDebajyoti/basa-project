@@ -39,6 +39,10 @@ export default function Page() {
           id: "#saraswati-pujo",
           element: document.getElementById("saraswati-pujo"),
         },
+        {
+          id: "#lokkhi-pujo",
+          element: document.getElementById("lokkhi-pujo"),
+        },
         { id: "#kali-pujo", element: document.getElementById("kali-pujo") },
         { id: "#dol-utsab", element: document.getElementById("dol-utsab") },
         {
@@ -114,7 +118,7 @@ export default function Page() {
 
   return (
     <main className="bg-background">
-      <section className="mx-auto max-w-6xl py-12 md:py-16">
+      <section className="mx-auto max-w-6xl py-2 md:py-16">
         <div style={palette} className="flex flex-col gap-8 md:gap-10">
           {/* <BreadcrumbTrail items={breadcrumbItems} /> */}
           <div className="flex flex-col gap-12 md:grid md:grid-cols-[200px_1fr] md:gap-14">

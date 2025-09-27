@@ -18,14 +18,14 @@ export function DolUtsab({ className }: BongoUtsavProps) {
           alt="Dance performance at Bongo Utsav"
           width={200}
           height={140}
-          className="h-full w-full rounded-md object-cover"
+          className="h-full w-full  object-cover"
         />
         <Image
           src="/kali/image 151.png"
           alt="Festival art from Bongo Utsav"
           width={408}
           height={180}
-          className="h-full w-full rounded-md object-cover"
+          className="h-full w-full  object-cover"
         />
       </div>
 

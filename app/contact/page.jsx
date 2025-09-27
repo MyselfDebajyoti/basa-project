@@ -110,7 +110,7 @@ function ContactUsPage() {
                     <h2 className="text-xl font-semibold text-gray-900 mb-2">
                       Email
                     </h2>
-                    <p className="font-light">contact@amaderbasa.org</p>
+                    <p className="font-light">president@amaderbasa.org</p>
                   </div>
                   <button
                     onClick={() =>
@@ -148,14 +148,17 @@ function ContactUsPage() {
                   </button>
                 </div>
 
-                <div className="flex justify-between items-center">
+                <div
+                  className="flex justify-between items-center"
+                  id="sponsorship-request"
+                >
                   <div>
                     <h2 className="text-xl font-semibold text-gray-900 mb-4">
                       Sponsorship Request
                     </h2>
                     <button
                       onClick={handleDownload}
-                      className="font-semibold text-sm px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl bg-red-400 hover:bg-red-500 text-white"
+                      className="font-semibold text-sm  rounded-lg transition-colors duration-200   text-black hover:underline"
                     >
                       Download File
                     </button>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import BusinessEnquiriesForm from "../businessForm";
 // import { Button } from "@/components/ui/button";
 
 export function BusinessEnquiryBody() {
@@ -127,12 +128,28 @@ export function BusinessEnquiryBody() {
               </p>
             </div>
           </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Left Column - About BASA Member Networking */}
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold text-[color:var(--brand-text)] mb-4">
+                Entrepreneur / Business Exchange Enquiry
+              </h2>
+              <p className="text-gray-700 leading-relaxed">
+                Fill out the form below to let us know more about your business
+                and how BASA can support your journey. Together, we can build a
+                strong, interconnected network that celebrates both our culture
+                and our professional success.
+              </p>
+            </div>
+
+            {/* Right Column - Questions to Guide Your Enquiry */}
+          </div>
         </div>
       </section>
 
       {/* Enquiry Form Section */}
       <section id="enquiry-form">
-        <div className="space-y-6"></div>
+        <BusinessEnquiriesForm></BusinessEnquiriesForm>
       </section>
     </div>
   );

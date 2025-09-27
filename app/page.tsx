@@ -123,7 +123,7 @@ export default function Home() {
         </div>
       </section>
       <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto" id="sponsors">
           {/* Section Title */}
           <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-16 text-left">
             Our Partners
@@ -338,13 +338,14 @@ export default function Home() {
           <div className="flex justify-center space-x-8 mb-8">
             {/* Facebook */}
             <a
-              href="https://www.facebook.com/basasouthafrica"
+              href="https://www.facebook.com/basasouthafrica
+"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 relative"
             >
               <Image
-                src="/icons/image 173 (1).png"
+                src="/icons/facebook.png"
                 alt="Facebook"
                 fill
                 className="object-contain"
@@ -380,19 +381,6 @@ export default function Home() {
                 className="object-contain"
               />
             </a> */}
-            <a
-              href="mailto:basa.gsec@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 relative"
-            >
-              <Image
-                src="/icons/image 189.png"
-                alt="Twitter"
-                fill
-                className="object-contain"
-              />
-            </a>
           </div>
 
           {/* Copyright Text */}

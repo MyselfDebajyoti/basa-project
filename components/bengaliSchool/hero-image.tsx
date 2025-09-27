@@ -115,6 +115,28 @@ const images = [
     alt: "Bengali School Image 3",
   },
 ];
+const imagesTwo = [
+  {
+    src: "/performing-art/image 153.png",
+    alt: "Bengali School Image 1",
+  },
+  {
+    src: "/performing-art/image 157.png",
+    alt: "Bengali School Image 2",
+  },
+  {
+    src: "/performing-art/image 154.png",
+    alt: "Bengali School Image 3",
+  },
+  {
+    src: "/performing-art/image 156.png",
+    alt: "Bengali School Image 3",
+  },
+  {
+    src: "/performing-art/image 155.png",
+    alt: "Bengali School Image 3",
+  },
+];
 
 export default function HeroImage() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -162,6 +184,97 @@ export default function HeroImage() {
                     alt={image.alt}
                     fill
                     className="object-cover object-top"
+                    priority={idx === 0}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </figure>
+
+      {/* Prev / Next controls (optional) */}
+      <button
+        aria-label="Previous slide"
+        onClick={prevSlide}
+        className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur-sm hover:bg-white"
+      >
+        <ChevronLeft size={18} />
+      </button>
+
+      <button
+        aria-label="Next slide"
+        onClick={nextSlide}
+        className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur-sm hover:bg-white"
+      >
+        <ChevronRight size={18} />
+      </button>
+
+      {/* Dots */}
+      <div className="mt-4 flex justify-center gap-2">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
+            className={`h-2.5 w-2.5 rounded-full transition-colors ${
+              index === activeIndex
+                ? "bg-[color:var(--brand-primary)]"
+                : "bg-[color:var(--brand-muted)] hover:bg-[color:var(--brand-muted-hover)]"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function HeroImageTwo() {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+
+  // Auto-advance slides every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex((i) => (i + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const nextSlide = () => setActiveIndex((i) => (i + 1) % images.length);
+  const prevSlide = () =>
+    setActiveIndex((i) => (i - 1 + images.length) % images.length);
+  const goToSlide = (index: number) => setActiveIndex(index);
+
+  // Track width is N * 100% so we must translate by (100 / N)% per slide
+  const trackWidth = images.length * 100; // percent
+  const translatePercentage = activeIndex * (100 / images.length);
+
+  return (
+    <div className="relative w-full overflow-hidden">
+      <figure className="border border-[color:var(--brand-muted)] bg-background">
+        <div className="w-full overflow-hidden">
+          {/* Track: width = images.length * 100% */}
+          <div
+            className="flex transition-transform duration-500 ease-out"
+            style={{
+              width: `${trackWidth}%`,
+              transform: `translateX(-${translatePercentage}%)`,
+            }}
+          >
+            {imagesTwo.map((image, idx) => (
+              // Each slide must take (100 / N)% of the track so it equals 100% of the viewport
+              <div
+                key={idx}
+                className="flex-none"
+                style={{ width: `${100 / images.length}%` }}
+              >
+                {/* Use Image with `fill` so it scales to parent and doesn't introduce intrinsic width overflow */}
+                <div className="relative h-[480px] w-full select-none">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-contain object-top"
                     priority={idx === 0}
                   />
                 </div>
