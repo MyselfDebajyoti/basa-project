@@ -3,6 +3,11 @@
 import { BreadcrumbTrail } from "./breadcrumb-trail";
 
 import { BongoUtsav } from "./bongo-utsav";
+import { AnnualPicnic } from "./annual-picnic";
+import { LokkhiPujo } from "./lokkhi-pujo";
+import { SaraswatiPujo } from "./saraswati-pujo";
+import { KaliPujo } from "./kali-pujo";
+import { DolUtsab } from "./dol-utsab";
 
 const breadcrumbItems = [
   { label: "Home", href: "/" },
@@ -56,35 +61,35 @@ export function BongoUtsavBody() {
       >
         Annual Picnic
       </h1>
-      <BongoUtsav className="mt-" />
+      <AnnualPicnic className="mt-" />
       <h1
         className="text-xl font-noto-sans font-semibold text-gray-800 mt-10  text-left"
         id="lokkhi-pujo"
       >
         Lokkhi Pujo
       </h1>
-      <BongoUtsav className="mt-" />
+      <LokkhiPujo className="mt-" />
       <h1
         className="text-xl font-noto-sans font-semibold text-gray-800 mt-10 text-left"
         id="saraswati-pujo"
       >
         Saraswati Pujo
       </h1>
-      <BongoUtsav className="mt-" />
+      <SaraswatiPujo className="mt-" />
       <h1
         className="text-xl font-noto-sans font-semibold text-gray-800 mt-10  text-left"
         id="kali-pujo"
       >
         Kali Pujo
       </h1>
-      <BongoUtsav className="mt-" />
+      <KaliPujo className="mt-" />
       <h1
         className="text-xl font-noto-sans font-semibold text-gray-800 mt-10 text-left"
         id="dol-utsab"
       >
         Dol Utsav
       </h1>
-      <BongoUtsav className="mt-" />
+      <DolUtsab className="mt-" />
     </div>
   );
 }

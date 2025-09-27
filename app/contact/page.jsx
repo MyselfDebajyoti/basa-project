@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 
 import ContactEnquiriesForm from "@/components/ContactEnquriesForm";
-import { ClipboardCheck, Copy } from "lucide-react";
+import { ClipboardCheck, Copy, Download } from "lucide-react";
 // import BreadcrumbTrail from "@/components/BreadcrumbTrail";
 
 function ContactUsPage() {
@@ -20,6 +20,16 @@ function ContactUsPage() {
     setTimeout(() => {
       setCopied({ ...copied, [key]: false });
     }, 2000);
+  };
+
+  const handleDownload = () => {
+    // Replace 'your-file-name.pdf' with the actual filename in your public folder
+    const link = document.createElement("a");
+    link.href = "/BASA- Sponsorship Note.pdf"; // Path to file in public folder
+    link.download = "sponsorship-request.pdf"; // Name for downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -138,10 +148,26 @@ function ContactUsPage() {
                   </button>
                 </div>
 
+                <div className="flex justify-between items-center">
+                  <div>
+                    <h2 className="text-xl font-semibold text-gray-900 mb-4">
+                      Sponsorship Request
+                    </h2>
+                    <button
+                      onClick={handleDownload}
+                      className="font-semibold text-sm px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl bg-red-400 hover:bg-red-500 text-white"
+                    >
+                      Download File
+                    </button>
+                  </div>
+                </div>
+
                 {/* Divider */}
 
                 {/* LinkedIn */}
               </div>
+
+              {/* Download Button Section */}
             </div>
           </div>
         </div>
