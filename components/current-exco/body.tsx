@@ -154,7 +154,7 @@ export function ExcoBody() {
         "A Probashi Bangali from Delhi and Mumbai, he has lived in South Africa since 2008. He leads a joint venture in water and environmental management and serves on the Advisory Board of the University of Pretoria EBIT and Chemical Engineering. With his wife, Chandra, and daughter, Gayatri, he remains deeply engaged in community work. A former President of BASA and the India Club, he is committed to strengthening BASA and building closer ties with other communities.",
     },
     {
-      name: " Mr. Parikhit Moitra",
+      name: " Mr. Parikshit Moitra",
       title: "Vice President",
       image: "/exco/Rectangle 457 (10).svg",
       description:
@@ -182,7 +182,7 @@ export function ExcoBody() {
         "Mahua Basu, originally from Behala, Kolkata, has been residing in Johannesburg since April 2022. With over 14 years of experience in the FMCG sector,she works as a certified Food Safety Auditor.She finds joy in life’s simple pleasures—whether it’s immersing herself in books, exploring new destinations through travel, or experimenting with new recipes in the kitchen. Spending quality time with family, sharing stories, and enjoying meals together are moments she cherishes. Her passion for learning, discovering diverse cultures, and creating flavorful dishes keeps her engaged and inspired. Now serving her second term as a part of BASA EXCO,she looks forward to learning, growing,and making meaningful contributions with the support of the BASA community ",
     },
     {
-      name: "Mr. Jayashree Mitra",
+      name: "Mrs. Jayashree Mitra",
       title: "Treasurer",
       image: "/exco/Rectangle 457 (14).svg",
       description:
@@ -196,7 +196,7 @@ export function ExcoBody() {
         "Originally from Kolkata, Siddhartha came to South Africa in 1994 with his parents and grew up in Durban. He relocated to Johannesburg in 2013 and is involved in the insurance industry and logistics. His wife Candice is from South Africa and is a home executive. They have been married for 8 years and have a 7-year-old daughter named Shona. Siddhartha is inspired to join the BASA Executive Committee because of the deep sense of community it fosters, aligning with his Bengali heritage and cultural identity. As a team player, he is eager to contribute meaningfully, adding value to our beloved association.",
     },
     {
-      name: "Mr. Vishal Vishwas",
+      name: "Mr. Vishal Viswas",
       title: "Executive Committee Member",
       image: "/exco/Rectangle 457 (16).svg",
       description:

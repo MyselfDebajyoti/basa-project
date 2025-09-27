@@ -108,10 +108,10 @@ export default function Page() {
 
   return (
     <main className="bg-background">
-      <section className="mx-auto max-w-6xl py-12 md:py-16">
-        <div style={palette} className="flex flex-col gap-8 md:gap-10">
+      <section className="mx-auto max-w-6xl py-4 px-4 sm:py-6 sm:px-6 md:py-12 lg:py-16">
+        <div style={palette} className="flex flex-col gap-6 sm:gap-8 md:gap-10">
           {/* <BreadcrumbTrail items={breadcrumbItems} /> */}
-          <div className="flex flex-col gap-12 md:grid md:grid-cols-[200px_1fr] md:gap-14">
+          <div className="flex flex-col gap-8 sm:gap-10 md:gap-12 lg:grid lg:grid-cols-[200px_1fr] lg:gap-14">
             <PujoSidebar
               items={updatedSidebarItems}
               onItemClick={handleSidebarClick}

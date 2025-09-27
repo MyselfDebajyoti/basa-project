@@ -10,7 +10,7 @@ type CommitteeMember = {
 
 const committeeMembers: CommitteeMember[] = [
   {
-    name: "Mrs. Mohua Basu",
+    name: "Mrs. Mahua Basu",
     description: ["Pujo Committee", "Co-ordinator"],
     imageQuery: "Mrs. Sudeshna Ghatak portrait",
     imageUrl: "/committee/Rectangle 458 (1).png",
@@ -34,7 +34,7 @@ const committeeMembers: CommitteeMember[] = [
     imageUrl: "/committee/annapurna.png",
   },
   {
-    name: "Mr. Debamalya Kar",
+    name: "Mr. Debmalya Kar",
     description: ["Co-ordinator,", "Drama Ramp Walk"],
     imageQuery: "Ms. Gayatri Chokroborty portrait",
     imageUrl: "/committee/Rectangle 458 (3).png",
@@ -56,17 +56,14 @@ export function CulturalCommittee({ className }: PujoCommitteeProps) {
     <section className={cn("space-y-6", className)}>
       <header className="flex flex-col gap-2">
         <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-12 text-left">
-          Pujo Committee 2025-Cultural Committee
+          Durga Pujo - Cultural Committee 2025
         </h2>
       </header>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {committeeMembers.map((member) => {
           const imageSrc = member.imageUrl;
           return (
-            <article
-              key={member.name}
-              className="flex items-start gap-4  p-4"
-            >
+            <article key={member.name} className="flex items-start gap-4  p-4">
               <Image
                 src={imageSrc || "/placeholder.svg"}
                 alt={`${member.name} portrait`}
