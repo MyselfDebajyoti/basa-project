@@ -413,9 +413,9 @@ const menuConfig = [
     color: "#002496",
     path: "/events",
     items: [
-      { title: "Annual Event Calendar", path: "/events#calendar" },
-      { title: "Upcoming Events", path: "/events#upcoming" },
-      { title: "RSVPs", path: "/events#rsvp" },
+      { title: "Annual Event Calendar", path: "/events/events-rsvp" },
+      { title: "Upcoming Events", path: "/events/events-rsvp#upcoming-events" },
+      { title: "RSVPs", path: "/events/events-rsvp#rsvp" },
     ],
   },
   {
@@ -424,12 +424,12 @@ const menuConfig = [
     color: "#FFB612",
     path: "/beyond-basa",
     items: [
-      { title: "Outreach Programs", path: "/beyond-basa#outreach" },
-      { title: "Sponsors & Partners", path: "/beyond-basa#sponsors" },
+      { title: "Outreach Programs", path: "/social-responsibility" },
+      { title: "Sponsors & Partners", path: "/#sponsors" },
       { title: "Sponsor List", path: "/beyond-basa#sponsor-list" },
       {
         title: "Sponsorship Request",
-        path: "/beyond-basa#sponsorship-request",
+        path: "/contact#sponsorship-request",
       },
       { title: "Enquiries", path: "/contact" },
       { title: "BASA Business Exchange", path: "/bussiness-enquiry" },

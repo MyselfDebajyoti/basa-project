@@ -10,94 +10,100 @@ type CommitteeMember = {
 
 const committeeMembers: CommitteeMember[] = [
   {
-    name: "Mrs. Sudeshna Ghatak",
-    description: ["Pujo Committee", "Co-ordinator"],
-    imageQuery: "Mrs. Sudeshna Ghatak portrait",
-    imageUrl: "/committee/Group 1171275684.png",
+    name: "Mrs. Anindita Paul",
+    description: ["Singing"],
+    imageQuery: "Mrs. Anindita Paul portrait",
+    imageUrl: "/art-teachers/anindita.png",
   },
   {
-    name: "Mrs. Annapurna Hazra",
-    description: ["Co-ordinator,", "Bhog Prep."],
-    imageQuery: "Mrs. Annapurna Hazra portrait",
-    imageUrl: "/committee/Group 1171275684.png",
+    name: "Mr. Somnath Modak",
+    description: ["Drama"],
+    imageQuery: "Mr. Somnath Modak portrait",
+    imageUrl: "/art-teachers/somnath.png",
   },
   {
-    name: "Mrs. Sayantani Chatterjee",
-    description: ["Co-ordinator,", "Bhog Prep."],
-    imageQuery: "Mrs. Sayantani Chatterjee portrait",
-    imageUrl: "/committee/Group 1171275684.png",
+    name: "Mrs. Hemantika Chatterjee",
+    description: ["Drama", "Elocution"],
+    imageQuery: "Mrs. Hemantika Chatterjee portrait",
+    imageUrl: "/art-teachers/hemantika.png",
   },
   {
-    name: "Mrs. Sagarika Ganguly",
-    description: ["Co-ordinator,", "Bhog Prep."],
-    imageQuery: "Mrs. Sagarika Ganguly portrait",
-    imageUrl: "/committee/Group 1171275684.png",
-  },
-  {
-    name: "Ms. Gayatri Chokroborty",
-    description: ["Co-ordinator,", "Venue & Decor"],
-    imageQuery: "Ms. Gayatri Chokroborty portrait",
-    imageUrl: "/committee/Group 1171275684.png",
-  },
-  {
-    name: "Ms. Saswati Das",
-    description: ["Co-ordinator,", "Venue & Decor"],
-    imageQuery: "Ms. Saswati Das portrait with saree",
-    imageUrl: "/committee/Group 1171275684.png",
-  },
-  {
-    name: "Mrs. Sikha Bhattacharya",
-    description: ["Co-ordinator,", "Fruit & Prasad"],
-    imageQuery: "Mrs. Sikha Bhattacharya portrait smiling",
-    imageUrl: "/committee/Group 1171275684.png",
-  },
-  {
-    name: "Mrs. Archana",
-    description: ["Co-ordinator,", "Fruit & Prasad"],
-    imageQuery: "Mrs. Archana portrait",
-    imageUrl: "/committee/Group 1171275684.png",
-  },
-  {
-    name: "Mrs. Sharmi Palit",
-    description: ["Co-ordinator", "Pujo Flower"],
-    imageQuery: "Mrs. Sharmi Palit portrait",
-    imageUrl: "/committee/Group 1171275684.png",
-  },
-  {
-    name: "Mrs. Jayashree Mitra",
-    description: ["Co-ordinator,", "Alpona"],
-    imageQuery: "Mrs. Jayashree Mitra portrait with glasses",
-    imageUrl: "/committee/Group 1171275684.png",
-  },
-  {
-    name: "Mrs. Santa Saha",
-    description: ["Co-ordinator,", "Evening Aarati"],
-    imageQuery: "Mrs. Santa Saha portrait",
-    imageUrl: "/committee/Group 1171275684.png",
-  },
-  {
-    name: "Mrs. Chandra Chokroborty",
-    description: ["Co-ordinator,", "Protima & Mondop"],
-    imageQuery: "Mrs. Chandra Chokroborty portrait smiling",
-    imageUrl: "/committee/Group 1171275684.png",
-  },
-  {
-    name: "Mrs. Tamalee Karmakar Das",
-    description: ["Co-ordinator,", "Protima & Mondop"],
-    imageQuery: "Mrs. Tamalee Karmakar Das portrait",
-    imageUrl: "/committee/Group 1171275684.png",
+    name: "Mrs. Sreela Gupta Banerjee",
+    description: ["Theatre"],
+    imageQuery: "Mrs. Sreela Gupta Banerjee portrait",
+    imageUrl: "/art-teachers/sreela.png",
   },
   {
     name: "Mrs. Saswati Das",
-    description: ["Co-ordinator,", "Inventory"],
-    imageQuery: "Mrs. Saswati Das committee member portrait",
-    imageUrl: "/committee/Group 1171275684.png",
+    description: ["Dance"],
+    imageQuery: "Mrs. Saswati Das portrait",
+    imageUrl: "/art-teachers/saswati.png",
   },
   {
-    name: "Mrs. Sanjukta Das",
-    description: ["Co-ordinator,", "Inventory"],
-    imageQuery: "Mrs. Sanjukta Das portrait",
-    imageUrl: "/committee/Group 1171275684.png",
+    name: "Mrs. Sudeshna Ghatak",
+    description: ["Dance"],
+    imageQuery: "Mrs. Sudeshna Ghatak portrait",
+    imageUrl: "/art-teachers/sudeshna.png",
+  },
+  {
+    name: "Mrs. Annapurna Hazra Ghosh",
+    description: ["Elocution", "Singing"],
+    imageQuery: "Mrs. Annapurna Hazra Ghosh portrait",
+    imageUrl: "/art-teachers/annapurna.png",
+  },
+  {
+    name: "Mrs. Sagarika Ganguly",
+    description: ["Singing"],
+    imageQuery: "Mrs. Sagarika Ganguly portrait",
+    imageUrl: "/art-teachers/sagarika.png",
+  },
+  {
+    name: "Mrs. Swastika Das",
+    description: ["Dance"],
+    imageQuery: "Mrs. Swastika Das portrait",
+    imageUrl: "/art-teachers/swastika.png",
+  },
+  {
+    name: "Mr. Sanjoy Das",
+    description: ["Elocution"],
+    imageQuery: "Mr. Sanjoy Das portrait",
+    imageUrl: "/art-teachers/sanjoy.png",
+  },
+  {
+    name: "Ms. Ambika Ghosh",
+    description: ["Dance"],
+    imageQuery: "Ms. Ambika Ghosh portrait",
+    imageUrl: "/art-teachers/ambika.png",
+  },
+  {
+    name: "Ms. Gayatri Chokroborty",
+    description: ["Dance Teacher"],
+    imageQuery: "Ms. Gayatri Chokroborty portrait",
+    imageUrl: "/art-teachers/gayatri.png",
+  },
+  {
+    name: "Mrs. Rini Sarkar",
+    description: ["Elocution"],
+    imageQuery: "Mrs. Rini Sarkar portrait",
+    imageUrl: "/art-teachers/rini.png",
+  },
+  {
+    name: "Mrs. Sayantani Chatterjee",
+    description: ["Elocution"],
+    imageQuery: "Mrs. Sayantani Chatterjee portrait",
+    imageUrl: "/art-teachers/sayantani.png",
+  },
+  {
+    name: "Mrs. Madhumita Bhattacharya",
+    description: ["Dance Teacher"],
+    imageQuery: "Mrs. Madhumita Bhattacharya portrait",
+    imageUrl: "/art-teachers/madhumita.png",
+  },
+  {
+    name: "Mr. Debmalya Kar",
+    description: ["Performing Arts"],
+    imageQuery: "Mr. Debmalya Kar portrait",
+    imageUrl: "/art-teachers/debmalya.png",
   },
 ];
 
@@ -119,7 +125,7 @@ export function Teachers({ className }: PujoCommitteeProps) {
           return (
             <article
               key={member.name}
-              className="flex items-start gap-4  border border-[color:var(--brand-muted)] bg-background p-4 shadow-sm"
+              className="flex items-start gap-4  bg-background p-4 "
             >
               <Image
                 src={imageSrc || "/placeholder.svg"}

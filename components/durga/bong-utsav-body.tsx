@@ -17,79 +17,85 @@ const breadcrumbItems = [
 
 export function BongoUtsavBody() {
   return (
-    <div className="flex flex-col gap-0">
-      <header className="flex flex-col gap-2">
-        <BreadcrumbTrail items={breadcrumbItems}></BreadcrumbTrail>
+    <div className="w-full min-h-screen">
+      {/* Container with responsive padding */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+        <div className="flex flex-col gap-0 max-w-6xl mx-auto">
+          {/* Header Section */}
+          <header className="flex flex-col gap-3 sm:gap-4 mb-6 sm:mb-8">
+            <div className="w-full">
+              <BreadcrumbTrail items={breadcrumbItems} />
+            </div>
 
-        <h1
-          className="text-xl font-noto-sans font-semibold text-gray-800 text-left"
-          id="bongo-utsab"
-        >
-          Bongo Utsav
-        </h1>
-      </header>
+            <h1
+              className="text-xl sm:text-2xl lg:text-3xl font-noto-sans font-semibold text-gray-800 text-left leading-tight"
+              id="bongo-utsab"
+            >
+              Bongo Utsav
+            </h1>
+          </header>
 
-      {/* <DurgaScheduleFigure />
+          {/* Main Content Sections */}
+          <div className="flex flex-col space-y-8 sm:space-y-12 lg:space-y-16">
+            {/* Bongo Utsav Section */}
+            <section className="w-full">
+              <BongoUtsav className="mt-2 sm:mt-4" />
+            </section>
 
-      <div className="mt-8">
-        <div className="grid gap-8 md:grid-cols-2">
-          <p className="text-pretty text-base leading-relaxed text-[color:var(--brand-text)] opacity-85">
-            Durga Pujo is the most cherished celebration in the Bengali
-            calendar, symbolizing the triumph of good over evil and the
-            homecoming of Goddess Durga with her children. For Bengalis across
-            the world, Durga Pujo is more than a religious occasion — it is a
-            festival of art, music, literature, and community spirit. The
-            fragrance of dhuno, the rhythm of dhaak, and the chants of ‘Bolo
-            Durga Mai Ki Jai’ bring the community together in joy and devotion.
-          </p>
-          <p className="text-pretty text-base leading-relaxed text-[color:var(--brand-text)] opacity-85">
-            In South Africa, BASA’s Durga Pujo has become a vibrant cultural
-            event where members gather to recreate the essence of Kolkata’s
-            festivities. From traditional rituals and pushpanjali to cultural
-            programs, food stalls, and addas, the Pujo is a celebration of
-            identity and belonging. It serves as a bridge between generations,
-            ensuring that Bengali traditions remain alive and accessible to the
-            diaspora.
-          </p>
+            {/* Annual Picnic Section */}
+            <section className="w-full">
+              <h2
+                className="text-lg sm:text-xl lg:text-2xl font-noto-sans font-semibold text-gray-800 text-left mb-4 sm:mb-6 leading-tight"
+                id="annual-picnic"
+              >
+                Annual Picnic
+              </h2>
+              <AnnualPicnic className="mt-2 sm:mt-4" />
+            </section>
+
+            {/* Lokkhi Pujo Section */}
+            <section className="w-full">
+              <h2
+                className="text-lg sm:text-xl lg:text-2xl font-noto-sans font-semibold text-gray-800 text-left mb-4 sm:mb-6 leading-tight"
+                id="lokkhi-pujo"
+              >
+                Lokkhi Pujo
+              </h2>
+              <LokkhiPujo className="mt-2 sm:mt-4" />
+            </section>
+
+            {/* Saraswati Pujo Section */}
+            <section className="w-full" id="saraswati-pujo">
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-noto-sans font-semibold text-gray-800 text-left mb-4 sm:mb-6 leading-tight">
+                Saraswati Pujo
+              </h2>
+              <SaraswatiPujo className="mt-2 sm:mt-4" />
+            </section>
+
+            {/* Kali Pujo Section */}
+            <section className="w-full">
+              <h2
+                className="text-lg sm:text-xl lg:text-2xl font-noto-sans font-semibold text-gray-800 text-left mb-4 sm:mb-6 leading-tight"
+                id="kali-pujo"
+              >
+                Kali Pujo
+              </h2>
+              <KaliPujo className="mt-2 sm:mt-4" />
+            </section>
+
+            {/* Dol Utsav Section */}
+            <section className="w-full">
+              <h2
+                className="text-lg sm:text-xl lg:text-2xl font-noto-sans font-semibold text-gray-800 text-left mb-4 sm:mb-6 leading-tight"
+                id="dol-utsab"
+              >
+                Dol Utsav
+              </h2>
+              <DolUtsab className="mt-2 sm:mt-4" />
+            </section>
+          </div>
         </div>
       </div>
-      <PujoCommittee className="mt-12" /> */}
-      <BongoUtsav className="mt-5" />
-      <h1
-        className="text-xl font-noto-sans font-semibold text-gray-800 mt-10 text-left"
-        id="annual-picnic"
-      >
-        Annual Picnic
-      </h1>
-      <AnnualPicnic className="mt-" />
-      <h1
-        className="text-xl font-noto-sans font-semibold text-gray-800 mt-10  text-left"
-        id="lokkhi-pujo"
-      >
-        Lokkhi Pujo
-      </h1>
-      <LokkhiPujo className="mt-" />
-      <h1
-        className="text-xl font-noto-sans font-semibold text-gray-800 mt-10 text-left"
-        id="saraswati-pujo"
-      >
-        Saraswati Pujo
-      </h1>
-      <SaraswatiPujo className="mt-" />
-      <h1
-        className="text-xl font-noto-sans font-semibold text-gray-800 mt-10  text-left"
-        id="kali-pujo"
-      >
-        Kali Pujo
-      </h1>
-      <KaliPujo className="mt-" />
-      <h1
-        className="text-xl font-noto-sans font-semibold text-gray-800 mt-10 text-left"
-        id="dol-utsab"
-      >
-        Dol Utsav
-      </h1>
-      <DolUtsab className="mt-" />
     </div>
   );
 }

@@ -16,7 +16,7 @@ export function Wishes({ className }: WishesOnSharodothsavProps) {
 
       <figure className="overflow-hidden rounded-xl grid grid-cols-2 gap-4 bg-background shadow-sm">
         <Image
-          src="/images/Screenshot 2025-09-20 at 14.54.10 1.svg"
+          src="/images/mamata.svg"
           alt="Letters conveying wishes on Sharodothsav from the Chief Minister of West Bengal and the High Commissioner of India."
           width={960}
           height={690}
