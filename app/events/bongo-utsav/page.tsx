@@ -10,9 +10,9 @@ const sidebarItems = [
   { label: "Bongo-Utsab", href: "#bongo-utsab", active: true },
   { label: "Annual Picnic", href: "#annual-picnic" },
   { label: "Lokkhi Pujo", href: "#lokkhi-pujo" },
+  { label: "Dol Utsav", href: "#dol-utsab" },
   { label: "Saraswati Pujo", href: "#saraswati-pujo" },
   { label: "Kali Pujo", href: "#kali-pujo" },
-  { label: "Dol Utsab", href: "#dol-utsab" },
   { label: "Back to Top", href: "" },
 ];
 

@@ -1,5 +1,8 @@
 import Image from "next/image";
 import HeroImage from "@/components/durga/hero-image";
+import { PrintMedia } from "@/components/durga/print-media";
+import { TVMedia } from "@/components/durga/tv-media";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -23,40 +26,37 @@ export default function Home() {
             {/* Card 1 - Durga Pujo 2025 */}
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
-              <img
-                src="/assets/Group 1171275770.png"
-                alt="Join our vibrant community"
-                className="block w-full h-auto"
-              />
-
-              {/* Overlay */}
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
-
-              {/* Content */}
+              <Link href="/events/events-rsvp">
+                <img
+                  src="/assets/Group 1171275770.png"
+                  alt="Join our vibrant community"
+                  className="block w-full h-auto"
+                />
+              </Link>
             </div>
 
             {/* Card 2 - Learn Bengali (Square Card) */}
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
-              <img
-                src="/assets/Group 1171275771.png"
-                alt="Join our vibrant community"
-                className="block w-full h-auto"
-              />
-              {/* public/assets/.png */}
-              {/* Overlay */}
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
-              {/* Content */}
+              <Link href="/bengali-school">
+                <img
+                  src="/assets/Group 1171275771.png"
+                  alt="Join our vibrant community"
+                  className="block w-full h-auto"
+                />
+              </Link>
             </div>
 
             {/* Card 3 - Join Community */}
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
-              <img
-                src="/assets/Group 1171275772.png"
-                alt="Join our vibrant community"
-                className="block w-full h-auto"
-              />
+              <Link href="/join-basa">
+                <img
+                  src="/assets/Group 1171275772.png"
+                  alt="Join our vibrant community"
+                  className="block w-full h-auto"
+                />
+              </Link>
 
               {/* Overlay */}
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
@@ -78,12 +78,13 @@ export default function Home() {
             {/* Card 1 - Durga Pujo 2025 */}
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
-              <img
-                src="/assets/Group 1171275773.png"
-                alt="Join our vibrant community"
-                className="block w-full h-auto"
-              />
-
+              <Link href="/our-story">
+                <img
+                  src="/assets/Group 1171275773.png"
+                  alt="Join our vibrant community"
+                  className="block w-full h-auto"
+                />
+              </Link>
               {/* Overlay */}
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
 
@@ -93,11 +94,13 @@ export default function Home() {
             {/* Card 2 - Learn Bengali (Square Card) */}
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
-              <img
-                src="/assets/Group 1171275774.png"
-                alt="Join our vibrant community"
-                className="block w-full h-auto"
-              />
+              <Link href="/our-story/current-exco">
+                <img
+                  src="/assets/Group 1171275774.png"
+                  alt="Join our vibrant community"
+                  className="block w-full h-auto"
+                />
+              </Link>
 
               {/* Overlay */}
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
@@ -108,16 +111,13 @@ export default function Home() {
             {/* Card 3 - Join Community */}
             <div className="relative inline-block  overflow-hidden shadow-lg group cursor-pointer transform hover:scale-105 transition-transform duration-300">
               {/* Background Image - Community Photo */}
-              <img
-                src="/assets/Group 1171275776.png"
-                alt="Join our vibrant community"
-                className="block w-full h-auto"
-              />
-
-              {/* Overlay */}
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20  to-transparent"></div> */}
-
-              {/* Content */}
+              <Link href="/">
+                <img
+                  src="/assets/Group 1171275776.png"
+                  alt="Join our vibrant community"
+                  className="block w-full h-auto"
+                />
+              </Link>
             </div>
           </div>
         </div>
@@ -325,7 +325,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <section className="py-16 px-4 bg-white max-w-7xl mx-auto">
+        <PrintMedia className="" />
+      </section>
+      <section className="py-16 px-4 bg-white max-w-7xl mx-auto">
+        <TVMedia className="" />
+      </section>
       {/* Footer */}
       <footer className="bg-white py-12 mt-5">
         <div className="max-w-7xl mx-auto px-4 text-center">
@@ -333,7 +338,7 @@ export default function Home() {
           <div className="flex justify-center space-x-8 mb-8">
             {/* Facebook */}
             <a
-              href="https://www.facebook.com/bengaliassociationsa"
+              href="https://www.facebook.com/basasouthafrica"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 relative"
@@ -347,7 +352,7 @@ export default function Home() {
             </a>
 
             {/* Instagram */}
-            <a
+            {/* <a
               href="https://www.instagram.com/bengaliassociationsa"
               target="_blank"
               rel="noopener noreferrer"
@@ -359,10 +364,10 @@ export default function Home() {
                 fill
                 className="object-contain"
               />
-            </a>
+            </a> */}
 
             {/* X (Twitter) */}
-            <a
+            {/* <a
               href="https://twitter.com/bengaliassocsa"
               target="_blank"
               rel="noopener noreferrer"
@@ -374,9 +379,9 @@ export default function Home() {
                 fill
                 className="object-contain"
               />
-            </a>
+            </a> */}
             <a
-              href="https://twitter.com/bengaliassocsa"
+              href="mailto:basa.gsec@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 relative"

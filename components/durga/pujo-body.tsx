@@ -17,7 +17,7 @@ import { KitchenCommittee } from "./kitchen-committe";
 const breadcrumbItems = [
   { label: "Home", href: "/" },
   { label: "Bengali Culture", href: "/events/bongo-utsav" },
-  { label: "Talent & Culture", current: true },
+  { label: "Durga Pujo", current: true },
 ];
 
 export function PujoBody() {
