@@ -16,7 +16,7 @@ const committeeMembers: CommitteeMember[] = [
     imageUrl: "/committee/Rectangle 457 (19).png",
   },
   {
-    name: "Mrs. Annapurna Hazra",
+    name: "Mrs. Annapurna Hazra Ghosh",
     description: ["Co-ordinator,", "Bhog Prep."],
     imageQuery: "Mrs. Annapurna Hazra portrait",
     imageUrl: "/committee/annapurna.png",
@@ -40,7 +40,7 @@ const committeeMembers: CommitteeMember[] = [
     imageUrl: "/committee/gayatri.png",
   },
   {
-    name: "Ms. Saswati Das",
+    name: "Mrs. Saswati Das",
     description: ["Co-ordinator,", "Venue & Decor"],
     imageQuery: "Ms. Saswati Das portrait with saree",
     imageUrl: "/committee/saswati.png",

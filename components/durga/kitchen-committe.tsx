@@ -10,7 +10,7 @@ type CommitteeMember = {
 
 const committeeMembers: CommitteeMember[] = [
   {
-    name: " Mr.Arunabha Das",
+    name: " Mr. Arunabha Das",
     description: ["Committee", " Co-ordinator"],
     imageQuery: "Mrs. Sudeshna Ghatak portrait",
     imageUrl: "/kitchen/Rectangle 457 (12).png",
@@ -46,7 +46,7 @@ const committeeMembers: CommitteeMember[] = [
     imageUrl: "/kitchen/Group 1171275726.png",
   },
   {
-    name: "Pankaj Bhadra",
+    name: "Mr. Pankaj Bhadra",
     description: ["Member"],
     imageQuery: "Ms. Gayatri Chokroborty portrait",
     imageUrl: "/kitchen/Rectangle 457 (16).png",

@@ -168,7 +168,7 @@ type CommitteeMember = {
 
 const committeeMembers: CommitteeMember[] = [
   {
-    name: "Mrs. Sanjay Das",
+    name: "Mr. Sanjoy Das",
     description: [
       "I am a chartered accountant & a chartered secretary by profession and living in SA for over 2 decades with his wife Rini and two young children. Sanjoy runs finance team of a mining group in SA. He is an active BASA member and one of the founder teacher of Kisholoy.",
     ],
@@ -176,7 +176,7 @@ const committeeMembers: CommitteeMember[] = [
     imageUrl: "/teachers/Rectangle 457 (1).svg",
   },
   {
-    name: "Mrs. Annapurna Hazra",
+    name: "Mrs. Annapurna Hazra Ghosh",
     description: [
       "I began the journey of Kisholoy to nurture Bengali language, culture, art, and music among BASA’s children. Now active across South Africa, Kisholoy reflects my passion for promoting Bangla heritage. A Statistician at WITS and long-time Johannesburg resident, I value collaboration and community building.",
     ],
