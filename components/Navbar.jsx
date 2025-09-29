@@ -41,7 +41,7 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   // Hide navbar on admin pages - moved after hooks
-  if (pathname.startsWith("/admin")) {
+  if (pathname.startsWith("/admin") || pathname === "/login") {
     return null;
   }
 
