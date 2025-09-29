@@ -54,6 +54,12 @@ export default function AdminLayout({
       current: pathname === "/admin",
     },
     {
+      name: "User Management",
+      href: "/admin/users",
+      icon: Shield,
+      current: pathname === "/admin/users",
+    },
+    {
       name: "Bengali Enrollment",
       href: "/admin/bengali-enrollment",
       icon: GraduationCap,

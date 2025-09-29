@@ -18,17 +18,19 @@ export default function AdminPage() {
     rsvp: 0,
     membership: 0,
     contact: 0,
+    users: 0,
   });
   const [loading, setLoading] = useState(true);
 
   const fetchStats = async () => {
     try {
-      const [bengaliRes, rsvpRes, membershipRes, contactRes] =
+      const [bengaliRes, rsvpRes, membershipRes, contactRes, usersRes] =
         await Promise.all([
           databases.listDocuments(DATABASE_ID!, TABLES.STUDENT_FORMS),
           databases.listDocuments(DATABASE_ID!, TABLES.RSVP_FORM),
           databases.listDocuments(DATABASE_ID!, TABLES.MEMBERSHIP_FORM),
           databases.listDocuments(DATABASE_ID!, TABLES.CONTACT_ENQUIRIES_FORM),
+          databases.listDocuments(DATABASE_ID!, TABLES.USERS),
         ]);
 
       setStats({
@@ -36,6 +38,7 @@ export default function AdminPage() {
         rsvp: rsvpRes.total,
         membership: membershipRes.total,
         contact: contactRes.total,
+        users: usersRes.total,
       });
     } catch (error) {
       console.error("Error fetching stats:", error);
@@ -47,8 +50,18 @@ export default function AdminPage() {
   useEffect(() => {
     fetchStats();
   }, []);
-
+  
   const formSections = [
+    {
+      title: "User Management",
+      description: "Manage BASA members and their information",
+      icon: Users,
+      count: stats.users,
+      href: "/admin/users",
+      color: "bg-indigo-500",
+      iconColor: "text-indigo-100",
+      borderColor: "border-indigo-200",
+    },
     {
       title: "Bengali Enrollment Forms",
       description: "View and manage Bengali language enrollment applications",
@@ -72,7 +85,7 @@ export default function AdminPage() {
     {
       title: "Membership Forms",
       description: "View and manage membership enquiry applications",
-      icon: Users,
+      icon: MessageSquare,
       count: stats.membership,
       href: "/admin/membership-forms",
       color: "bg-purple-500",
@@ -110,27 +123,35 @@ export default function AdminPage() {
             <BarChart3 className="w-5 h-5 text-gray-600" />
             <h2 className="text-lg font-semibold text-gray-900">Overview</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-indigo-600">
+                {loading ? "..." : stats.users}
+              </div>
+              <div className="text-sm text-gray-600">
+                BASA Members
+              </div>
+            </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-blue-600">
                 {loading ? "..." : stats.bengali}
               </div>
               <div className="text-sm text-gray-600">
-                Bengali Forms Responses
+                Bengali Enrollments
               </div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-green-600">
                 {loading ? "..." : stats.rsvp}
               </div>
-              <div className="text-sm text-gray-600">RSVP Forms Responses</div>
+              <div className="text-sm text-gray-600">RSVP Responses</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-purple-600">
                 {loading ? "..." : stats.membership}
               </div>
               <div className="text-sm text-gray-600">
-                Membership Forms Responses
+                Membership Forms
               </div>
             </div>
             <div className="text-center">
@@ -138,7 +159,7 @@ export default function AdminPage() {
                 {loading ? "..." : stats.contact}
               </div>
               <div className="text-sm text-gray-600">
-                Contact Enquiries Responses
+                Contact Enquiries
               </div>
             </div>
           </div>
