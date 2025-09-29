@@ -49,7 +49,7 @@ export default function RsvpFormsPage() {
       const wsData = [
         [
           "ID",
-          "Name",
+          "Name Of Main Member",
           "Contact Number",
           "Lunch Fri 3 Oct",
           "Lunch Sun 5 Oct",
@@ -228,7 +228,7 @@ export default function RsvpFormsPage() {
                     Sr No.
                   </th>
                   <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Name
+                    Name of Main Member
                   </th>
                   <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Contact

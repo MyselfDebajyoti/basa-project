@@ -200,44 +200,44 @@ const RsvpForm = () => {
           )}
         </div>
 
-        {/* Contact Number */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Contact Number <span className="text-red-500">*</span>
-          </label>
-          <div className="flex">
-            <div className="flex items-center px-3 py-3 border border-r-0 border-gray-300 rounded-l-md bg-gray-50">
-              <img
-                src="https://flagcdn.com/w20/in.png"
-                alt="India"
-                className="w-5 h-auto mr-2"
-              />
-              <svg
-                className="w-4 h-4 text-gray-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
+        {/* /* Contact Number */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Contact Number <span className="text-red-500">*</span>
+            </label>
+            <div className="flex">
+              <div className="flex items-center px-3 py-3 border border-r-0 border-gray-300 rounded-l-md bg-gray-50">
+                <img
+            src="https://flagcdn.com/w20/za.png"
+            alt="South Africa"
+            className="w-5 h-auto mr-2"
                 />
-              </svg>
-            </div>
-            <input
-              type="tel"
-              name="contactNumber"
-              placeholder="Please enter your contact number"
-              value={formData.contactNumber}
-              onChange={handleChange}
-              className="flex-1 px-4 py-3 text-base border border-gray-300 rounded-r-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors placeholder-gray-400"
-              required
-              disabled={isSubmitting}
+                <svg
+            className="w-4 h-4 text-gray-400"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+                >
+            <path
+              fillRule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clipRule="evenodd"
             />
+                </svg>
+              </div>
+              <input
+                type="tel"
+                name="contactNumber"
+                placeholder="Please enter your contact number"
+                value={formData.contactNumber}
+                onChange={handleChange}
+                className="flex-1 px-4 py-3 text-base border border-gray-300 rounded-r-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors placeholder-gray-400"
+                required
+                disabled={isSubmitting}
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Lunch - Friday 3 Oct */}
+          {/* Lunch - Friday 3 Oct */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
             1. Lunch - Friday 3 Oct - How many individuals from your family will
@@ -251,7 +251,7 @@ const RsvpForm = () => {
             className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors bg-white"
             disabled={isSubmitting}
           >
-            {[...Array(21)].map((_, i) => (
+            {[...Array(11)].map((_, i) => (
               <option key={i} value={i}>
                 {i}
               </option>
@@ -273,7 +273,7 @@ const RsvpForm = () => {
             className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors bg-white"
             disabled={isSubmitting}
           >
-            {[...Array(21)].map((_, i) => (
+            {[...Array(11)].map((_, i) => (
               <option key={i} value={i}>
                 {i}
               </option>
@@ -293,7 +293,7 @@ const RsvpForm = () => {
             className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors bg-white"
             disabled={isSubmitting}
           >
-            {[...Array(21)].map((_, i) => (
+            {[...Array(11)].map((_, i) => (
               <option key={i} value={i}>
                 {i}
               </option>
@@ -313,7 +313,7 @@ const RsvpForm = () => {
             className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors bg-white"
             disabled={isSubmitting}
           >
-            {[...Array(21)].map((_, i) => (
+            {[...Array(5)].map((_, i) => (
               <option key={i} value={i}>
                 {i}
               </option>
@@ -335,7 +335,7 @@ const RsvpForm = () => {
             className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors bg-white"
             disabled={isSubmitting}
           >
-            {[...Array(21)].map((_, i) => (
+            {[...Array(11)].map((_, i) => (
               <option key={i} value={i}>
                 {i}
               </option>
