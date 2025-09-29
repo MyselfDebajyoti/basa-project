@@ -3,8 +3,7 @@
 import { useState, useEffect } from "react";
 import { databases, DATABASE_ID, TABLES } from "@/lib/appwrite";
 import * as XLSX from 'xlsx';
-import { ArrowLeft, Download, RefreshCw } from "lucide-react";
-import Link from "next/link";
+import { Download, RefreshCw } from "lucide-react";
 
 interface StudentFormDocument {
   $id: string;
@@ -72,21 +71,16 @@ export default function BengaliEnrollmentPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-4">
-            <Link
-              href="/admin"
-              className="flex items-center gap-2 text-blue-600 hover:text-blue-700"
-            >
-              <ArrowLeft className="w-5 h-5" />
-              Back to Admin
-            </Link>
+          <div>
             <h1 className="text-2xl font-semibold text-gray-900">
               Bengali Enrollment Forms
             </h1>
+            <p className="text-gray-600 mt-1">
+              Manage Bengali language enrollment applications
+            </p>
           </div>
           <div className="flex gap-3">
             <button
@@ -184,6 +178,5 @@ export default function BengaliEnrollmentPage() {
           )}
         </div>
       </div>
-    </div>
   );
 }

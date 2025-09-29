@@ -447,6 +447,11 @@ const menuConfig = [
     additionalItems: [
       { title: "Contact us", path: "/contact", icon: "/images/call.png" },
       { title: "ExCo Login", path: "/admin", icon: "/images/lock.png" },
+      {
+        title: "Webmail login",
+        path: "https://webmail.your-server.de/login.php",
+        icon: "/images/lock.png",
+      },
     ],
   },
 ];
