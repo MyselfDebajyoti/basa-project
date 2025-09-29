@@ -147,36 +147,6 @@ export default function RsvpFormsPage() {
             {data.length}
           </div>
         </div>
-        <div className="bg-white rounded-lg shadow p-4">
-          <div className="text-xs text-gray-600">Lunch Fri 3 Oct</div>
-          <div className="text-xl font-semibold text-blue-600">
-            {eventStats.lunchFri}
-          </div>
-        </div>
-        <div className="bg-white rounded-lg shadow p-4">
-          <div className="text-xs text-gray-600">Lunch Sun 5 Oct</div>
-          <div className="text-xl font-semibold text-green-600">
-            {eventStats.lunchSun}
-          </div>
-        </div>
-        <div className="bg-white rounded-lg shadow p-4">
-          <div className="text-xs text-gray-600">Nobomi Yagya</div>
-          <div className="text-xl font-semibold text-purple-600">
-            {eventStats.nobomiYagya}
-          </div>
-        </div>
-        <div className="bg-white rounded-lg shadow p-4">
-          <div className="text-xs text-gray-600">Debi Boron</div>
-          <div className="text-xl font-semibold text-pink-600">
-            {eventStats.debiBoron}
-          </div>
-        </div>
-        <div className="bg-white rounded-lg shadow p-4">
-          <div className="text-xs text-gray-600">Dinner Mon 6 Oct</div>
-          <div className="text-xl font-semibold text-orange-600">
-            {eventStats.dinnerMon}
-          </div>
-        </div>
       </div>
 
       {/* Table */}
@@ -194,6 +164,11 @@ export default function RsvpFormsPage() {
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
+                  <th
+                  className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Sr No.
+                  </th>
                   <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Name
                   </th>
@@ -226,6 +201,11 @@ export default function RsvpFormsPage() {
               <tbody className="bg-white divide-y divide-gray-200">
                 {data.map((doc) => (
                   <tr key={doc.$id} className="hover:bg-gray-50">
+                    <td
+                    className="px-4 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      {data.indexOf(doc) + 1}
+                    </td>
                     <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                       {doc.name || "N/A"}
                     </td>
