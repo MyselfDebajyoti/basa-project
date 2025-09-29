@@ -32,22 +32,36 @@ export function Body() {
         </h3>
         <div className="grid gap-8 md:grid-cols-2">
           <p className="text-pretty text-base leading-relaxed text-[color:var(--brand-text)] opacity-85">
-            Durga Pujo is the most cherished celebration in the Bengali
-            calendar, symbolizing the triumph of good over evil and the
-            homecoming of Goddess Durga with her children. For Bengalis across
-            the world, Durga Pujo is more than a religious occasion — it is a
-            festival of art, music, literature, and community spirit. The
-            fragrance of dhuno, the rhythm of dhaak, and the chants of ‘Bolo
-            Durga Mai Ki Jai’ bring the community together in joy and devotion.
+            KISHOLOY: A Center for Bengali Language, Culture & Global Ties is an
+            immersive online program designed to nurture a deep connection with
+            the Bengali language and heritage. Open to all and offered free of
+            cost, it brings together students from across multiple countries,
+            creating a truly global learning community.
           </p>
           <p className="text-pretty text-base leading-relaxed text-[color:var(--brand-text)] opacity-85">
-            In South Africa, BASA’s Durga Pujo has become a vibrant cultural
-            event where members gather to recreate the essence of Kolkata’s
-            festivities. From traditional rituals and pushpanjali to cultural
-            programs, food stalls, and addas, the Pujo is a celebration of
-            identity and belonging. It serves as a bridge between generations,
-            ensuring that Bengali traditions remain alive and accessible to the
-            diaspora.
+            Beyond language learning, Kisholoy opens the doors to Bengal’s rich
+            cultural landscape—its history, traditions, literature, and artistic
+            expressions—enabling learners to experience the vibrancy of Bengali
+            identity.
+          </p>
+        </div>
+        <div className="grid gap-8 md:grid-cols-2">
+          <p className="text-pretty text-base leading-relaxed text-[color:var(--brand-text)] opacity-85">
+            The program empowers participants to communicate confidently, refine
+            comprehension, and achieve fluency by mastering phonetics,
+            pronunciation, vocabulary, and grammar in a structured yet engaging
+            way.
+          </p>
+          <p className="text-pretty text-base leading-relaxed text-[color:var(--brand-text)] opacity-85">
+            At its heart are our dedicated volunteer teachers and enthusiastic
+            parents, who work tirelessly to ensure children attend every week.
+            often with them generously sacrificing their weekends. Kisholoy
+            thrives as a labor of love, offering learners opportunities to
+            engage in recitation, elocution, storytelling, drama, singing, and
+            other performing arts. By blending linguistic skill-building with
+            cultural exploration, Kisholoy not only preserves and celebrates
+            Bengali heritage but also strengthens global ties, connecting
+            communities and generations around the world.
           </p>
         </div>
       </div>

@@ -22,28 +22,40 @@ const images = [
 export default function HeroImage() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
-  // Auto-advance slides every 10 seconds
+  // Auto-advance slides every 10 seconds, stop at the end
   useEffect(() => {
     const timer = setInterval(() => {
-      setActiveIndex((i) => (i + 1) % images.length);
+      setActiveIndex((i) => {
+        if (i < images.length - 1) {
+          return i + 1;
+        }
+        return i; // Stay at last slide
+      });
     }, 10000);
     return () => clearInterval(timer);
   }, []);
 
-  const nextSlide = () => setActiveIndex((i) => (i + 1) % images.length);
-  const prevSlide = () =>
-    setActiveIndex((i) => (i - 1 + images.length) % images.length);
+  const nextSlide = () => {
+    if (activeIndex < images.length - 1) {
+      setActiveIndex((i) => i + 1);
+    }
+  };
+
+  const prevSlide = () => {
+    if (activeIndex > 0) {
+      setActiveIndex((i) => i - 1);
+    }
+  };
+
   const goToSlide = (index: number) => setActiveIndex(index);
 
-  // Track width is N * 100% so we must translate by (100 / N)% per slide
-  const trackWidth = images.length * 100; // percent
+  const trackWidth = images.length * 100;
   const translatePercentage = activeIndex * (100 / images.length);
 
   return (
     <div className="relative w-full overflow-hidden">
-      <figure className="">
+      <figure className="max-w-[1920px] mx-auto">
         <div className="w-full overflow-hidden">
-          {/* Track: width = images.length * 100% */}
           <div
             className="flex transition-transform duration-500 ease-out"
             style={{
@@ -52,19 +64,17 @@ export default function HeroImage() {
             }}
           >
             {images.map((image, idx) => (
-              // Each slide must take (100 / N)% of the track so it equals 100% of the viewport
               <div
                 key={idx}
                 className="flex-none"
                 style={{ width: `${100 / images.length}%` }}
               >
-                {/* Use Image with `fill` so it scales to parent and doesn't introduce intrinsic width overflow */}
-                <div className="relative h-[680px] w-full select-none">
+                <div className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[680px] xl:h-[720px] w-full select-none">
                   <Image
                     src={image.src}
                     alt={image.alt}
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-center"
                     priority={idx === 0}
                   />
                 </div>
@@ -74,25 +84,30 @@ export default function HeroImage() {
         </div>
       </figure>
 
-      {/* Prev / Next controls (optional) */}
-      <button
-        aria-label="Previous slide"
-        onClick={prevSlide}
-        className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur-sm hover:bg-white"
-      >
-        <ChevronLeft size={18} />
-      </button>
+      {/* Prev button - hidden when at first slide */}
+      {activeIndex > 0 && (
+        <button
+          aria-label="Previous slide"
+          onClick={prevSlide}
+          className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur-sm hover:bg-white transition-opacity"
+        >
+          <ChevronLeft size={18} />
+        </button>
+      )}
 
-      <button
-        aria-label="Next slide"
-        onClick={nextSlide}
-        className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur-sm hover:bg-white"
-      >
-        <ChevronRight size={18} />
-      </button>
+      {/* Next button - hidden when at last slide */}
+      {activeIndex < images.length - 1 && (
+        <button
+          aria-label="Next slide"
+          onClick={nextSlide}
+          className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-md backdrop-blur-sm hover:bg-white transition-opacity"
+        >
+          <ChevronRight size={18} />
+        </button>
+      )}
 
       {/* Dots */}
-      <div className="mt-4 flex justify-center gap-2">
+      <div className="mt-4 flex justify-center gap-2 pb-4">
         {images.map((_, index) => (
           <button
             key={index}

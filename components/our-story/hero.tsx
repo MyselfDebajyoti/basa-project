@@ -407,7 +407,7 @@ export function Hero({ className }: BongoUtsavProps) {
       imageQuery: "Mrs. Sudeshna Ghatak portrait",
       imageUrl: "/images/Rectangle 457 (8).svg",
       position: "Member between 1994-2008",
-      work: ["Founding Leader of B.A.S.A"],
+      work: ["Eminent Member of Bengali", "Association in Southern Africa."],
     },
   ];
 
@@ -709,7 +709,7 @@ export function Hero({ className }: BongoUtsavProps) {
                 alt={`${member.name} portrait`}
                 width={96}
                 height={96}
-                className="h-24 w-24 object-cover rounded-md"
+                className="h-24 w-24 object-cover"
               />
               <div className="flex flex-col gap-4">
                 <div className="space-y-1">

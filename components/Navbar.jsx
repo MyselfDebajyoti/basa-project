@@ -101,7 +101,7 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  const renderMenuItem = (item, colorClass) => {
+  const renderMenuItem = (item, colorStyles) => {
     if (item.disabled) {
       return (
         <span
@@ -118,7 +118,7 @@ const Navbar = () => {
         <button
           key={item.title}
           onClick={() => handleLinkClick(item.path, item.external)}
-          className={`${colorClass} block text-left w-full py-1 hover:font-semibold transition-colors`}
+          className={`block text-left w-full py-1 hover:font-semibold transition-colors`}
         >
           {item.title}
         </button>
@@ -129,7 +129,7 @@ const Navbar = () => {
       <Link
         key={item.title}
         href={item.path}
-        className={`${colorClass} block py-1 hover:font-semibold transition-colors`}
+        className={`block py-1 hover:font-semibold transition-colors`}
         onClick={() => setIsMenuOpen(false)}
       >
         {item.title}
@@ -198,13 +198,15 @@ const Navbar = () => {
                   : "-translate-y-10 opacity-0"
               }`}
               style={{
-                height: "calc(100vh - 76px)",
-                maxHeight: "calc(100vh - 76px)",
+                minHeight: "calc(100vh - 76px)",
               }}
             >
               {/* Menu content - fully responsive grid */}
-              <div className="px-4 sm:px-6 lg:px-8 pb-6 lg:pb-8 h-full overflow-y-auto">
-                <div className="mx-auto max-w-screen-xl h-full">
+              <div
+                className="px-4 sm:px-6 lg:px-8 pb-6 lg:pb-8 overflow-y-auto"
+                style={{ maxHeight: "calc(100vh - 76px)" }}
+              >
+                <div className="mx-auto max-w-screen-xl">
                   {/* Responsive grid: 1 col on mobile, 2 on tablet, 5 on desktop */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-6 sm:gap-8 py-4 lg:py-6">
                     {menuConfig.map((menu) => {
@@ -259,9 +261,6 @@ const Navbar = () => {
                                     key={item.title}
                                     className="flex items-center space-x-2 text-sm"
                                   >
-                                    {/* <span className="text-base">
-                                      
-                                    </span> */}
                                     <img
                                       className="w-4"
                                       src={item.icon}
@@ -270,7 +269,6 @@ const Navbar = () => {
                                     <Link
                                       href={item.path}
                                       className={`py-1 font-light hover:underline transition-colors `}
-                                      // style={colorStyles.linkStyle}
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {item.title}

@@ -42,7 +42,7 @@ const committeeMembers: CommitteeMember[] = [
     name: "Mrs. Sayantani Chatterjee",
     description: ["Co-ordinator,", "Bhog Prep."],
     imageQuery: "Mrs. Sayantani Chatterjee portrait",
-    imageUrl: "/flags/Zambia.png",
+    imageUrl: "/flags/zambia.png",
     country: "Zambia",
   },
   {
@@ -72,8 +72,9 @@ export function Outreach({ className }: PujoCommitteeProps) {
           const countryName = member.country;
           return (
             <div
-            key={member.name}
-            className="flex flex-col items-center gap-2 ">
+              key={member.name}
+              className="flex flex-col items-center gap-2 "
+            >
               <div
                 key={member.name}
                 className="bg-background  w-24 h-24 flex justify-center items-center rounded-full "
