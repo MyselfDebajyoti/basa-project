@@ -200,14 +200,70 @@ export default function RsvpFormsPage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-6">
-        <div className="bg-white rounded-lg shadow p-4">
-          <div className="text-xs text-gray-600">Total RSVPs</div>
-          <div className="text-xl font-semibold text-gray-900">
-            {data.length}
-          </div>
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-6">
+      <div className="bg-white rounded-lg shadow p-4">
+        <div className="text-xs text-gray-600">Total RSVPs</div>
+        <div className="text-xl font-semibold text-gray-900">
+        {data.length}
         </div>
       </div>
+    <div className="bg-white rounded-lg shadow p-4 md:col-span-2 lg:col-span-3">
+      <div className="text-xs text-gray-600 mb-2">RSVP Link</div>
+      <div className="flex items-center gap-2">
+        <input 
+        type="text" 
+        value="https://www.amaderbasa.org/events/events-rsvp#rsvp" 
+        readOnly
+        className="text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded px-3 py-1.5 flex-1 truncate"
+        />
+        <button 
+        onClick={() => {
+          navigator.clipboard.writeText("https://www.amaderbasa.org/events/events-rsvp#rsvp");
+          alert("RSVP link copied to clipboard!");
+        }}
+        className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        <span className="text-xs font-medium">Copy</span>
+        </button>
+        <button 
+        onClick={() => {
+          const shareUrl = "https://www.amaderbasa.org/events/events-rsvp#rsvp";
+          if (navigator.share) {
+            navigator.share({
+            title: 'RSVP for Basa Event',
+            text: 'Please RSVP for the upcoming Basa event',
+            url: shareUrl,
+            }).catch(err => {
+            console.error('Error sharing:', err);
+            // Fallback to copy
+            navigator.clipboard.writeText(shareUrl);
+            alert("RSVP link copied to clipboard!");
+            });
+          } else {
+            // Fallback for browsers that don't support sharing
+            navigator.clipboard.writeText(shareUrl);
+            alert("RSVP link copied to clipboard!");
+          }
+        }}
+        className="flex items-center gap-1.5 px-3 py-1.5 bg-green-100 text-green-700 rounded hover:bg-green-200 transition-colors"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+          <circle cx="18" cy="5" r="3"></circle>
+          <circle cx="6" cy="12" r="3"></circle>
+          <circle cx="18" cy="19" r="3"></circle>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+        </svg>
+        <span className="text-xs font-medium">Share</span>
+        </button>
+      </div>
+    </div>
+    </div>
+    {/* </button> */}
 
       {/* Table */}
       <div className="bg-white rounded-lg shadow overflow-hidden">
