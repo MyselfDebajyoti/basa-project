@@ -41,7 +41,7 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   // Hide navbar on admin pages - moved after hooks
-  if (pathname.startsWith("/admin")) {
+  if (pathname.startsWith("/admin") || pathname === "/login") {
     return null;
   }
 
@@ -447,6 +447,11 @@ const menuConfig = [
     additionalItems: [
       { title: "Contact us", path: "/contact", icon: "/images/call.png" },
       { title: "ExCo Login", path: "/admin", icon: "/images/lock.png" },
+      {
+        title: "Webmail login",
+        path: "https://webmail.your-server.de/login.php",
+        icon: "/images/lock.png",
+      },
     ],
   },
 ];

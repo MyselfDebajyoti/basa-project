@@ -7,12 +7,15 @@ const RsvpForm = () => {
   const [filteredMembers, setFilteredMembers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
-  
+
   const [formData, setFormData] = useState({
     name: "",
     contactNumber: "",
-    nabamiMahaJogyo: 0,
-    dashamiDebiBoron: 0,
+    lunchFriday3Oct: 0,
+    lunchSunday5Oct: 0,
+    nobomiYagya: 0,
+    debiBoron: 0,
+    dinnerMonday6Oct: 0,
     comments: "",
   });
 
@@ -23,22 +26,22 @@ const RsvpForm = () => {
   useEffect(() => {
     const loadMembers = async () => {
       try {
-        const response = await fetch('/members.json');
+        const response = await fetch("/members.json");
         const data = await response.json();
         setMembers(data.members);
         setFilteredMembers(data.members);
       } catch (error) {
-        console.error('Error loading members:', error);
+        console.error("Error loading members:", error);
       }
     };
-    
+
     loadMembers();
   }, []);
 
   // Filter members based on search term
   useEffect(() => {
     if (searchTerm) {
-      const filtered = members.filter(member =>
+      const filtered = members.filter((member) =>
         member.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
       setFilteredMembers(filtered);
@@ -95,8 +98,11 @@ const RsvpForm = () => {
         {
           name: formData.name,
           contactNumber: formData.contactNumber,
-          nabamiMahaJogyo: formData.nabamiMahaJogyo,
-          dashamiDebiBoron: formData.dashamiDebiBoron,
+          lunchFriday3Oct: formData.lunchFriday3Oct,
+          lunchSunday5Oct: formData.lunchSunday5Oct,
+          nobomiYagya: formData.nobomiYagya,
+          debiBoron: formData.debiBoron,
+          dinnerMonday6Oct: formData.dinnerMonday6Oct,
           comments: formData.comments || "",
         }
       );
@@ -110,10 +116,14 @@ const RsvpForm = () => {
       setFormData({
         name: "",
         contactNumber: "",
-        nabamiMahaJogyo: 0,
-        dashamiDebiBoron: 0,
+        lunchFriday3Oct: 0,
+        lunchSunday5Oct: 0,
+        nobomiYagya: 0,
+        debiBoron: 0,
+        dinnerMonday6Oct: 0,
         comments: "",
       });
+      setSearchTerm("");
     } catch (error) {
       console.error("Error submitting RSVP form:", error);
       setSubmitMessage("Error submitting RSVP. Please try again.");
@@ -155,7 +165,7 @@ const RsvpForm = () => {
             disabled={isSubmitting}
             autoComplete="off"
           />
-          
+
           {/* Dropdown */}
           {showDropdown && filteredMembers.length > 0 && (
             <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-60 overflow-auto">
@@ -180,67 +190,68 @@ const RsvpForm = () => {
               )}
             </div>
           )}
-          
+
           {/* Click outside to close dropdown */}
           {showDropdown && (
-            <div 
+            <div
               className="fixed inset-0 z-5"
               onClick={() => setShowDropdown(false)}
             />
           )}
         </div>
 
-        {/* Contact Number */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Contact Number <span className="text-red-500">*</span>
-          </label>
-          <div className="flex">
-            <div className="flex items-center px-3 py-3 border border-r-0 border-gray-300 rounded-l-md bg-gray-50">
-              <img
-                src="https://flagcdn.com/w20/in.png"
-                alt="India"
-                className="w-5 h-auto mr-2"
-              />
-              <svg
-                className="w-4 h-4 text-gray-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
+        {/* /* Contact Number */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Contact Number <span className="text-red-500">*</span>
+            </label>
+            <div className="flex">
+              <div className="flex items-center px-3 py-3 border border-r-0 border-gray-300 rounded-l-md bg-gray-50">
+                <img
+            src="https://flagcdn.com/w20/za.png"
+            alt="South Africa"
+            className="w-5 h-auto mr-2"
                 />
-              </svg>
-            </div>
-            <input
-              type="tel"
-              name="contactNumber"
-              placeholder="Please enter your contact number"
-              value={formData.contactNumber}
-              onChange={handleChange}
-              className="flex-1 px-4 py-3 text-base border border-gray-300 rounded-r-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors placeholder-gray-400"
-              required
-              disabled={isSubmitting}
+                <svg
+            className="w-4 h-4 text-gray-400"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+                >
+            <path
+              fillRule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clipRule="evenodd"
             />
+                </svg>
+              </div>
+              <input
+                type="tel"
+                name="contactNumber"
+                placeholder="Please enter your contact number"
+                value={formData.contactNumber}
+                onChange={handleChange}
+                className="flex-1 px-4 py-3 text-base border border-gray-300 rounded-r-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors placeholder-gray-400"
+                required
+                disabled={isSubmitting}
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Nabami Maha Jogyo Event */}
+          {/* Lunch - Friday 3 Oct */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            Nabami Maha Jogyo – 5th October , Sunday 12:30 PM
+            1. Lunch - Friday 3 Oct - How many individuals from your family will
+            be joining?
           </label>
           <select
-            value={formData.nabamiMahaJogyo}
+            value={formData.lunchFriday3Oct}
             onChange={(e) =>
-              handleNumberChange("nabamiMahaJogyo", e.target.value)
+              handleNumberChange("lunchFriday3Oct", e.target.value)
             }
             className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors bg-white"
             disabled={isSubmitting}
           >
-            {[...Array(21)].map((_, i) => (
+            {[...Array(11)].map((_, i) => (
               <option key={i} value={i}>
                 {i}
               </option>
@@ -248,20 +259,83 @@ const RsvpForm = () => {
           </select>
         </div>
 
-        {/* Dashami Debi Boron Event */}
+        {/* Lunch - Sunday 5 Oct */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            Dashami Debi Boron – 5th October , Sunday 2:30 PM
+            2. Lunch - Sunday 5 Oct - How many individuals from your family will
+            be joining?
           </label>
           <select
-            value={formData.dashamiDebiBoron}
+            value={formData.lunchSunday5Oct}
             onChange={(e) =>
-              handleNumberChange("dashamiDebiBoron", e.target.value)
+              handleNumberChange("lunchSunday5Oct", e.target.value)
             }
             className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors bg-white"
             disabled={isSubmitting}
           >
-            {[...Array(21)].map((_, i) => (
+            {[...Array(11)].map((_, i) => (
+              <option key={i} value={i}>
+                {i}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Nobomi Yagya - Sun 05 Oct */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            3. Nobomi Yagya - Sun 05 Oct - How many individuals from your family
+            will be joining?
+          </label>
+          <select
+            value={formData.nobomiYagya}
+            onChange={(e) => handleNumberChange("nobomiYagya", e.target.value)}
+            className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors bg-white"
+            disabled={isSubmitting}
+          >
+            {[...Array(11)].map((_, i) => (
+              <option key={i} value={i}>
+                {i}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Debi Boron - Sun 05 Oct */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            4. Debi Boron - Sun 05 Oct - How many women from your family will be
+            joining?
+          </label>
+          <select
+            value={formData.debiBoron}
+            onChange={(e) => handleNumberChange("debiBoron", e.target.value)}
+            className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors bg-white"
+            disabled={isSubmitting}
+          >
+            {[...Array(5)].map((_, i) => (
+              <option key={i} value={i}>
+                {i}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Dinner - Monday 6 Oct */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            5. Dinner - Monday 6 Oct - How many individuals from your family
+            will be joining?
+          </label>
+          <select
+            value={formData.dinnerMonday6Oct}
+            onChange={(e) =>
+              handleNumberChange("dinnerMonday6Oct", e.target.value)
+            }
+            className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors bg-white"
+            disabled={isSubmitting}
+          >
+            {[...Array(11)].map((_, i) => (
               <option key={i} value={i}>
                 {i}
               </option>
