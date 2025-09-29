@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { databases, DATABASE_ID, TABLES } from "@/lib/appwrite";
 import * as XLSX from "xlsx";
-import { Download, RefreshCw } from "lucide-react";
+import { Download, RefreshCw, Trash2, AlertTriangle } from "lucide-react";
 
 interface RsvpFormDocument {
   $id: string;
@@ -22,6 +22,9 @@ export default function RsvpFormsPage() {
   const [data, setData] = useState<RsvpFormDocument[]>([]);
   const [loading, setLoading] = useState(true);
   const [downloadLoading, setDownloadLoading] = useState(false);
+  const [deleteLoading, setDeleteLoading] = useState<string | null>(null);
+  const [showDeleteAllModal, setShowDeleteAllModal] = useState(false);
+  const [deleteAllLoading, setDeleteAllLoading] = useState(false);
 
   const fetchData = async () => {
     try {
@@ -86,6 +89,55 @@ export default function RsvpFormsPage() {
     }
   };
 
+  const deleteSingleRow = async (docId: string, name: string) => {
+    if (
+      !confirm(
+        `Are you sure you want to delete the RSVP form for "${name}"? This action cannot be undone.`
+      )
+    ) {
+      return;
+    }
+
+    try {
+      setDeleteLoading(docId);
+      await databases.deleteDocument(DATABASE_ID!, TABLES.RSVP_FORM, docId);
+
+      // Remove from local state
+      setData((prevData) => prevData.filter((doc) => doc.$id !== docId));
+      alert("RSVP form deleted successfully!");
+    } catch (error) {
+      console.error("Error deleting document:", error);
+      alert("Error deleting RSVP form. Please try again.");
+    } finally {
+      setDeleteLoading(null);
+    }
+  };
+
+  const deleteAllData = async () => {
+    try {
+      setDeleteAllLoading(true);
+
+      // Delete all documents one by one
+      const deletePromises = data.map((doc) =>
+        databases.deleteDocument(DATABASE_ID!, TABLES.RSVP_FORM, doc.$id)
+      );
+
+      await Promise.all(deletePromises);
+
+      // Clear local state
+      setData([]);
+      setShowDeleteAllModal(false);
+      alert(`Successfully deleted all ${data.length} RSVP forms!`);
+    } catch (error) {
+      console.error("Error deleting all data:", error);
+      alert(
+        "Error deleting all data. Some records may not have been deleted. Please refresh and try again."
+      );
+    } finally {
+      setDeleteAllLoading(false);
+    }
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -136,6 +188,14 @@ export default function RsvpFormsPage() {
             <Download className="w-4 h-4" />
             {downloadLoading ? "Downloading..." : "Download Excel"}
           </button>
+          <button
+            onClick={() => setShowDeleteAllModal(true)}
+            disabled={data.length === 0 || deleteAllLoading}
+            className="flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 disabled:bg-gray-400"
+          >
+            <Trash2 className="w-4 h-4" />
+            Delete All
+          </button>
         </div>
       </div>
 
@@ -164,9 +224,7 @@ export default function RsvpFormsPage() {
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
-                  <th
-                  className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  >
+                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Sr No.
                   </th>
                   <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -196,14 +254,15 @@ export default function RsvpFormsPage() {
                   <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Submitted
                   </th>
+                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Actions
+                  </th>
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 {data.map((doc) => (
                   <tr key={doc.$id} className="hover:bg-gray-50">
-                    <td
-                    className="px-4 py-4 whitespace-nowrap text-sm text-gray-500"
-                    >
+                    <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
                       {data.indexOf(doc) + 1}
                     </td>
                     <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
@@ -243,6 +302,27 @@ export default function RsvpFormsPage() {
                     <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
                       {new Date(doc.$createdAt).toLocaleDateString()}
                     </td>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <button
+                        onClick={() =>
+                          deleteSingleRow(doc.$id, doc.name || "Unknown")
+                        }
+                        disabled={deleteLoading === doc.$id}
+                        className="flex items-center gap-1 px-3 py-1 bg-red-100 text-red-700 rounded-md hover:bg-red-200 disabled:bg-gray-100 disabled:text-gray-400 transition-colors"
+                      >
+                        {deleteLoading === doc.$id ? (
+                          <>
+                            <div className="animate-spin rounded-full h-3 w-3 border-b-2 border-red-600"></div>
+                            <span className="text-xs">Deleting...</span>
+                          </>
+                        ) : (
+                          <>
+                            <Trash2 className="w-3 h-3" />
+                            <span className="text-xs">Delete</span>
+                          </>
+                        )}
+                      </button>
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -250,6 +330,61 @@ export default function RsvpFormsPage() {
           </div>
         )}
       </div>
+
+      {/* Delete All Confirmation Modal */}
+      {showDeleteAllModal && (
+        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
+          <div className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <div className="mt-3 text-center">
+              <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100">
+                <AlertTriangle className="h-6 w-6 text-red-600" />
+              </div>
+              <h3 className="text-lg font-medium text-gray-900 mt-4">
+                Delete All RSVP Forms
+              </h3>
+              <div className="mt-2 px-7 py-3">
+                <p className="text-sm text-gray-500">
+                  Are you absolutely sure you want to delete all{" "}
+                  <span className="font-semibold text-red-600">
+                    {data.length}
+                  </span>{" "}
+                  RSVP forms?
+                </p>
+                <p className="text-sm text-red-600 mt-2 font-medium">
+                  This action cannot be undone and all data will be permanently
+                  lost.
+                </p>
+              </div>
+              <div className="flex gap-4 mt-4">
+                <button
+                  onClick={() => setShowDeleteAllModal(false)}
+                  disabled={deleteAllLoading}
+                  className="flex-1 px-4 py-2 bg-gray-300 text-gray-700 text-base font-medium rounded-md hover:bg-gray-400 disabled:bg-gray-200 disabled:text-gray-400"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={deleteAllData}
+                  disabled={deleteAllLoading}
+                  className="flex-1 px-4 py-2 bg-red-600 text-white text-base font-medium rounded-md hover:bg-red-700 disabled:bg-red-400 flex items-center justify-center gap-2"
+                >
+                  {deleteAllLoading ? (
+                    <>
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                      Deleting...
+                    </>
+                  ) : (
+                    <>
+                      <Trash2 className="w-4 h-4" />
+                      Delete All
+                    </>
+                  )}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
