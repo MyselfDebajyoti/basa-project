@@ -345,48 +345,6 @@ export default function AdminPage() {
             );
           })}
         </div>
-
-        {/* Forms Section */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2">
-            Form Management
-          </h2>
-          <p className="text-gray-600">Preview and test all available forms</p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-              <GraduationCap className="w-5 h-5 mr-2 text-blue-500" />
-              Bengali Enrollment Form
-            </h3>
-            <FormSkeleton />
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-              <Users className="w-5 h-5 mr-2 text-purple-500" />
-              Membership Form
-            </h3>
-            <MembershipForm />
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-              <Calendar className="w-5 h-5 mr-2 text-green-500" />
-              RSVP Form
-            </h3>
-            <RsvpForm />
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-              <MessageSquare className="w-5 h-5 mr-2 text-orange-500" />
-              Contact Enquiries Form
-            </h3>
-            <ContactEnquriesForm />
-          </div>
-        </div>
       </div>
     </div>
   );
