@@ -299,7 +299,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-16 px-4 bg-white">
+      <section className=" pt-16 md:py-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
           <h2 className="text-xl font-noto-sans font-semibold text-gray-800 mb-12 text-left">
@@ -308,18 +308,18 @@ export default function Home() {
 
           {/* Facebook Post Embed */}
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="overflow-hidden">
               <iframe
                 src="https://www.facebook.com/plugins/post.php?href=https://www.facebook.com/FriendsFM919/videos/2898745130317631&show_text=false&width=500"
                 width="100%"
-                height="500"
+                height="400"
                 style={{ border: "none", overflow: "hidden" }}
                 scrolling="no"
                 frameBorder="0"
                 allowTransparency={true}
                 allow="encrypted-media"
                 title="Facebook Post - Friends Sunday Funday with Animesh"
-                className="w-full"
+                className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px]"
               ></iframe>
             </div>
           </div>

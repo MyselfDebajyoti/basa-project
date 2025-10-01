@@ -17,10 +17,10 @@ export function PrintMedia({ className }: PujoCommitteeProps) {
         {/* Section Title */}
 
         {/* Facebook Post Embed */}
-        <div className="flex">
+        <div className="flex flex-col gap-10 md:gap-12">
+          {/* First Row - Two Images */}
           <div className="flex flex-col md:flex-row gap-10 md:gap-12">
             <a href="https://www.thewall.in/international-news/spring-arrives-in-johannesburg-with-the-blooming-of-purple-jacaranda-petals-durga-puja-drums-ringing/tid/174178">
-              {" "}
               <img
                 src="/images/image--1.png"
                 width="500"
@@ -28,9 +28,9 @@ export function PrintMedia({ className }: PujoCommitteeProps) {
                 style={{ border: "none", overflow: "hidden" }}
                 alt="Facebook Post - Friends Sunday Funday with Animesh"
                 className="w-full"
-              ></img>
+              />
             </a>
-            <a href="https://epaper.sangbadpratidin.in/epaper/m/950604/683b6a256c708">
+            <a href="https://www.thewall.in/international-news/spring-arrives-in-johannesburg-with-the-blooming-of-purple-jacaranda-petals-durga-puja-drums-ringing/tid/174178">
               <img
                 src="/images/image--2.png"
                 width="500"
@@ -38,7 +38,21 @@ export function PrintMedia({ className }: PujoCommitteeProps) {
                 style={{ border: "none", overflow: "hidden" }}
                 alt="Facebook Post - Friends Sunday Funday with Animesh"
                 className="w-full"
-              ></img>
+              />
+            </a>
+          </div>
+
+          {/* Second Row - Third Image */}
+          <div className="flex flex-col md:flex-row gap-10 md:gap-12">
+            <a href="https://zeenews.india.com/bengali/world/south-africa-puja-celebrations-johannesburg-returns-to-familiar-address-after-20-years_614778.html">
+              <img
+                src="/images/zee-news.png"
+                width="500"
+                height="500"
+                style={{ border: "none", overflow: "hidden" }}
+                alt="Facebook Post - Friends Sunday Funday with Animesh"
+                className="md:w-[40%] w-full "
+              />
             </a>
           </div>
         </div>
